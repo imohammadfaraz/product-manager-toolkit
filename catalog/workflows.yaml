@@ -1,0 +1,13 @@
+workflows:
+  - id: prd-to-acceptance-criteria
+    name: PRD to Acceptance Criteria
+    path: workflows/prd-to-acceptance-criteria/WORKFLOW.md
+    status: guide
+  - id: requirements-change-review
+    name: Requirements Change Review
+    path: workflows/requirements-change-review/WORKFLOW.md
+    status: guide
+  - id: qa-handoff
+    name: QA Handoff
+    path: workflows/qa-handoff/WORKFLOW.md
+    status: guide
