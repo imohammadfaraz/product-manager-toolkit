@@ -1,0 +1,2 @@
+# Add agent records here when role, permissions, and orchestration contracts are defined.
+agents: []
