@@ -1,0 +1,115 @@
+# Skills catalog
+# Source of truth for discoverability. Each item points to a standalone SKILL.md.
+skills:
+  - id: metrics-analytics-designer
+    title: "Metrics Analytics Designer"
+    category: analytics
+    path: skills/analytics/metrics-analytics-designer/SKILL.md
+  - id: ux-reviewer
+    title: "Ux Reviewer"
+    category: design
+    path: skills/design/ux-reviewer/SKILL.md
+  - id: problem-definition-expert
+    title: "Problem Definition Expert"
+    category: discovery
+    path: skills/discovery/problem-definition-expert/SKILL.md
+  - id: ab-testing-expert
+    title: "Ab Testing Expert"
+    category: experimentation
+    path: skills/experimentation/ab-testing-expert/SKILL.md
+  - id: monetization-strategist
+    title: "Monetization Strategist"
+    category: growth
+    path: skills/growth/monetization-strategist/SKILL.md
+  - id: gtm-planner
+    title: "Gtm Planner"
+    category: launch
+    path: skills/launch/gtm-planner/SKILL.md
+  - id: risk-and-edge-case-analyzer
+    title: "Risk And Edge Case Analyzer"
+    category: quality
+    path: skills/quality/risk-and-edge-case-analyzer/SKILL.md
+  - id: acceptance-criteria-generator
+    title: "Acceptance Criteria Generator"
+    category: requirements
+    path: skills/requirements/acceptance-criteria-generator/SKILL.md
+  - id: business-rule-builder
+    title: "Business Rule Builder"
+    category: requirements
+    path: skills/requirements/business-rule-builder/SKILL.md
+  - id: change-impact-analyzer
+    title: "Change Impact Analyzer"
+    category: requirements
+    path: skills/requirements/change-impact-analyzer/SKILL.md
+  - id: clarification-builder
+    title: "Clarification Builder"
+    category: requirements
+    path: skills/requirements/clarification-builder/SKILL.md
+  - id: coverage-gap-analyzer
+    title: "Coverage Gap Analyzer"
+    category: requirements
+    path: skills/requirements/coverage-gap-analyzer/SKILL.md
+  - id: edge-case-generator
+    title: "Edge Case Generator"
+    category: requirements
+    path: skills/requirements/edge-case-generator/SKILL.md
+  - id: gherkin-quality-reviewer
+    title: "Gherkin Quality Reviewer"
+    category: requirements
+    path: skills/requirements/gherkin-quality-reviewer/SKILL.md
+  - id: non-functional-reviewer
+    title: "Non Functional Reviewer"
+    category: requirements
+    path: skills/requirements/non-functional-reviewer/SKILL.md
+  - id: prd-analyzer
+    title: "Prd Analyzer"
+    category: requirements
+    path: skills/requirements/prd-analyzer/SKILL.md
+  - id: prd-generator
+    title: "Prd Generator"
+    category: requirements
+    path: skills/requirements/prd-generator/SKILL.md
+  - id: prd-intake
+    title: "Prd Intake"
+    category: requirements
+    path: skills/requirements/prd-intake/SKILL.md
+  - id: prd-to-gherkin
+    title: "Prd To Gherkin"
+    category: requirements
+    path: skills/requirements/prd-to-gherkin/SKILL.md
+  - id: qa-handoff
+    title: "Qa Handoff"
+    category: requirements
+    path: skills/requirements/qa-handoff/SKILL.md
+  - id: requirement-decomposer
+    title: "Requirement Decomposer"
+    category: requirements
+    path: skills/requirements/requirement-decomposer/SKILL.md
+  - id: scenario-coverage-planner
+    title: "Scenario Coverage Planner"
+    category: requirements
+    path: skills/requirements/scenario-coverage-planner/SKILL.md
+  - id: test-data-builder
+    title: "Test Data Builder"
+    category: requirements
+    path: skills/requirements/test-data-builder/SKILL.md
+  - id: traceability-matrix
+    title: "Traceability Matrix"
+    category: requirements
+    path: skills/requirements/traceability-matrix/SKILL.md
+  - id: user-story-generator
+    title: "User Story Generator"
+    category: requirements
+    path: skills/requirements/user-story-generator/SKILL.md
+  - id: workflow-orchestrator
+    title: "Workflow Orchestrator"
+    category: requirements
+    path: skills/requirements/workflow-orchestrator/SKILL.md
+  - id: competitive-analysis-expert
+    title: "Competitive Analysis Expert"
+    category: strategy
+    path: skills/strategy/competitive-analysis-expert/SKILL.md
+  - id: product-strategy-builder
+    title: "Product Strategy Builder"
+    category: strategy
+    path: skills/strategy/product-strategy-builder/SKILL.md
