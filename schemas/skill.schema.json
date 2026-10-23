@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/imohammadfaraz/product-manager-toolkit/blob/main/schemas/skill.schema.json",
+  "title": "Product Manager Toolkit Skill metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "display_name",
+    "description",
+    "category",
+    "asset_type",
+    "version",
+    "status",
+    "portability",
+    "review_status",
+    "tags"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "category": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "asset_type": {
+      "const": "skill"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "draft",
+        "deprecated"
+      ]
+    },
+    "portability": {
+      "enum": [
+        "portable",
+        "migrated-source-preserved"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "standardized",
+        "standardized-wrapper-content-review-needed",
+        "content-reviewed",
+        "deprecated"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}

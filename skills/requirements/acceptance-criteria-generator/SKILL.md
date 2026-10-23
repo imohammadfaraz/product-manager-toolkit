@@ -1,12 +1,23 @@
 ---
 name: acceptance-criteria-generator
+display_name: "Acceptance Criteria Generator"
 description: "Acceptance Criteria Generator. Produce observable, testable acceptance criteria from requirements and approved decisions."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "acceptance", "criteria", "generator"]
 ---
-
 # Acceptance Criteria Generator
 
 ## Purpose
 Produce observable, testable acceptance criteria from requirements and approved decisions.
+
+
+## When to use
+Use this Skill when you need to produce observable, testable acceptance criteria from requirements and approved decisions. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

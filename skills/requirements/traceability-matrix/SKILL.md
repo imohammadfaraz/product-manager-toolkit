@@ -1,12 +1,23 @@
 ---
 name: traceability-matrix
+display_name: "Requirements Traceability Matrix Builder"
 description: "Requirements Traceability Matrix Builder. Map requirements to stories, criteria, scenarios, tests, and releases where data exists."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "traceability", "matrix"]
 ---
-
 # Requirements Traceability Matrix Builder
 
 ## Purpose
 Map requirements to stories, criteria, scenarios, tests, and releases where data exists.
+
+
+## When to use
+Use this Skill when you need to map requirements to stories, criteria, scenarios, tests, and releases where data exists. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

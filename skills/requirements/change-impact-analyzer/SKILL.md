@@ -1,12 +1,23 @@
 ---
 name: change-impact-analyzer
+display_name: "Requirements Change Impact Analyzer"
 description: "Requirements Change Impact Analyzer. Assess downstream effects of changed requirements across connected artifacts."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "change", "impact", "analyzer"]
 ---
-
 # Requirements Change Impact Analyzer
 
 ## Purpose
 Assess downstream effects of changed requirements across connected artifacts.
+
+
+## When to use
+Use this Skill when you need to assess downstream effects of changed requirements across connected artifacts. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

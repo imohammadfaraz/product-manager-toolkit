@@ -1,12 +1,23 @@
 ---
 name: prd-analyzer
+display_name: "PRD Analyzer"
 description: "PRD Analyzer. Assess PRDs for clarity, completeness, consistency, testability, dependencies, and unresolved decisions."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "prd", "analyzer"]
 ---
-
 # PRD Analyzer
 
 ## Purpose
 Assess PRDs for clarity, completeness, consistency, testability, dependencies, and unresolved decisions.
+
+
+## When to use
+Use this Skill when you need to assess PRDs for clarity, completeness, consistency, testability, dependencies, and unresolved decisions. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

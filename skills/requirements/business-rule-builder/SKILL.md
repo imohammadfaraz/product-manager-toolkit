@@ -1,12 +1,23 @@
 ---
 name: business-rule-builder
+display_name: "Business Rules & Decision Table Builder"
 description: "Business Rules & Decision Table Builder. Structure stated business rules into explicit rules and decision tables."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "business", "rule", "builder"]
 ---
-
 # Business Rules & Decision Table Builder
 
 ## Purpose
 Structure stated business rules into explicit rules and decision tables.
+
+
+## When to use
+Use this Skill when you need to structure stated business rules into explicit rules and decision tables. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

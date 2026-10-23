@@ -1,12 +1,23 @@
 ---
 name: non-functional-reviewer
+display_name: "Non-Functional Acceptance Criteria Reviewer"
 description: "Non-Functional Acceptance Criteria Reviewer. Review non-functional expectations for relevance, measurability, and verifiability."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "non", "functional", "reviewer"]
 ---
-
 # Non-Functional Acceptance Criteria Reviewer
 
 ## Purpose
 Review non-functional expectations for relevance, measurability, and verifiability.
+
+
+## When to use
+Use this Skill when you need to review non-functional expectations for relevance, measurability, and verifiability. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

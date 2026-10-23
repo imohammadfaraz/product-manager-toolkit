@@ -1,12 +1,23 @@
 ---
 name: prd-intake
+display_name: "PRD Intake & Normalizer"
 description: "PRD Intake & Normalizer. Normalize PRDs, feature briefs, notes, and references without changing meaning."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "prd", "intake"]
 ---
-
 # PRD Intake & Normalizer
 
 ## Purpose
 Normalize PRDs, feature briefs, notes, and references without changing meaning.
+
+
+## When to use
+Use this Skill when you need to normalize PRDs, feature briefs, notes, and references without changing meaning. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

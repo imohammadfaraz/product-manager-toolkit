@@ -1,12 +1,23 @@
 ---
 name: scenario-coverage-planner
+display_name: "Scenario Coverage Planner"
 description: "Scenario Coverage Planner. Plan scenario coverage across requirements, actors, states, journeys, constraints, and risk dimensions."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "scenario", "coverage", "planner"]
 ---
-
 # Scenario Coverage Planner
 
 ## Purpose
 Plan scenario coverage across requirements, actors, states, journeys, constraints, and risk dimensions.
+
+
+## When to use
+Use this Skill when you need to plan scenario coverage across requirements, actors, states, journeys, constraints, and risk dimensions. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

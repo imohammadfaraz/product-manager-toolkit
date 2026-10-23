@@ -7,193 +7,305 @@ skills:
     category_title: "Analytics & Metrics"
     path: skills/analytics/metrics-analytics-designer/SKILL.md
     format: SKILL.md
+    asset_type: skill
+    version: "1.0.0"
+    status: active
     portability: migrated-source-preserved
+    review_status: standardized-wrapper-content-review-needed
   - id: ux-reviewer
     title: "UX Reviewer"
     category: design
     category_title: "UX & Design"
     path: skills/design/ux-reviewer/SKILL.md
     format: SKILL.md
+    asset_type: skill
+    version: "1.0.0"
+    status: active
     portability: migrated-source-preserved
+    review_status: standardized-wrapper-content-review-needed
   - id: problem-definition-expert
     title: "Problem Definition Expert"
     category: discovery
     category_title: "Discovery"
     path: skills/discovery/problem-definition-expert/SKILL.md
     format: SKILL.md
+    asset_type: skill
+    version: "1.0.0"
+    status: active
     portability: migrated-source-preserved
+    review_status: standardized-wrapper-content-review-needed
   - id: ab-testing-expert
     title: "A/B Testing Expert"
     category: experimentation
     category_title: "Experimentation"
     path: skills/experimentation/ab-testing-expert/SKILL.md
     format: SKILL.md
+    asset_type: skill
+    version: "1.0.0"
+    status: active
     portability: migrated-source-preserved
+    review_status: standardized-wrapper-content-review-needed
   - id: monetization-strategist
     title: "Monetization Strategist"
     category: growth
     category_title: "Growth & Monetization"
     path: skills/growth/monetization-strategist/SKILL.md
     format: SKILL.md
+    asset_type: skill
+    version: "1.0.0"
+    status: active
     portability: migrated-source-preserved
+    review_status: standardized-wrapper-content-review-needed
   - id: gtm-planner
     title: "GTM Planner"
     category: launch
     category_title: "Launch & GTM"
     path: skills/launch/gtm-planner/SKILL.md
     format: SKILL.md
+    asset_type: skill
+    version: "1.0.0"
+    status: active
     portability: migrated-source-preserved
+    review_status: standardized-wrapper-content-review-needed
   - id: risk-and-edge-case-analyzer
     title: "Risk & Edge Case Analyzer"
     category: quality
     category_title: "Quality & Risk"
     path: skills/quality/risk-and-edge-case-analyzer/SKILL.md
     format: SKILL.md
+    asset_type: skill
+    version: "1.0.0"
+    status: active
     portability: migrated-source-preserved
+    review_status: standardized-wrapper-content-review-needed
   - id: acceptance-criteria-generator
     title: "Acceptance Criteria Generator"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/acceptance-criteria-generator/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: business-rule-builder
     title: "Business Rules & Decision Table Builder"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/business-rule-builder/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: change-impact-analyzer
     title: "Requirements Change Impact Analyzer"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/change-impact-analyzer/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: clarification-builder
     title: "Clarification & Decision Builder"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/clarification-builder/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: coverage-gap-analyzer
     title: "Acceptance Criteria Coverage Gap Analyzer"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/coverage-gap-analyzer/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: edge-case-generator
     title: "Edge Case & Negative Path Generator"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/edge-case-generator/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: gherkin-quality-reviewer
     title: "Gherkin Quality Reviewer"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/gherkin-quality-reviewer/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: non-functional-reviewer
     title: "Non-Functional Acceptance Criteria Reviewer"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/non-functional-reviewer/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: prd-analyzer
     title: "PRD Analyzer"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/prd-analyzer/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: prd-generator
     title: "PRD Generator"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/prd-generator/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: prd-intake
     title: "PRD Intake & Normalizer"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/prd-intake/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: prd-to-gherkin
     title: "PRD-to-Gherkin Converter"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/prd-to-gherkin/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: qa-handoff
     title: "QA Handoff & Automation Readiness Reviewer"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/qa-handoff/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: requirement-decomposer
     title: "Requirement Decomposer"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/requirement-decomposer/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: scenario-coverage-planner
     title: "Scenario Coverage Planner"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/scenario-coverage-planner/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: test-data-builder
     title: "Test Data & Boundary Value Builder"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/test-data-builder/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: traceability-matrix
     title: "Requirements Traceability Matrix Builder"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/traceability-matrix/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: user-story-generator
     title: "User Story Generator"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/user-story-generator/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: workflow-orchestrator
     title: "Acceptance Criteria Workflow Orchestrator"
     category: requirements
     category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/workflow-orchestrator/SKILL.md
     format: SKILL.md
-    portability: toolkit-standard
+    asset_type: skill
+    version: "1.0.0"
+    status: active
+    portability: portable
+    review_status: standardized
   - id: competitive-analysis-expert
     title: "Competitive Analysis Expert"
     category: strategy
     category_title: "Strategy"
     path: skills/strategy/competitive-analysis-expert/SKILL.md
     format: SKILL.md
+    asset_type: skill
+    version: "1.0.0"
+    status: active
     portability: migrated-source-preserved
+    review_status: standardized-wrapper-content-review-needed
   - id: product-strategy-builder
     title: "Product Strategy Builder"
     category: strategy
     category_title: "Strategy"
     path: skills/strategy/product-strategy-builder/SKILL.md
     format: SKILL.md
+    asset_type: skill
+    version: "1.0.0"
+    status: active
     portability: migrated-source-preserved
+    review_status: standardized-wrapper-content-review-needed

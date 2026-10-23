@@ -1,12 +1,23 @@
 ---
 name: workflow-orchestrator
+display_name: "Acceptance Criteria Workflow Orchestrator"
 description: "Acceptance Criteria Workflow Orchestrator. Select and coordinate a suitable sequence of requirements and acceptance-criteria capabilities."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "workflow", "orchestrator"]
 ---
-
 # Acceptance Criteria Workflow Orchestrator
 
 ## Purpose
 Select and coordinate a suitable sequence of requirements and acceptance-criteria capabilities.
+
+
+## When to use
+Use this Skill when you need to select and coordinate a suitable sequence of requirements and acceptance-criteria capabilities. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.
