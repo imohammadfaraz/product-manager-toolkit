@@ -1,7 +1,7 @@
 ---
 name: activation-analysis
 display_name: "Activation Analysis"
-description: "diagnose activation and turn the result into a decision-ready a prioritized diagnosis with likely causes, evidence gaps, and tests"
+description: "Helps PMs diagnose activation with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,7 +13,7 @@ tags: ["product-management", "analytics", "activation-analysis"]
 # Activation Analysis
 
 ## Purpose
-This Skill helps product teams diagnose activation and turn the result into a decision-ready a prioritized diagnosis with likely causes, evidence gaps, and tests.
+This Skill helps product teams diagnose activation, producing a prioritized diagnosis with likely causes, evidence gaps, and tests grounded in supplied evidence and explicit assumptions.
 
 ## When to use
 Use when a product team needs to diagnose activation and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.

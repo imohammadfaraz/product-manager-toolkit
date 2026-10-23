@@ -1,7 +1,7 @@
 ---
 name: event-taxonomy-designer
 display_name: "Event Taxonomy Designer"
-description: "design a practical approach for event taxonomy and turn the result into a decision-ready a design brief with user needs, states, constraints, and trade-offs"
+description: "Helps PMs design event taxonomy with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "analytics", "event-taxonomy"]
 # Event Taxonomy Designer
 
 ## Purpose
-This Skill helps product teams design a practical approach for event taxonomy and turn the result into a decision-ready a design brief with user needs, states, constraints, and trade-offs.
+This Skill helps product teams design event taxonomy, producing a design brief with user needs, states, constraints, and trade-offs grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to design a practical approach for event taxonomy and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to design event taxonomy and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.

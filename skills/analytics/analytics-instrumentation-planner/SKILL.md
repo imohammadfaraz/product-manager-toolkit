@@ -1,7 +1,7 @@
 ---
 name: analytics-instrumentation-planner
 display_name: "Analytics Instrumentation Planner"
-description: "plan a repeatable approach for analytics instrumentation and turn the result into a decision-ready a structured plan with sequence, decisions, dependencies, and validation steps"
+description: "Helps PMs plan analytics instrumentation with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "analytics", "analytics-instrumentation"]
 # Analytics Instrumentation Planner
 
 ## Purpose
-This Skill helps product teams plan a repeatable approach for analytics instrumentation and turn the result into a decision-ready a structured plan with sequence, decisions, dependencies, and validation steps.
+This Skill helps product teams plan analytics instrumentation, producing a structured plan with sequence, decisions, dependencies, and validation steps grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to plan a repeatable approach for analytics instrumentation and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to plan analytics instrumentation and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.

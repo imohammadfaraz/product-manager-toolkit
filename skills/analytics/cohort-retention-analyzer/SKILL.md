@@ -1,7 +1,7 @@
 ---
 name: cohort-retention-analyzer
 display_name: "Cohort Retention Analyzer"
-description: "analyze cohort retention and turn the result into a decision-ready a structured analysis with evidence, alternatives, implications, and next steps"
+description: "Helps PMs analyze cohort retention with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,7 +13,7 @@ tags: ["product-management", "analytics", "cohort-retention"]
 # Cohort Retention Analyzer
 
 ## Purpose
-This Skill helps product teams analyze cohort retention and turn the result into a decision-ready a structured analysis with evidence, alternatives, implications, and next steps.
+This Skill helps product teams analyze cohort retention, producing a structured analysis with evidence, alternatives, implications, and next steps grounded in supplied evidence and explicit assumptions.
 
 ## When to use
 Use when a product team needs to analyze cohort retention and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.

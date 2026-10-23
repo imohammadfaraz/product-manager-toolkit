@@ -1,7 +1,7 @@
 ---
 name: dashboard-requirements-writer
 display_name: "Dashboard Requirements Writer"
-description: "produce a clear draft for dashboard requirements and turn the result into a decision-ready a ready-to-edit draft tailored to its audience and intended decision"
+description: "Helps PMs write dashboard requirements with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "analytics", "dashboard-requirements"]
 # Dashboard Requirements Writer
 
 ## Purpose
-This Skill helps product teams produce a clear draft for dashboard requirements and turn the result into a decision-ready a ready-to-edit draft tailored to its audience and intended decision.
+This Skill helps product teams write dashboard requirements, producing a ready-to-edit draft tailored to its audience and intended decision grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to produce a clear draft for dashboard requirements and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to write dashboard requirements and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.

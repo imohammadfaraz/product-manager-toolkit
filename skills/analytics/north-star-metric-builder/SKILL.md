@@ -1,7 +1,7 @@
 ---
 name: north-star-metric-builder
 display_name: "North Star Metric Builder"
-description: "create a structured artifact for north star metric and turn the result into a decision-ready a usable artifact with explicit structure, rationale, and open questions"
+description: "Helps PMs build north star metric with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "analytics", "north-star"]
 # North Star Metric Builder
 
 ## Purpose
-This Skill helps product teams create a structured artifact for north star metric and turn the result into a decision-ready a usable artifact with explicit structure, rationale, and open questions.
+This Skill helps product teams build north star metric, producing a usable artifact with explicit structure, rationale, and open questions grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to create a structured artifact for north star metric and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to build north star metric and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.

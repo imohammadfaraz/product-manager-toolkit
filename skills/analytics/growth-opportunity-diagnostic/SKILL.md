@@ -1,7 +1,7 @@
 ---
 name: growth-opportunity-diagnostic
 display_name: "Growth Opportunity Diagnostic"
-description: "analyze growth opportunity and turn the result into a decision-ready a structured analysis with evidence, alternatives, implications, and next steps"
+description: "Helps PMs analyze growth opportunity with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,7 +13,7 @@ tags: ["product-management", "analytics", "growth-opportunity"]
 # Growth Opportunity Diagnostic
 
 ## Purpose
-This Skill helps product teams analyze growth opportunity and turn the result into a decision-ready a structured analysis with evidence, alternatives, implications, and next steps.
+This Skill helps product teams analyze growth opportunity, producing a structured analysis with evidence, alternatives, implications, and next steps grounded in supplied evidence and explicit assumptions.
 
 ## When to use
 Use when a product team needs to analyze growth opportunity and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.

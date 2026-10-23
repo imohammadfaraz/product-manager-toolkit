@@ -1,7 +1,7 @@
 ---
 name: ab-test-results-interpreter
 display_name: "A/B Test Results Interpreter"
-description: "interpret evidence from a/b test results and turn the result into a decision-ready a validated interpretation, uncertainty notes, and decision implications"
+description: "Helps PMs interpret A/B test results with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "analytics", "ab-test"]
 # A/B Test Results Interpreter
 
 ## Purpose
-This Skill helps product teams interpret evidence from a/b test results and turn the result into a decision-ready a validated interpretation, uncertainty notes, and decision implications.
+This Skill helps product teams interpret A/B test results, producing a validated interpretation, uncertainty notes, and decision implications grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to interpret evidence from a/b test results and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to interpret A/B test results and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.

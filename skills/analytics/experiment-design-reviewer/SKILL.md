@@ -1,7 +1,7 @@
 ---
 name: experiment-design-reviewer
 display_name: "Experiment Design Reviewer"
-description: "evaluate the quality and completeness of experiment design and turn the result into a decision-ready a prioritized review with evidence, severity, recommendations, and unresolved risks"
+description: "Helps PMs review experiment design with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "analytics", "experiment-design"]
 # Experiment Design Reviewer
 
 ## Purpose
-This Skill helps product teams evaluate the quality and completeness of experiment design and turn the result into a decision-ready a prioritized review with evidence, severity, recommendations, and unresolved risks.
+This Skill helps product teams review experiment design, producing a prioritized review with evidence, severity, recommendations, and unresolved risks grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to evaluate the quality and completeness of experiment design and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to review experiment design and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.
