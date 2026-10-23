@@ -67,12 +67,28 @@ def main() -> int:
                 ERRORS.append(f"{agent_path.relative_to(ROOT)}:{location}: {issue.message}")
             if not issues:
                 print(f"PASS {agent_path.relative_to(ROOT)} against agent.schema.json")
+    # Validate every integration definition in the registry tree.
+    integration_schema = load_json(SCHEMA_DIR / "integration.schema.json")
+    integrations_dir = ROOT / "integrations"
+    integration_files = sorted(integrations_dir.glob("**/integration.json")) if integrations_dir.exists() else []
+    if integration_schema is not None:
+        integration_validator = Draft202012Validator(integration_schema, format_checker=FormatChecker())
+        for integration_path in integration_files:
+            instance = load_json(integration_path)
+            if instance is None:
+                continue
+            issues = sorted(integration_validator.iter_errors(instance), key=lambda error: list(map(str, error.absolute_path)))
+            for issue in issues:
+                location = ".".join(str(part) for part in issue.absolute_path) or "$"
+                ERRORS.append(f"{integration_path.relative_to(ROOT)}:{location}: {issue.message}")
+            if not issues:
+                print(f"PASS {integration_path.relative_to(ROOT)} against integration.schema.json")
     if ERRORS:
         print("\nAsset schema validation failed:")
         for error in ERRORS:
             print(f"- {error}")
         return 1
-    print(f"Validated {len(FIXTURES)} schemas, {sum(map(len, FIXTURES.values()))} example fixtures, and {len(agent_files)} agent definitions.")
+    print(f"Validated {len(FIXTURES)} schemas, {sum(map(len, FIXTURES.values()))} example fixtures, and {len(agent_files)} agent definitions, and {len(integration_files)} integration definitions.")
     print("Structural validation is not runtime compatibility or security certification.")
     return 0
 
