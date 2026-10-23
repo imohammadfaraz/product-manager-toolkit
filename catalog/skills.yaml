@@ -1,115 +1,199 @@
-# Skills catalog
-# Source of truth for discoverability. Each item points to a standalone SKILL.md.
+# Product Manager Toolkit catalog
+# Stable IDs and paths for each standalone Skill.
 skills:
   - id: metrics-analytics-designer
-    title: "Metrics Analytics Designer"
+    title: "Metrics & Analytics Designer"
     category: analytics
+    category_title: "Analytics & Metrics"
     path: skills/analytics/metrics-analytics-designer/SKILL.md
+    format: SKILL.md
+    portability: migrated-source-preserved
   - id: ux-reviewer
-    title: "Ux Reviewer"
+    title: "UX Reviewer"
     category: design
+    category_title: "UX & Design"
     path: skills/design/ux-reviewer/SKILL.md
+    format: SKILL.md
+    portability: migrated-source-preserved
   - id: problem-definition-expert
     title: "Problem Definition Expert"
     category: discovery
+    category_title: "Discovery"
     path: skills/discovery/problem-definition-expert/SKILL.md
+    format: SKILL.md
+    portability: migrated-source-preserved
   - id: ab-testing-expert
-    title: "Ab Testing Expert"
+    title: "A/B Testing Expert"
     category: experimentation
+    category_title: "Experimentation"
     path: skills/experimentation/ab-testing-expert/SKILL.md
+    format: SKILL.md
+    portability: migrated-source-preserved
   - id: monetization-strategist
     title: "Monetization Strategist"
     category: growth
+    category_title: "Growth & Monetization"
     path: skills/growth/monetization-strategist/SKILL.md
+    format: SKILL.md
+    portability: migrated-source-preserved
   - id: gtm-planner
-    title: "Gtm Planner"
+    title: "GTM Planner"
     category: launch
+    category_title: "Launch & GTM"
     path: skills/launch/gtm-planner/SKILL.md
+    format: SKILL.md
+    portability: migrated-source-preserved
   - id: risk-and-edge-case-analyzer
-    title: "Risk And Edge Case Analyzer"
+    title: "Risk & Edge Case Analyzer"
     category: quality
+    category_title: "Quality & Risk"
     path: skills/quality/risk-and-edge-case-analyzer/SKILL.md
+    format: SKILL.md
+    portability: migrated-source-preserved
   - id: acceptance-criteria-generator
     title: "Acceptance Criteria Generator"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/acceptance-criteria-generator/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: business-rule-builder
-    title: "Business Rule Builder"
+    title: "Business Rules & Decision Table Builder"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/business-rule-builder/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: change-impact-analyzer
-    title: "Change Impact Analyzer"
+    title: "Requirements Change Impact Analyzer"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/change-impact-analyzer/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: clarification-builder
-    title: "Clarification Builder"
+    title: "Clarification & Decision Builder"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/clarification-builder/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: coverage-gap-analyzer
-    title: "Coverage Gap Analyzer"
+    title: "Acceptance Criteria Coverage Gap Analyzer"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/coverage-gap-analyzer/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: edge-case-generator
-    title: "Edge Case Generator"
+    title: "Edge Case & Negative Path Generator"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/edge-case-generator/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: gherkin-quality-reviewer
     title: "Gherkin Quality Reviewer"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/gherkin-quality-reviewer/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: non-functional-reviewer
-    title: "Non Functional Reviewer"
+    title: "Non-Functional Acceptance Criteria Reviewer"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/non-functional-reviewer/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: prd-analyzer
-    title: "Prd Analyzer"
+    title: "PRD Analyzer"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/prd-analyzer/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: prd-generator
-    title: "Prd Generator"
+    title: "PRD Generator"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/prd-generator/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: prd-intake
-    title: "Prd Intake"
+    title: "PRD Intake & Normalizer"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/prd-intake/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: prd-to-gherkin
-    title: "Prd To Gherkin"
+    title: "PRD-to-Gherkin Converter"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/prd-to-gherkin/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: qa-handoff
-    title: "Qa Handoff"
+    title: "QA Handoff & Automation Readiness Reviewer"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/qa-handoff/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: requirement-decomposer
     title: "Requirement Decomposer"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/requirement-decomposer/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: scenario-coverage-planner
     title: "Scenario Coverage Planner"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/scenario-coverage-planner/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: test-data-builder
-    title: "Test Data Builder"
+    title: "Test Data & Boundary Value Builder"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/test-data-builder/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: traceability-matrix
-    title: "Traceability Matrix"
+    title: "Requirements Traceability Matrix Builder"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/traceability-matrix/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: user-story-generator
     title: "User Story Generator"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/user-story-generator/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: workflow-orchestrator
-    title: "Workflow Orchestrator"
+    title: "Acceptance Criteria Workflow Orchestrator"
     category: requirements
+    category_title: "Requirements & Acceptance Criteria"
     path: skills/requirements/workflow-orchestrator/SKILL.md
+    format: SKILL.md
+    portability: toolkit-standard
   - id: competitive-analysis-expert
     title: "Competitive Analysis Expert"
     category: strategy
+    category_title: "Strategy"
     path: skills/strategy/competitive-analysis-expert/SKILL.md
+    format: SKILL.md
+    portability: migrated-source-preserved
   - id: product-strategy-builder
     title: "Product Strategy Builder"
     category: strategy
+    category_title: "Strategy"
     path: skills/strategy/product-strategy-builder/SKILL.md
+    format: SKILL.md
+    portability: migrated-source-preserved
