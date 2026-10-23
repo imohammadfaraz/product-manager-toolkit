@@ -1,10 +1,10 @@
 {
   "id": "github-issues-projects",
   "name": "GitHub Issues and Projects",
-  "description": "Read issues, pull requests, project items, labels and release metadata.",
-  "version": "1.0.0",
+  "description": "Read-only weekly delivery summary from repository issue activity and a personal GitHub Projects v2 board.",
+  "version": "1.1.0",
   "status": "draft",
-  "owner": "Product Manager Toolkit maintainers",
+  "owner": "@imohammadfaraz",
   "tags": [
     "delivery",
     "github-issues-projects",
@@ -12,14 +12,15 @@
   ],
   "platform": "GitHub Issues and Projects",
   "integration_type": "tool-connector",
-  "purpose": "Read issues, pull requests, project items, labels and release metadata.",
+  "purpose": "Read-only weekly delivery summary from repository issue activity and a personal GitHub Projects v2 board.",
   "capabilities": [
     {
-      "id": "primary-use-case",
-      "description": "Repository issues, PRs, project items and releases",
-      "availability": "unverified",
+      "id": "weekly-delivery-summary",
+      "description": "Read repository issues updated in a defined window and current status fields from a user-owned Projects v2 board; produce a source-linked Markdown report.",
+      "availability": "implemented-unverified",
       "required_permissions": [
-        "Read-only access to explicitly authorized resources"
+        "Read-only repository Issues access",
+        "Read access to the personal Projects v2 board; confirm current supported token type and scopes"
       ]
     }
   ],
@@ -41,7 +42,7 @@
     }
   ],
   "authentication": {
-    "method": "GitHub App or fine-grained token with minimal repository scopes",
+    "method": "GITHUB_TOKEN environment variable supplied by an approved secret manager or local environment; personal Projects v2 access may require a classic personal access token with project scope. Confirm current provider documentation and account policy.",
     "secret_handling": "Store credentials only in an approved secret manager. Never commit, prompt-inject or log tokens. Redact secrets and rotate/revoke after exposure.",
     "scopes": [
       "Minimum read-only scopes; exact provider scopes unverified"
@@ -51,7 +52,8 @@
   },
   "permissions": {
     "required_scopes": [
-      "Read-only; verify exact resource scopes for deployment"
+      "Read-only repository Issues access",
+      "Read access to the personal Projects v2 board"
     ],
     "least_privilege": true,
     "approval_gates": [
@@ -78,12 +80,12 @@
   ],
   "verification": {
     "status": "unverified",
-    "method": "Documentation-only; no live authentication, API call or runtime test performed.",
+    "method": "Mocked tests are authored; no live authentication or smoke test has been performed.",
     "verified_on": null,
     "evidence": [],
     "verified_by": "Not yet verified",
     "next_review_due": null,
-    "tested_version": "Not tested"
+    "tested_version": "Not live-tested"
   },
   "failure_handling": [
     {
@@ -128,14 +130,15 @@
   },
   "limitations": [
     "Never commit tokens; default read-only; review writes and PRs.",
-    "Documentation and schema only, not a deployed connector or executable client.",
     "Provider features vary by plan, tenant, region and API version.",
-    "Runtime implementation and maintenance require a separate named owner."
+    "Runtime implementation and maintenance require a separate named owner.",
+    "Adapter code is present but live provider access and runtime verification are pending.",
+    "Project status is a current snapshot and does not provide historical status transitions."
   ],
   "documentation_uri": "https://github.com/imohammadfaraz/product-manager-toolkit/blob/main/integrations/delivery/github-issues-projects/README.md",
   "metadata": {
     "category": "delivery",
-    "implementation_status": "documented-pattern-only",
+    "implementation_status": "adapter-implemented-unverified",
     "execution_available": false,
     "verification_date": null
   }
