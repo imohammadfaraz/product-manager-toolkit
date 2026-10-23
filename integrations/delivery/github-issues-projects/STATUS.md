@@ -4,11 +4,13 @@
 - Scope: Read-only weekly summary from repository issue activity and a personal Projects v2 board
 - Code status: Adapter and mocked tests added on branch feat/github-weekly-delivery-summary
 - Live verification: Pending
-- Verification date: None
-- Runtime / Python version: Not recorded
-- Test repository and board: Not recorded
-- Smoke-test outcome: Not run
-- Evidence: None
+- Verification date: 2026-10-23 UTC for automated mocked tests only; live verification remains pending
+- Runtime / Python version: GitHub Actions, Ubuntu runner, Python 3.12 for mocked tests
+- Test repository and board: Mocked fixtures only; no live repository or board queried
+- Mocked test outcome: Passed, https://github.com/imohammadfaraz/product-manager-toolkit/actions/runs/40032483810
+- Asset schema validation: Passed, https://github.com/imohammadfaraz/product-manager-toolkit/actions/runs/40032483822
+- Live smoke-test outcome: Not run
+- Live evidence: None
 
 ## Promotion criteria
 
