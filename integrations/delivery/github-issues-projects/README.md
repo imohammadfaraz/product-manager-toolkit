@@ -45,7 +45,7 @@ Optional: set the exact start of the window with --since 2026-10-15T00:00:00Z. D
     python -m pip install pytest
     PYTHONPATH=integrations/delivery/github-issues-projects/src pytest integrations/delivery/github-issues-projects/tests -q
 
-Tests use mocked API responses. They do not authenticate with GitHub and do not count as a live smoke test. Test execution has not yet been recorded from a repository runtime.
+Tests use mocked API responses. They do not authenticate with GitHub and do not count as a live smoke test. The mocked suite passed in GitHub Actions on Python 3.12: https://github.com/imohammadfaraz/product-manager-toolkit/actions/runs/40032483810. The repository asset schema validation also passed after the contract enum fix: https://github.com/imohammadfaraz/product-manager-toolkit/actions/runs/40032483822.
 
 ## Live smoke-test checklist
 
