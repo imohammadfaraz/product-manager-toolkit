@@ -20,3 +20,5 @@ jobs:
           python-version: "3.x"
       - name: Validate Skill structure and catalog
         run: python scripts/validate_skills.py
+      - name: Validate editorial evaluation fixtures
+        run: python scripts/validate_skill_cases.py

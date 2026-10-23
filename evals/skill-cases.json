@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Behavioral evaluation fixtures for editorial review. These are test prompts and rubrics, not automated model-output scores.",
+  "evaluation_method": "Run each prompt against the named Skill. Score each expected_behaviors item as pass/fail and each must_not item as triggered/not triggered. Record model, date, reviewer, output, and rationale in a separate evaluation report. A fixture validator checks completeness only; it does not execute or grade an LLM.",
+  "cases": [
+    {
+      "skill": "metrics-analytics-designer",
+      "case_id": "metrics-feature-context-present",
+      "prompt": "We are adding shared albums to a photo app. The goal is to increase meaningful collaboration. Propose the core metric and event plan. We have no baseline yet.",
+      "expected_behaviors": [
+        "Connect metric to shared-album value rather than raw clicks",
+        "Define event triggers and useful non-sensitive properties",
+        "Mark baseline and numeric targets as unknown"
+      ],
+      "must_not": [
+        "Invent a baseline or validated target",
+        "Recommend collecting unnecessary personal data"
+      ]
+    },
+    {
+      "skill": "metrics-analytics-designer",
+      "case_id": "metrics-vague-goal",
+      "prompt": "Give me metrics for my product.",
+      "expected_behaviors": [
+        "Ask a small number of material questions or proceed with clearly labeled assumptions",
+        "Explain that metrics depend on user value and the decision to support"
+      ],
+      "must_not": [
+        "Dump a generic exhaustive metric list as if tailored"
+      ]
+    },
+    {
+      "skill": "ux-reviewer",
+      "case_id": "ux-screenshot-only",
+      "prompt": "Here is a checkout screenshot. Review the UX. No analytics data is available.",
+      "expected_behaviors": [
+        "Separate visible observations from hypotheses",
+        "Give specific usability and accessibility findings",
+        "Recommend ways to validate the most important hypotheses"
+      ],
+      "must_not": [
+        "Claim an actual conversion drop or user behavior from the screenshot alone"
+      ]
+    },
+    {
+      "skill": "ux-reviewer",
+      "case_id": "ux-flow-with-error",
+      "prompt": "In mobile sign-up, users can submit an expired verification code and receive 'Something went wrong'. Suggest fixes.",
+      "expected_behaviors": [
+        "Recommend a specific, actionable error message and recovery path",
+        "Consider resend, retry limits, accessibility, and abuse controls where relevant",
+        "Prioritize by user impact"
+      ],
+      "must_not": [
+        "Only say 'improve the UX' without concrete changes"
+      ]
+    },
+    {
+      "skill": "problem-definition-expert",
+      "case_id": "problem-solution-confusion",
+      "prompt": "We should add AI chat to our banking app because competitors have it. Help frame the problem.",
+      "expected_behaviors": [
+        "Separate proposed solution from user problem",
+        "Identify missing evidence and assumptions",
+        "Offer a solution-neutral problem statement or explicit placeholders"
+      ],
+      "must_not": [
+        "Treat competitor parity as proof of user need"
+      ]
+    },
+    {
+      "skill": "problem-definition-expert",
+      "case_id": "problem-evidence-present",
+      "prompt": "Support tickets show small-business admins spend 30 minutes weekly reconciling duplicate invoices. Draft a problem statement and next discovery steps.",
+      "expected_behaviors": [
+        "Use supplied evidence accurately and preserve the scope",
+        "Distinguish evidence from inferred causes",
+        "Suggest validation steps that reduce uncertainty"
+      ],
+      "must_not": [
+        "Invent prevalence beyond the supplied tickets or claim root cause is proven"
+      ]
+    },
+    {
+      "skill": "ab-testing-expert",
+      "case_id": "ab-test-missing-baseline",
+      "prompt": "We want to A/B test a new onboarding flow to improve activation, but don't know baseline conversion or weekly traffic.",
+      "expected_behaviors": [
+        "Explain which inputs are needed before reliable sample-size estimates",
+        "Provide a draft design with clearly labeled unknowns if useful",
+        "Define primary metric, guardrails, and win/lose/inconclusive decisions"
+      ],
+      "must_not": [
+        "Invent sample size, runtime, or baseline"
+      ]
+    },
+    {
+      "skill": "ab-testing-expert",
+      "case_id": "ab-test-peeking",
+      "prompt": "We ran an experiment for two days and p-value is 0.04. Can we stop and ship?",
+      "expected_behaviors": [
+        "Explain risks of unplanned early stopping and repeated peeking",
+        "Ask whether stopping rules and duration were pre-specified",
+        "Consider practical effect, guardrails, data quality, and decision context"
+      ],
+      "must_not": [
+        "Declare a definitive win from p-value alone"
+      ]
+    },
+    {
+      "skill": "monetization-strategist",
+      "case_id": "pricing-without-evidence",
+      "prompt": "Our note-taking app has 1,000 weekly active users. Suggest a monetization approach, but we have no willingness-to-pay research.",
+      "expected_behaviors": [
+        "Treat user count as insufficient to establish willingness to pay",
+        "Compare relevant models and propose validation experiments",
+        "Label any price points as hypotheses or avoid false precision"
+      ],
+      "must_not": [
+        "Claim a price is validated or recommend deceptive paywalls"
+      ]
+    },
+    {
+      "skill": "monetization-strategist",
+      "case_id": "price-increase-risk",
+      "prompt": "We plan to increase subscription price by 25%. What should we consider before rollout?",
+      "expected_behaviors": [
+        "Assess segment, value, churn, retention, cost-to-serve, and trust impacts",
+        "Recommend controlled rollout or research with guardrails",
+        "Flag legal/billing requirements for qualified review where applicable"
+      ],
+      "must_not": [
+        "Optimize only for immediate revenue or suggest obstructive cancellation"
+      ]
+    },
+    {
+      "skill": "gtm-planner",
+      "case_id": "gtm-feature-launch",
+      "prompt": "We are launching team folders for a cloud storage product next month. Target users are small teams; budget is limited.",
+      "expected_behaviors": [
+        "Prioritize channels that fit small teams and budget",
+        "Include readiness, activation, measurement, risks, and launch phases",
+        "Label dates or owners as proposed if not confirmed"
+      ],
+      "must_not": [
+        "Recommend every possible marketing channel without prioritization"
+      ]
+    },
+    {
+      "skill": "gtm-planner",
+      "case_id": "gtm-unproven-claims",
+      "prompt": "We want to launch an AI assistant. We have a prototype but no customer validation. Write positioning and launch gates.",
+      "expected_behaviors": [
+        "Avoid unsupported performance claims",
+        "Recommend validation or staged release and explicit readiness gates",
+        "Define learning goals and user-impact guardrails"
+      ],
+      "must_not": [
+        "Present prototype capability as proven customer value"
+      ]
+    },
+    {
+      "skill": "risk-and-edge-case-analyzer",
+      "case_id": "risk-feature-rollout",
+      "prompt": "A new bulk-delete feature is planned for enterprise users. Analyze risks and mitigations.",
+      "expected_behaviors": [
+        "Identify accidental deletion, authorization, auditability, recovery, and operational risks as relevant",
+        "Provide concrete scenarios, mitigations, detection, and residual risk",
+        "Prioritize severe or hard-to-reverse failures"
+      ],
+      "must_not": [
+        "Mark controls as existing without evidence"
+      ]
+    },
+    {
+      "skill": "risk-and-edge-case-analyzer",
+      "case_id": "risk-boundary-with-test-cases",
+      "prompt": "Review a payment retry feature for launch risk. We already have detailed test cases; focus on broader risks.",
+      "expected_behaviors": [
+        "Focus on business, operational, data integrity, abuse, reliability, and rollback risks",
+        "Keep detailed scenario generation separate from broad risk assessment",
+        "Identify monitoring and escalation needs"
+      ],
+      "must_not": [
+        "Duplicate a full exhaustive test-case suite"
+      ]
+    },
+    {
+      "skill": "prd-generator",
+      "case_id": "prd-incomplete-input",
+      "prompt": "Write a PRD for a dashboard that helps managers see team productivity. We haven't defined the metric or audience yet.",
+      "expected_behaviors": [
+        "Identify unresolved audience and metric definitions",
+        "Draft with explicit assumptions and open questions or ask targeted questions",
+        "Include goals, non-goals, measurable requirements, privacy, and risks where relevant"
+      ],
+      "must_not": [
+        "Invent productivity definitions, targets, or approvals"
+      ]
+    },
+    {
+      "skill": "prd-generator",
+      "case_id": "prd-ai-feature",
+      "prompt": "Create a PRD outline for summarizing customer support tickets with an LLM. Include human review and failure behavior.",
+      "expected_behaviors": [
+        "Include source data, access/privacy, quality evaluation, human review, and fallback behavior",
+        "Define measurable outcomes without fabricated baselines",
+        "Make requirements observable and testable"
+      ],
+      "must_not": [
+        "Assume the model is always correct or omit failure handling"
+      ]
+    },
+    {
+      "skill": "competitive-analysis-expert",
+      "case_id": "competitor-current-pricing",
+      "prompt": "Compare the current pricing of three project-management tools for Indian startups.",
+      "expected_behaviors": [
+        "Use current sources and dates if browsing/source access is available",
+        "Mark unverified pricing or missing data honestly",
+        "Compare consistent plans, currency, billing periods, and relevant constraints"
+      ],
+      "must_not": [
+        "Invent current prices or imply stale knowledge is verified"
+      ]
+    },
+    {
+      "skill": "competitive-analysis-expert",
+      "case_id": "competitor-strategy-inference",
+      "prompt": "Competitor X launched an AI feature. Tell me why they did it and what we should copy.",
+      "expected_behaviors": [
+        "Separate observable launch facts from hypotheses about motive",
+        "Evaluate user need and strategic implication before recommending action",
+        "Suggest evidence needed to test the inference"
+      ],
+      "must_not": [
+        "State internal competitor strategy as fact or recommend copying without rationale"
+      ]
+    },
+    {
+      "skill": "product-strategy-builder",
+      "case_id": "strategy-with-constraints",
+      "prompt": "We have two engineers for the next quarter. Our B2B product has low activation and rising support tickets. Propose a strategy.",
+      "expected_behaviors": [
+        "Make explicit prioritization and trade-offs based on constraints",
+        "Connect bets to user outcomes, measures, guardrails, and learning milestones",
+        "Identify missing evidence and avoid false roadmap precision"
+      ],
+      "must_not": [
+        "Propose an unbounded list of initiatives"
+      ]
+    },
+    {
+      "skill": "product-strategy-builder",
+      "case_id": "strategy-trend-led",
+      "prompt": "We should pivot to AI because everyone is doing it. Help build product strategy.",
+      "expected_behaviors": [
+        "Challenge the trend as insufficient evidence on its own",
+        "Connect any AI bet to a target user problem and differentiated value",
+        "State assumptions, non-goals, and evidence that could invalidate the bet"
+      ],
+      "must_not": [
+        "Treat AI adoption as strategy without user/business rationale"
+      ]
+    }
+  ]
+}

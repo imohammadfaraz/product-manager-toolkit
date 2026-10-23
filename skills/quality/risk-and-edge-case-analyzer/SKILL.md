@@ -1,267 +1,61 @@
 ---
 name: risk-and-edge-case-analyzer
 display_name: "Risk & Edge Case Analyzer"
-description: "Identify product risks, edge cases, failure modes, and launch-readiness questions."
+description: "Identify product, operational, user-impact, and launch risks with mitigations and validation needs."
 category: quality
 asset_type: skill
-version: "1.0.0"
+version: "1.1.0"
 status: active
-portability: migrated-source-preserved
-review_status: standardized-wrapper-content-review-needed
-tags: ["quality", "risk", "and", "edge", "case", "analyzer"]
+portability: portable
+review_status: content-reviewed
+tags: ["risk", "edge-cases", "quality", "launch-readiness"]
 source: https://github.com/imohammadfaraz/claude-skills-for-product-manager/blob/main/top-skills/risk-and-edge-case-analyzer/risk-and-edge-case-analyzer.md
 ---
 # Risk & Edge Case Analyzer
 
 ## Purpose
-Identify product risks, edge cases, failure modes, and launch-readiness questions.
+Surface material ways a product change can fail, harm users, create operational burden, or miss its intended outcome, then make the risks actionable.
 
 ## When to use
-Use this Skill when the task requires identify product risks, edge cases, failure modes, and launch-readiness questions. Ask targeted clarification questions only when missing information materially changes the recommendation or deliverable. If the user has supplied sufficient context, proceed and label unresolved assumptions.
+Use during discovery, requirements review, design review, release readiness, or post-incident learning. This Skill surveys broader risk. For exhaustive requirement-linked test scenario generation, hand off to an Edge Case Generator.
 
 ## Inputs
-- Product, user, business, market, or feature context relevant to the task.
-- Evidence, constraints, current-state data, and prior decisions when available.
-- Desired deliverable, audience, and format.
-- Known limitations, risks, and success measures, where applicable.
+- Feature, system, workflow, or launch description.
+- Requirements, user journey, architecture, dependencies, and constraints, if available.
+- User segments, failure history, security/privacy context, scale assumptions, and operational processes.
+- Release stage, risk tolerance, and desired level of detail.
+
+## Process
+1. **Define scope and context.** Identify what is changing, who may be affected, and the decisions the analysis should support. Ask only for material gaps.
+2. **Map risk categories.** Consider user harm, functional failure, data integrity, security/privacy, accessibility, reliability/performance, abuse, compliance, support/operations, dependencies, rollout, and business impact where relevant.
+3. **Find concrete failure modes.** Describe the condition, trigger, affected users or systems, and consequence. Avoid generic labels without a scenario.
+4. **Rate risk transparently.** Use a simple likelihood/impact scale if useful, define the scale, and mark ratings as estimates when evidence is limited. Include detectability or reversibility when it materially changes priority.
+5. **Propose mitigations and controls.** Identify prevention, detection, recovery, owner role, validation evidence, and rollback or escalation path where appropriate.
+6. **Check edge conditions.** Consider empty/missing data, invalid inputs, permissions, retries, duplicate actions, partial failure, timeouts, concurrent updates, migrations, and unusual scale only where relevant to the product.
+7. **Prioritize.** Separate launch blockers from issues that can be monitored or accepted with explicit rationale.
+8. **Identify observability.** Recommend events, alerts, logs, support signals, or manual checks needed to detect failures. Do not claim those controls already exist unless confirmed.
+9. **State residual risk.** List assumptions, unresolved decisions, and risks that remain after mitigation.
 
 ## Expected outputs
-- A task-specific recommendation or artifact.
-- Evidence and source references where available.
-- Explicit assumptions, unknowns, conflicts, and decisions needed.
-- Prioritized next steps and quality caveats.
-
-## Quality and safety contract
-- Separate supplied facts from inference, assumptions, unknowns, and recommendations.
-- Do not invent metrics, customer evidence, market facts, policies, requirements, or approvals.
-- State calculation methods and assumptions when quantitative analysis is requested.
-- Make recommendations actionable, explain material trade-offs, and adapt depth to the request.
-- Do not claim to browse, test, execute, validate, or access integrations unless that action actually occurred.
-- Preserve privacy and do not expose confidential source material in outputs intended for broader distribution.
-
-## Detailed operating instructions
-
-### Original title: Risk & Edge Case Analyzer
-
-You are a Senior PM with deep experience in reliability engineering, pre-launch audits, and post-mortem analysis. Your job is to surface every realistic way a product or feature can fail — and give the team something actionable to do about it.
-
-Think like:
-- A PM who owns user trust and has to answer for every incident
-- A QA engineer whose job is to break the system before users do
-- A frustrated user who does the exact wrong thing at the exact wrong time
-
----
-
-## MANDATORY THINKING APPROACH
-
-Before writing a single risk, build a mental model:
-
-1. Map the CORE USER FLOW end to end
-2. Identify every step where control is transferred (user to system, system to third-party, etc.)
-3. Ask: what assumptions are baked into each step?
-4. Ask: what happens when those assumptions fail?
-5. Consider failure across three dimensions:
-   - SYSTEM (what breaks technically)
-   - USER (what breaks behaviorally)
-   - CONTEXT (what breaks environmentally — network, device, time, load)
-
-Do NOT skip this. Generic risks ("the server might go down") without grounding in the actual flow are useless.
-
----
-
-## CLARIFICATION RULE (NON-NEGOTIABLE)
-
-If the user's input is missing any of the following, ask BEFORE producing any analysis:
-
-1. What is the core user flow? (step by step, if possible)
-2. What platform(s) are involved? (web, iOS, Android, backend service, etc.)
-3. Is this MVP, beta, or scaled product?
-4. Any critical external dependencies? (APIs, payment providers, third-party services)
-5. Any known constraints or prior incidents to factor in?
-
-Keep questions sharp. Do not ask for information you can reasonably infer. Do not proceed with weak assumptions — state them explicitly and ask for confirmation if they're load-bearing.
-
----
-
-## OUTPUT FORMAT (MANDATORY)
-
-Always produce the full structure below. Do not skip sections. Do not collapse sections together.
-
----
-
-### RISK & EDGE CASE ANALYSIS: [Feature/Product Name]
-
----
-
-#### 1. CORE FLOW SUMMARY
-
-Briefly describe the primary user journey in 3-5 steps. Then call out the 2-3 steps where failure is MOST LIKELY. This sets the frame for everything that follows.
-
----
-
-#### 2. EDGE CASES (RARE BUT POSSIBLE)
-
-Organize by category. For each edge case: what is the scenario, what triggers it, and what does the user experience.
-
-**User Behavior**
-- Unexpected inputs (special characters, empty fields, absurdly long strings)
-- Abandoning mid-flow and returning
-- Repeating actions (double-tap, double-submit, rapid retries)
-- Using the feature in an unintended sequence
-- Extreme time gaps (session started hours ago, token expired)
-
-**Data and State**
-- Missing, null, or corrupted data
-- Duplicate records or submissions
-- Stale or cached data shown as current
-- Conflicting state across devices or sessions
-
-**Environment**
-- Low battery or device throttling
-- App backgrounded or screen locked mid-flow
-- Interrupted session (call, notification, OS interrupt)
-- Slow or intermittent network
-- Older OS or browser versions
-
----
-
-#### 3. FAILURE SCENARIOS (LIKELY RISKS)
-
-These are not rare — these WILL happen at some point. For each:
-
-| Scenario | When It Happens | User Impact |
-|---|---|---|
-| [What fails] | [Condition/trigger] | [What the user experiences] |
-
-Cover at minimum:
-- API timeout or failure from a dependency
-- Authentication or session expiry mid-flow
-- Payment or transaction failure
-- Upload, save, or submit interruption
-- Rate limiting or quota hit
-- Data sync failure across clients
-
----
-
-#### 4. USER HARM RISKS
-
-For each risk, include: what happens, severity (Low / Medium / High), and why it matters.
-
-Categories to cover:
-- DATA LOSS — work, progress, or inputs lost without warning
-- PRIVACY — accidental exposure of user data or PII
-- FINANCIAL — incorrect charges, failed refunds, double billing
-- TRUST EROSION — silent failures, confusing states, no feedback
-- EMOTIONAL IMPACT — frustration from poor recovery, dead ends
-
-Do NOT treat these as edge cases. These are the risks that destroy retention and generate chargebacks.
-
----
-
-#### 5. TECHNICAL RISKS
-
-Identify where the system is fragile under real conditions:
-
-- Scalability: what breaks at 10x or 100x current load?
-- Performance bottlenecks: slow queries, unoptimized reads, blocking operations
-- Dependency failures: what happens if [third-party service] is down?
-- Data consistency: are there race conditions, eventual consistency gaps, or transaction rollback gaps?
-
-For each: state likelihood (Low / Medium / High) and blast radius if it occurs.
-
----
-
-#### 6. UX FAILURE POINTS
-
-Identify where the interface itself creates or amplifies failure:
-
-- Error messages that don't tell users what to do next
-- No loading state or feedback during async operations
-- Confusing recovery paths after failure (how do I retry? did it save?)
-- Missing confirmation before destructive actions
-- Inconsistent behavior across platforms
-- Inaccessible flows on assistive technology
-
----
-
-#### 7. MITIGATION STRATEGIES
-
-For EVERY risk identified in sections 2-6, provide a concrete mitigation. No mitigation-free risks.
-
-| Risk | Severity | Mitigation |
-|---|---|---|
-| [Risk name] | [Low/Med/High] | [Specific, implementable action] |
-
-Mitigations should be SPECIFIC. Not "add better error handling" — "show a toast notification with a retry CTA if the upload API returns a 5xx, and preserve the user's draft locally." That level of specificity.
-
-Types of mitigations to draw from:
-- Retry mechanisms with exponential backoff
-- Graceful degradation (feature degrades, not crashes)
-- Optimistic UI with rollback on failure
-- Local/offline state preservation
-- Clear, action-oriented error messaging
-- Feature flags for fast kill-switch
-- Input validation and sanitization
-- Rate limiting on the client side
-- Idempotency keys for critical operations
-
----
-
-#### 8. MONITORING AND DETECTION
-
-Define what must be tracked so the team knows when something breaks — before users report it.
-
-| Signal | Why It Matters | Alert Threshold |
-|---|---|---|
-| [Metric or event] | [What failure it indicates] | [When to fire an alert] |
-
-Cover:
-- Error rate spikes by endpoint or flow step
-- Drop-off spikes at specific funnel steps
-- Latency percentiles (p95, p99 — not just average)
-- Third-party API failure rates
-- Retry rate trends
-
----
-
-#### 9. PRE-LAUNCH CHECKLIST
-
-What MUST be validated before this ships. Be specific to the feature.
-
-- [ ] Load tested at [X]x expected traffic
-- [ ] Edge cases in section 2 covered by QA test cases
-- [ ] Failure scenarios in section 3 manually triggered and verified
-- [ ] Error states reviewed by a designer — not just the happy path
-- [ ] Rollback plan documented and tested
-- [ ] Monitoring alerts configured and verified
-- [ ] [Feature-specific item]
-
----
-
-#### 10. POST-LAUNCH RISK PLAN
-
-What happens if something goes wrong after release:
-
-- ROLLBACK: can this feature be disabled via feature flag without a deploy?
-- INCIDENT RESPONSE: who owns the incident, what is the escalation path?
-- USER COMMUNICATION: if users are impacted, what is the message and channel?
-- TRIAGE PRIORITY: which failure modes are P0 (stop everything) vs P2 (fix in next sprint)?
-
----
-
-## QUALITY BAR
-
-Every output must:
-- Go BEYOND obvious risks (not just "what if the API is slow")
-- Include REAL-WORLD scenarios grounded in the actual user flow
-- Cover user harm explicitly — not just system failure
-- Be ACTIONABLE — every risk has a mitigation, every mitigation is specific
-- Protect user trust at scale
-
-## WHAT TO AVOID
-
-- Generic risks with no grounding ("the system might fail")
-- Risks with no mitigations
-- Ignoring user harm in favor of only technical risks
-- Skipping the clarification step when the flow is unclear
-- Treating low-traffic assumptions as universal (always think at scale)
+- Risk register: scenario, cause/trigger, impact, likelihood, severity, mitigation, detection, owner role, and status.
+- Prioritized edge conditions and validation checks.
+- Launch blockers, accepted risks, and rationale.
+- Monitoring, recovery, rollback, and escalation recommendations.
+- Assumptions and open questions.
+
+## Quality checklist
+- Risks are expressed as concrete scenarios with plausible consequences.
+- Ratings have definitions and are not presented as objective fact without evidence.
+- Mitigations include prevention and/or detection plus recovery where appropriate.
+- Priority reflects severity and reversibility, not just frequency.
+- Launch blockers and residual risks are explicit.
+
+## Guardrails
+- Do not invent compliance requirements, security guarantees, incident history, or existing controls.
+- Do not assume every possible edge case has equal importance.
+- Do not mark a risk "mitigated" without evidence that the control exists and works.
+- Do not turn this broad risk review into a duplicate of detailed test-case generation.
+- Escalate high-impact security, safety, privacy, or regulatory questions to qualified owners.
+
+## Definition of done
+The team has a prioritized and reviewable view of important failure scenarios, mitigation actions, detection needs, and remaining risk.

@@ -24,11 +24,11 @@ All Skills use the same frontmatter keys:
 | `tags` | Short discoverability terms |
 | `source` | Required when migrated from another repository |
 
-Use `schemas/skill.schema.json` as the machine-readable field contract. The validator enforces the required keys, valid values, uniqueness, catalog consistency, and required sections.
+Use `schemas/skill.schema.json` as the machine-readable field contract. The validator enforces required keys, valid values, uniqueness, catalog consistency, and required sections.
 
 ## 3. Required body structure
 
-Toolkit-authored, portable Skills use these sections in order:
+Portable Skills use these sections in order:
 
 1. Purpose
 2. When to use
@@ -41,13 +41,12 @@ Toolkit-authored, portable Skills use these sections in order:
 
 Keep each section specific to the Skill. Do not use generic placeholder inputs or outputs when a task-specific list is possible.
 
-Migrated Skills use a standardized wrapper with Purpose, When to use, Inputs, Expected outputs, Quality and safety contract, and Detailed operating instructions. Their source instructions remain preserved until editorial review is complete. Do not mark migrated content portable solely because its metadata or wrapper is standardized.
-
 ## 4. Behavioral contract
 
 Skills should:
 
-- Ask clarifying questions when missing information materially changes the answer; do not force unnecessary clarification when sufficient context exists.
+- Ask clarifying questions only when missing information materially changes the result; otherwise proceed with labeled assumptions.
+- Work across model providers and interfaces unless a platform integration is essential to the task.
 - Preserve source wording, identifiers, and provenance where relevant.
 - Separate evidence, interpretation, assumptions, unknowns, conflicts, and recommendations.
 - Avoid inventing thresholds, policies, permissions, defaults, calculations, error handling, customer evidence, or approvals.
@@ -66,11 +65,17 @@ Before creating a Skill, compare its purpose, inputs, process, and outputs with 
 - Scenario Coverage Planner proposes a coverage approach; Coverage Gap Analyzer identifies omissions in existing coverage; Traceability Matrix maps artifacts and their relationships.
 - Competitive Analysis Expert gathers and interprets competitive evidence; Product Strategy Builder makes product choices using that and other inputs.
 
-## 6. Review status
+## 6. Evaluation contract
+
+Each content-reviewed Skill should have at least two realistic evaluation fixtures covering a normal task and a material ambiguity, missing input, or failure mode. Fixtures define expected behaviors and behaviors to avoid. Run them against the intended model/runtime and review outputs before relying on a Skill in production.
+
+Automated fixture validation checks that cases are present and well-formed. It does not execute a model, judge response quality, or prove correctness. Record actual evaluation results separately.
+
+## 7. Review status
 
 - `standardized`: toolkit-authored content has the required structure.
 - `standardized-wrapper-content-review-needed`: migrated instructions have standardized metadata and wrapper, but detailed source instructions still need portability and conflict review.
-- `content-reviewed`: a human/editorial review has assessed task behavior, platform-specific wording, and conflicts.
+- `content-reviewed`: editorial review has assessed task behavior, platform-specific wording, conflicts, output quality, and guardrails. Evaluation fixtures exist, but this label alone does not mean every model/runtime has passed them.
 - `deprecated`: retained for history but no longer recommended.
 
 A passing automated validator checks structure, not product judgment or factual accuracy. Review status must reflect what has actually been checked.

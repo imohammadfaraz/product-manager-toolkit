@@ -1,279 +1,73 @@
 ---
 name: prd-generator
 display_name: "PRD Generator"
-description: "Help Product Managers complete the prd generator task using a structured, evidence-aware process."
+description: "Create an actionable product requirements document from a validated problem, goals, and constraints."
 category: requirements
 asset_type: skill
-version: "1.0.0"
+version: "1.1.0"
 status: active
-portability: migrated-source-preserved
-review_status: standardized-wrapper-content-review-needed
-tags: ["requirements", "prd", "generator"]
+portability: portable
+review_status: content-reviewed
+tags: ["prd", "requirements", "product-specification"]
 source: https://github.com/imohammadfaraz/claude-skills-for-product-manager/blob/main/top-skills/prd-generator/prd-generator.md
 ---
 # PRD Generator
 
 ## Purpose
-Help Product Managers complete the prd generator task using a structured, evidence-aware process.
+Produce a clear, testable product requirements document that aligns stakeholders on the problem, outcomes, scope, behavior, constraints, and decisions needed.
 
 ## When to use
-Use this Skill when the task requires help Product Managers complete the prd generator task using a structured, evidence-aware process. Ask targeted clarification questions only when missing information materially changes the deliverable. If enough context is available, proceed and label unresolved assumptions.
+Use when the problem and intended outcome are sufficiently understood to specify a solution. If the input is only an idea or unvalidated request, first frame the problem with Problem Definition Expert or identify discovery gaps.
 
 ## Inputs
-- Relevant product, user, business, market, or feature context.
-- Evidence, constraints, current-state data, and prior decisions where available.
-- Desired deliverable, audience, and format.
-- Known limitations, risks, and success measures where applicable.
+- Problem statement, target users, use cases, and evidence.
+- Goals, success metrics, baseline data, and guardrails where known.
+- Proposed solution, workflows, requirements, dependencies, and technical constraints.
+- MVP scope, out-of-scope items, release context, stakeholders, and open decisions.
+- Requested document depth or organizational template, if any.
+
+## Process
+1. **Check readiness.** Identify missing inputs that materially affect requirements. Ask concise questions when needed; otherwise draft with an explicit assumptions and open-questions section.
+2. **Separate outcomes from solutions.** State the user problem, desired outcome, and rationale before describing features.
+3. **Set scope.** Define goals, non-goals, users, use cases, MVP boundaries, and dependencies.
+4. **Define requirements.** Describe functional behavior in observable, unambiguous language. Link requirements to user needs or business goals when possible.
+5. **Specify experience and system considerations.** Include key flows, states, permissions, data handling, accessibility, performance/reliability, integrations, migration, and AI/ML behavior only where relevant.
+6. **Cover failure and recovery.** Describe important validation errors, empty states, retries, partial failures, permissions, and recovery paths.
+7. **Define success and measurement.** Specify metric definitions, guardrails, event requirements, and data-quality needs without inventing targets.
+8. **Identify risks and decisions.** Capture dependencies, trade-offs, unresolved questions, and owners when known.
+9. **Make it testable.** Ensure each important requirement can be verified. Use Acceptance Criteria Generator or Gherkin tools for detailed test artifacts rather than duplicating them by default.
+10. **Review coherence.** Check that scope, requirements, metrics, and roadmap assumptions do not conflict.
 
 ## Expected outputs
-- A task-specific recommendation or artifact.
-- Source references and evidence notes where available.
-- Explicit assumptions, unknowns, conflicts, and decisions needed.
-- Prioritized next steps and quality caveats.
-
-## Quality and safety contract
-- Separate supplied facts from inference, assumptions, unknowns, conflicts, and recommendations.
-- Do not invent metrics, customer evidence, market facts, policies, requirements, or approvals.
-- State calculation methods and assumptions for quantitative work.
-- Explain material trade-offs and make recommendations actionable.
-- Do not claim to browse, test, execute, validate, or access integrations unless that action occurred.
-- Protect private or confidential information.
-
-## Detailed operating instructions
-
-### Original title: PRD Generator
-
-## Role
-You are a Product Manager with broad experience across product types — consumer apps, B2B SaaS, internal tools, platforms, APIs, and AI-driven features. Your job is to generate PRDs that are structured, insightful, decision-oriented, and ready for execution. Adapt your framing and vocabulary to the product context provided.
-
----
-
-## Step 1: Clarification (MANDATORY if input is incomplete)
-
-Before writing anything, check if the user has provided:
-- Feature name
-- Product / platform / product type (consumer app, B2B SaaS, internal tool, API, etc.)
-- Target users (customers, internal users, developers, etc.)
-- Business goal
-
-**If any of these are missing, ask 3–5 sharp clarifying questions before proceeding.** Examples:
-- Who is the primary user for this feature — external customers, internal teams, or developers?
-- What type of product are we working with (mobile app, web app, API, enterprise software)?
-- What is the core business goal — growth, retention, efficiency, monetization, compliance?
-- Are there known constraints (timeline, tech stack, team size, regulatory)?
-- Any competitor or reference product we should benchmark against?
-
-Do NOT generate the PRD until you have enough to write something specific and non-generic.
-
----
-
-## Step 2: Thinking Framework (Internal — before writing)
-
-Before writing, mentally complete:
-1. What is the user problem, stated sharply?
-2. Who exactly is the target user — segment, context, behavior?
-3. What is the business objective this solves?
-4. What are the key constraints and trade-offs?
-5. What comparable product features exist to benchmark against?
-
----
-
-## Step 3: PRD Structure (MANDATORY — always follow this)
-
-Generate the PRD using ALL of the following sections. Skip none. Add tables where helpful. Adapt terminology to the product context (e.g., "customers" vs. "users" vs. "operators" vs. "developers" as appropriate).
-
----
-
-### 1. Overview
-- Feature name
-- Summary (what it is + why it matters, in 2–3 sentences)
-- Product type and scope (e.g., mobile app, web app, API, internal tool; applicable platforms or environments)
-
----
-
-### 2. Problem Statement
-- What problem are we solving? (Be specific — no "improve experience")
-- Why now? (market timing, user demand, operational need, competitive pressure)
-- Current gaps (user pain + product gap)
-
----
-
-### 3. Goals & Success Metrics
-
-| Goal Type | Goal | Metric | Target |
-|-----------|------|--------|--------|
-| Primary | | | |
-| Secondary | | | |
-| Business | | | |
-
----
-
-### 4. Target Users
-
-| Segment | Description | Key Need | Behavioral Insight |
-|---------|-------------|----------|--------------------|
-| | | | |
-
----
-
-### 5. Use Cases
-List 3–5 key scenarios with realistic examples:
-- **Use Case 1**: [User type] wants to [goal] so that [outcome]
-- (etc.)
-
----
-
-### 6. Solution Overview
-- High-level approach (1–2 paragraphs)
-- Core logic / mechanism
-
----
-
-### 7. Key Features
-
-For each sub-feature:
-| Feature | Description | Example | User Value |
-|---------|-------------|---------|------------|
-| | | | |
-
----
-
-### 8. User Flow
-Step-by-step journey from entry point to completion:
-1. User reaches [entry point / trigger]
-2. ...
-3. ...
-
----
-
-### 9. UX / Interaction Considerations
-*(Adapt this section based on product type — skip sub-points that don't apply)*
-- **Entry points**: Where does the user discover or access this?
-- **Empty states**: What does the user see with no data?
-- **Error states**: What happens when something fails?
-- **Edge UX moments**: Loading, onboarding, permission prompts, degraded states
-- **For API/developer products**: Document error codes, response formats, SDK patterns
-
----
-
-### 10. Technical Considerations
-- Architecture overview (brief)
-- Key dependencies (APIs, services, platforms, third-party tools)
-- Data requirements (what needs to be stored, fetched, or computed)
-- Non-functional requirements (performance, scalability, security, compliance) if relevant
-
----
-
-### 11. AI/ML Logic *(include only if the feature involves AI/ML)*
-- Model(s) used / approach
-- Inputs and outputs
-- Training signals / feedback loops
-- Accuracy thresholds or fallback behavior
-
----
-
-### 12. Edge Cases
-List critical edge cases and how the feature should handle them:
-- Edge case 1: [Scenario] → [Expected behavior]
-- Edge case 2: ...
-
----
-
-### 13. Risks & Mitigation
-
-| Risk | Likelihood | Impact | Mitigation |
-|------|------------|--------|------------|
-| | | | |
-
----
-
-### 14. MVP Scope
-
-**Must Have (P0)**
-- [Feature / behavior]
-
-**Nice to Have (P1)**
-- [Feature / behavior]
-
-**Future Scope**
-- [Feature / behavior]
-
----
-
-### 15. Roadmap
-
-| Phase | Scope | Timeline |
-|-------|-------|----------|
-| Phase 1 – MVP | | |
-| Phase 2 – Enhanced | | |
-| Phase 3 – Scale | | |
-
----
-
-### 16. Competitive / Comparative Analysis *(if applicable)*
-
-| Feature | [Competitor / Alternative A] | [Competitor / Alternative B] | Our Approach |
-|---------|------------------------------|-------------------------------|--------------|
-| | | | |
-
----
-
-### 17. Open Questions
-- What is unclear and needs stakeholder input?
-- What assumptions need validation?
-- What needs a design or engineering spike before committing?
-
----
-
-## Step 4: Strategic Insight (append after PRD)
-
-After the PRD, always include this section:
-
-### Strategic Insight
-
-**Key Product Bets**
-What 1–2 decisions will make or break this feature?
-
-**Failure Scenarios**
-Why might this fail? Be honest — scope creep, low adoption, technical feasibility, stakeholder misalignment, etc.
-
-**PM Recommendation**
-If you had to bet — what would you prioritize first and why?
-
----
-
-## Quality Bar (Non-Negotiable)
-
-PASS:
-- Specific, not generic
-- Metrics are quantifiable, not vague
-- Examples are realistic and appropriate to the product context
-- Trade-offs are acknowledged
-- Edge cases are covered
-- Reads like it was written by an experienced PM, not a template filler
-
-FAIL:
-- Filler phrases like "improve user experience" with no substance
-- Obvious, repetitive points
-- Goals without corresponding metrics
-- Skipped sections without justification
-
----
-
-## Optional Enhancements (include if relevant)
-
-- **Monetization strategy**: How does this feature connect to revenue or cost reduction?
-- **Growth loops**: Does this feature drive virality, retention, or network effects?
-- **Experiment ideas**: Suggest 1–2 A/B tests or validation approaches to test assumptions
-
----
-
-## Input Format Expected from User
-
-Feature: <feature name>
-Product: <product, platform, or product type>
-Context: <optional background>
-Constraints: <optional>
-References: <optional competitors or inspirations>
-
-If the user provides less than this, trigger the clarification step.
+Use a fit-for-purpose structure, typically:
+1. Overview and context
+2. Problem statement and evidence
+3. Goals, non-goals, success metrics, and guardrails
+4. Users and use cases
+5. Solution overview and key flows
+6. Functional requirements
+7. UX, accessibility, and content considerations
+8. Technical, data, security, and operational considerations
+9. Edge cases and failure recovery
+10. MVP scope, dependencies, rollout, and risks
+11. Open questions and decisions needed
+
+Include AI/ML-specific sections only when the feature uses AI/ML. Follow a user-provided PRD template when supplied.
+
+## Quality checklist
+- Problem, outcomes, and scope are distinct and consistent.
+- Requirements are specific, observable, and testable.
+- Metrics have definitions and no fabricated baselines or targets.
+- Out-of-scope items, dependencies, failure paths, and open decisions are visible.
+- Detail is appropriate to the product stage and audience.
+- The document does not imply stakeholder approval that has not occurred.
+
+## Guardrails
+- Do not invent research, customer quotes, technical decisions, approvals, owners, dates, or business targets.
+- Do not force a long template when a short PRD is more useful.
+- Do not treat assumptions as requirements; label and validate them.
+- Do not use vague requirement words such as "fast", "easy", or "intuitive" without an observable criterion or explicit follow-up.
+- Do not duplicate detailed acceptance criteria or test cases unless requested.
+
+## Definition of done
+The PRD gives product, design, engineering, data, and QA a shared, testable understanding of the problem, intended outcome, scope, requirements, and unresolved decisions.
