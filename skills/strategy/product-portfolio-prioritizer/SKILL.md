@@ -1,7 +1,7 @@
 ---
 name: product-portfolio-prioritizer
 display_name: "Product Portfolio Prioritizer"
-description: "rank options for product portfolio and turn the result into a decision-ready a ranked set of options with criteria, trade-offs, and sensitivity notes"
+description: "Provides a structured method for product portfolio, with evidence-aware recommendations and actionable outputs."
 category: strategy
 asset_type: skill
 version: "1.0.0"
@@ -13,31 +13,31 @@ tags: ["product-management", "strategy", "product-portfolio"]
 # Product Portfolio Prioritizer
 
 ## Purpose
-This Skill helps product teams rank options for product portfolio and turn the result into a decision-ready a ranked set of options with criteria, trade-offs, and sensitivity notes.
+This Skill helps product teams make progress on product portfolio by producing a ranked set of options with criteria, trade-offs, and sensitivity notes grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to rank options for product portfolio and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use this Skill when a team needs help with product portfolio and must make a concrete decision, create an artifact, or reduce a material uncertainty. It produces work from supplied context and does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product context, target market, customer needs, business objectives, constraints, existing research, and the decision to support.
-- The specific source artifact, dataset, notes, requirements, or options to work from, if available.
+- The source artifact, dataset, notes, requirements, or options to work from, if available.
 - Required output format, audience, depth, and constraints.
 - Known decisions, deadlines, dependencies, and unresolved questions.
 
 ## Process
 1. Agree on the outcome, eligibility criteria, and constraints before ranking candidates.
-2. Apply a transparent method. Explain scoring scales and weights; keep raw evidence separate from subjective estimates.
-3. Show the ranking, rationale, trade-offs, confidence, and how the result changes if a key assumption or weight changes.
+2. Apply a transparent method. Explain scales and weights; keep raw evidence separate from subjective estimates.
+3. Show ranking, rationale, trade-offs, confidence, and how results change if a key assumption or weight changes.
+4. Apply the Product Portfolio Prioritizer lens: Assess customer value, market structure, differentiation, business economics, capability fit, and opportunity cost.
+5. Communicate uncertainty. Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
 4. Test strategic coherence: compare alternatives, opportunity cost, capabilities, market evidence, and conditions that would invalidate the recommendation.
-5. **Communicate uncertainty.** Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
-6. **Make the result actionable.** Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
+6. Make the result actionable. Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
 
 ## Expected outputs
-- A primary a ranked set of options with criteria, trade-offs, and sensitivity notes.
+- a ranked set of options with criteria, trade-offs, and sensitivity notes.
 - A concise rationale tied to the supplied context and decision.
 - Evidence, assumptions, unknowns, and material risks clearly separated.
 - Prioritized next steps, validation checks, and open questions.
-- A compact, reusable artifact format appropriate to product portfolio prioritizer, rather than an unstructured brainstorm.
 
 ## Quality checklist
 - The output directly addresses the stated objective and intended audience.
@@ -45,13 +45,14 @@ Use when a product team needs to rank options for product portfolio and has a co
 - Alternatives, trade-offs, limitations, and material failure modes are considered.
 - Priorities are explained; false precision and unsupported claims are avoided.
 - The artifact is clear enough for another teammate to review, challenge, and use.
-- Choices and trade-offs are explicit; estimates show method and ranges; competitive claims are evidence-linked; the output leads to a decision.
+- Choices and trade-offs are explicit; estimates show method and ranges; competitive claims are evidence-linked; the output supports a decision.
 
 ## Guardrails
 - Do not invent source evidence, customer quotes, statistics, benchmarks, policies, approvals, owners, dates, or system capabilities.
 - Do not claim to have browsed, run code, queried a database, tested a prototype, or verified an implementation unless that action actually occurred.
 - If information is missing, identify the gap and either ask a focused question or proceed with clearly labeled assumptions.
-- Date changeable market claims, distinguish sourced facts from estimates, and state assumptions behind sizing or strategic conclusions.
+- Date changeable market claims, distinguish sourced facts from estimates, and state assumptions behind market sizing or strategic conclusions.
+
 
 ## Definition of done
-The user receives a usable a ranked set of options with criteria, trade-offs, and sensitivity notes, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should help a team make or prepare for a real product decision without obscuring what still needs validation.
+The user receives a ranked set of options with criteria, trade-offs, and sensitivity notes, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should support a real product decision without obscuring what still needs validation.

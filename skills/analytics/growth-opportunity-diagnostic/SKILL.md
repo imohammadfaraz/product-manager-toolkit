@@ -1,7 +1,7 @@
 ---
 name: growth-opportunity-diagnostic
 display_name: "Growth Opportunity Diagnostic"
-description: "Helps PMs analyze growth opportunity with evidence-aware recommendations and actionable outputs."
+description: "Provides a structured method for growth opportunity, with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,31 +13,31 @@ tags: ["product-management", "analytics", "growth-opportunity"]
 # Growth Opportunity Diagnostic
 
 ## Purpose
-This Skill helps product teams analyze growth opportunity, producing a structured analysis with evidence, alternatives, implications, and next steps grounded in supplied evidence and explicit assumptions.
+This Skill helps product teams make progress on growth opportunity by producing a prioritized diagnosis with plausible causes, evidence gaps, and tests grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to analyze growth opportunity and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use this Skill when a team needs help with growth opportunity and must make a concrete decision, create an artifact, or reduce a material uncertainty. It produces work from supplied context and does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.
-- The specific source artifact, dataset, notes, requirements, or options to work from, if available.
+- The source artifact, dataset, notes, requirements, or options to work from, if available.
 - Required output format, audience, depth, and constraints.
 - Known decisions, deadlines, dependencies, and unresolved questions.
 
 ## Process
-1. Define the decision and comparison frame; identify the relevant user, system, market, or workflow boundary.
-2. Examine evidence, likely drivers, alternatives, dependencies, and counter-explanations. Separate correlation from causation where relevant.
-3. Rank findings by impact and confidence, recommend validation or action, and state what remains unknown.
-4. Validate measurement: check metric definitions, denominators, event semantics, missing data, cohort effects, seasonality, and appropriate guardrails.
-5. **Communicate uncertainty.** Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
-6. **Make the result actionable.** Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
+1. Define the symptom, affected population, time window, and expected baseline or healthy state.
+2. Break the issue into plausible causes and distinguish data/instrumentation problems from genuine behavior changes.
+3. Rank explanations by evidence and testability; recommend checks in order and state what would confirm or weaken each hypothesis.
+4. Apply the Growth Opportunity Diagnostic lens: Check event semantics, identity and denominator consistency, cohort effects, seasonality, sample size, and instrumentation quality.
+5. Communicate uncertainty. Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
+4. Validate measurement: check definitions, denominators, event semantics, missing data, cohort effects, seasonality, and guardrails.
+6. Make the result actionable. Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
 
 ## Expected outputs
-- A primary a structured analysis with evidence, alternatives, implications, and next steps.
+- a prioritized diagnosis with plausible causes, evidence gaps, and tests.
 - A concise rationale tied to the supplied context and decision.
 - Evidence, assumptions, unknowns, and material risks clearly separated.
 - Prioritized next steps, validation checks, and open questions.
-- A compact, reusable artifact format appropriate to growth opportunity diagnostic, rather than an unstructured brainstorm.
 
 ## Quality checklist
 - The output directly addresses the stated objective and intended audience.
@@ -55,4 +55,4 @@ Use when a product team needs to analyze growth opportunity and has a concrete d
 - Do not fabricate metric values, sample sizes, benchmark ranges, SQL schemas, or experiment outcomes.
 
 ## Definition of done
-The user receives a usable a structured analysis with evidence, alternatives, implications, and next steps, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should help a team make or prepare for a real product decision without obscuring what still needs validation.
+The user receives a prioritized diagnosis with plausible causes, evidence gaps, and tests, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should support a real product decision without obscuring what still needs validation.

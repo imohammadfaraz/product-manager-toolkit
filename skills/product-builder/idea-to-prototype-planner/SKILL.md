@@ -1,7 +1,7 @@
 ---
 name: idea-to-prototype-planner
 display_name: "Idea To Prototype Planner"
-description: "plan a repeatable approach for idea to prototype and turn the result into a decision-ready a structured plan with sequence, decisions, dependencies, and validation steps"
+description: "Provides a structured method for idea to prototype, with evidence-aware recommendations and actionable outputs."
 category: product-builder
 asset_type: skill
 version: "1.0.0"
@@ -13,31 +13,31 @@ tags: ["product-management", "product-builder", "idea-to"]
 # Idea To Prototype Planner
 
 ## Purpose
-This Skill helps product teams plan a repeatable approach for idea to prototype and turn the result into a decision-ready a structured plan with sequence, decisions, dependencies, and validation steps.
+This Skill helps product teams make progress on idea to prototype by producing a structured plan with sequence, dependencies, decision gates, and validation steps grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to plan a repeatable approach for idea to prototype and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use this Skill when a team needs help with idea to prototype and must make a concrete decision, create an artifact, or reduce a material uncertainty. It produces work from supplied context and does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Problem statement, user journey, prototype scope, existing stack or platform constraints, integrations, data needs, acceptance criteria, and deployment context.
-- The specific source artifact, dataset, notes, requirements, or options to work from, if available.
+- The source artifact, dataset, notes, requirements, or options to work from, if available.
 - Required output format, audience, depth, and constraints.
 - Known decisions, deadlines, dependencies, and unresolved questions.
 
 ## Process
-1. Define the research or delivery question, audience, scope, constraints, and success condition.
-2. Sequence activities from highest-risk uncertainty to lower-risk detail; identify participants, owners, dependencies, timing, and fallback options where known.
-3. Specify the evidence to collect, decision gates, and how findings will change the next step.
+1. Define the question, audience, scope, constraints, and success condition.
+2. Sequence activities from highest-risk uncertainty to lower-risk detail; identify dependencies, owners, timing, and fallback options only when known.
+3. Specify evidence to collect, decision gates, and how findings should change the next step.
+4. Apply the Idea To Prototype Planner lens: Break work into buildable slices, verify assumptions, inspect integration and data boundaries, and separate demo readiness from production readiness.
+5. Communicate uncertainty. Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
 4. Separate demo from production: check integration boundaries, data handling, authentication, error recovery, testing, deployment, and maintainability.
-5. **Communicate uncertainty.** Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
-6. **Make the result actionable.** Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
+6. Make the result actionable. Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
 
 ## Expected outputs
-- A primary a structured plan with sequence, decisions, dependencies, and validation steps.
+- a structured plan with sequence, dependencies, decision gates, and validation steps.
 - A concise rationale tied to the supplied context and decision.
 - Evidence, assumptions, unknowns, and material risks clearly separated.
 - Prioritized next steps, validation checks, and open questions.
-- A compact, reusable artifact format appropriate to idea to prototype planner, rather than an unstructured brainstorm.
 
 ## Quality checklist
 - The output directly addresses the stated objective and intended audience.
@@ -51,7 +51,8 @@ Use when a product team needs to plan a repeatable approach for idea to prototyp
 - Do not invent source evidence, customer quotes, statistics, benchmarks, policies, approvals, owners, dates, or system capabilities.
 - Do not claim to have browsed, run code, queried a database, tested a prototype, or verified an implementation unless that action actually occurred.
 - If information is missing, identify the gap and either ask a focused question or proceed with clearly labeled assumptions.
-- Keep core guidance tool-agnostic; distinguish prototype from production; do not claim code was executed or security was verified without evidence.
+- Keep core guidance tool-agnostic; distinguish prototype from production; do not claim code was executed or security verified without evidence.
+
 
 ## Definition of done
-The user receives a usable a structured plan with sequence, decisions, dependencies, and validation steps, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should help a team make or prepare for a real product decision without obscuring what still needs validation.
+The user receives a structured plan with sequence, dependencies, decision gates, and validation steps, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should support a real product decision without obscuring what still needs validation.

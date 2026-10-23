@@ -1,7 +1,7 @@
 ---
 name: north-star-metric-builder
 display_name: "North Star Metric Builder"
-description: "Helps PMs build north star metric with evidence-aware recommendations and actionable outputs."
+description: "Provides a structured method for north star metric, with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,31 +13,31 @@ tags: ["product-management", "analytics", "north-star"]
 # North Star Metric Builder
 
 ## Purpose
-This Skill helps product teams build north star metric, producing a usable artifact with explicit structure, rationale, and open questions grounded in supplied evidence and explicit assumptions.
+This Skill helps product teams make progress on north star metric by producing a usable artifact with clear structure, rationale, and open questions grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to build north star metric and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use this Skill when a team needs help with north star metric and must make a concrete decision, create an artifact, or reduce a material uncertainty. It produces work from supplied context and does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.
-- The specific source artifact, dataset, notes, requirements, or options to work from, if available.
+- The source artifact, dataset, notes, requirements, or options to work from, if available.
 - Required output format, audience, depth, and constraints.
 - Known decisions, deadlines, dependencies, and unresolved questions.
 
 ## Process
-1. Choose a structure that fits the decision and the maturity of the product; do not force a large template when a compact artifact is sufficient.
+1. Choose a structure that fits the decision and product maturity; do not force a large template when a compact artifact is sufficient.
 2. Populate each section using source-backed facts and explicit assumptions. Preserve traceability between inputs, analysis, and recommendations.
-3. Check internal consistency, missing sections, dependencies, and whether the artifact can be used without undocumented context.
-4. Validate measurement: check metric definitions, denominators, event semantics, missing data, cohort effects, seasonality, and appropriate guardrails.
-5. **Communicate uncertainty.** Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
-6. **Make the result actionable.** Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
+3. Check internal consistency, missing sections, dependencies, and whether another teammate can use the artifact without undocumented context.
+4. Apply the North Star Metric Builder lens: Check event semantics, identity and denominator consistency, cohort effects, seasonality, sample size, and instrumentation quality.
+5. Communicate uncertainty. Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
+4. Validate measurement: check definitions, denominators, event semantics, missing data, cohort effects, seasonality, and guardrails.
+6. Make the result actionable. Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
 
 ## Expected outputs
-- A primary a usable artifact with explicit structure, rationale, and open questions.
+- a usable artifact with clear structure, rationale, and open questions.
 - A concise rationale tied to the supplied context and decision.
 - Evidence, assumptions, unknowns, and material risks clearly separated.
 - Prioritized next steps, validation checks, and open questions.
-- A compact, reusable artifact format appropriate to north star metric builder, rather than an unstructured brainstorm.
 
 ## Quality checklist
 - The output directly addresses the stated objective and intended audience.
@@ -55,4 +55,4 @@ Use when a product team needs to build north star metric and has a concrete deci
 - Do not fabricate metric values, sample sizes, benchmark ranges, SQL schemas, or experiment outcomes.
 
 ## Definition of done
-The user receives a usable a usable artifact with explicit structure, rationale, and open questions, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should help a team make or prepare for a real product decision without obscuring what still needs validation.
+The user receives a usable artifact with clear structure, rationale, and open questions, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should support a real product decision without obscuring what still needs validation.

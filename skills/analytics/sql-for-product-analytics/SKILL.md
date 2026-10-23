@@ -1,7 +1,7 @@
 ---
 name: sql-for-product-analytics
 display_name: "SQL For Product Analytics"
-description: "Helps PMs draft and validate queries for SQL for product analytics with evidence-aware recommendations and actionable outputs."
+description: "Provides a structured method for SQL for product analytics, with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,31 +13,31 @@ tags: ["product-management", "analytics", "sql-for"]
 # SQL For Product Analytics
 
 ## Purpose
-This Skill helps product teams draft and validate queries for SQL for product analytics, producing a safe, readable query approach with definitions, assumptions, and validation checks grounded in supplied evidence and explicit assumptions.
+This Skill helps product teams make progress on SQL for product analytics by producing a readable query approach with definitions, assumptions, and validation checks grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to draft and validate queries for SQL for product analytics and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use this Skill when a team needs help with SQL for product analytics and must make a concrete decision, create an artifact, or reduce a material uncertainty. It produces work from supplied context and does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.
-- The specific source artifact, dataset, notes, requirements, or options to work from, if available.
+- The source artifact, dataset, notes, requirements, or options to work from, if available.
 - Required output format, audience, depth, and constraints.
 - Known decisions, deadlines, dependencies, and unresolved questions.
 
 ## Process
 1. Clarify the business question, source tables or event schema, grain, filters, time window, and output shape.
 2. Draft readable, parameterized SQL or pseudocode only to the level supported by the schema. Explain joins, deduplication, null handling, and denominator choices.
-3. Add validation queries or sanity checks; flag unknown schema details and avoid claiming the query ran unless execution evidence is provided.
-4. Validate measurement: check metric definitions, denominators, event semantics, missing data, cohort effects, seasonality, and appropriate guardrails.
-5. **Communicate uncertainty.** Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
-6. **Make the result actionable.** Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
+3. Add validation queries or sanity checks; flag unknown schema details and do not claim the query ran unless execution evidence is provided.
+4. Apply the SQL For Product Analytics lens: Check event semantics, identity and denominator consistency, cohort effects, seasonality, sample size, and instrumentation quality.
+5. Communicate uncertainty. Label facts, estimates, assumptions, hypotheses, and unknowns. Ask only clarifying questions that materially change the result; otherwise proceed with explicit assumptions.
+4. Validate measurement: check definitions, denominators, event semantics, missing data, cohort effects, seasonality, and guardrails.
+6. Make the result actionable. Prioritize the most important findings, identify the next decision or validation step, and keep recommendations proportional to the evidence and team capacity.
 
 ## Expected outputs
-- A primary a safe, readable query approach with definitions, assumptions, and validation checks.
+- a readable query approach with definitions, assumptions, and validation checks.
 - A concise rationale tied to the supplied context and decision.
 - Evidence, assumptions, unknowns, and material risks clearly separated.
 - Prioritized next steps, validation checks, and open questions.
-- A compact, reusable artifact format appropriate to sql for product analytics, rather than an unstructured brainstorm.
 
 ## Quality checklist
 - The output directly addresses the stated objective and intended audience.
@@ -55,4 +55,4 @@ Use when a product team needs to draft and validate queries for SQL for product 
 - Do not fabricate metric values, sample sizes, benchmark ranges, SQL schemas, or experiment outcomes.
 
 ## Definition of done
-The user receives a usable a safe, readable query approach with definitions, assumptions, and validation checks, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should help a team make or prepare for a real product decision without obscuring what still needs validation.
+The user receives a readable query approach with definitions, assumptions, and validation checks, a clear rationale, a truthful account of uncertainty, and concrete next steps. The output should support a real product decision without obscuring what still needs validation.
