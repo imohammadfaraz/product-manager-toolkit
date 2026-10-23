@@ -17,7 +17,7 @@
     {
       "id": "weekly-delivery-summary",
       "description": "Read repository issues updated in a defined window and current status fields from a user-owned Projects v2 board; produce a source-linked Markdown report.",
-      "availability": "implemented-unverified",
+      "availability": "unverified",
       "required_permissions": [
         "Read-only repository Issues access",
         "Read access to the personal Projects v2 board; confirm current supported token type and scopes"
