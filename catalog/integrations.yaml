@@ -150,7 +150,7 @@ integrations:
     verification_status: unverified
     last_verification_date: null
     execution_available: false
-    description: "Repository issue and project tracking metadata."
+    description: "Read-only weekly delivery summary from repository issue activity and a personal Projects v2 board."
   - id: azure-devops
     name: "Azure DevOps"
     category: delivery
