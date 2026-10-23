@@ -1,7 +1,7 @@
 ---
 name: portfolio-case-study-reviewer
 display_name: "Portfolio Case Study Reviewer"
-description: "evaluate the quality and completeness of portfolio case study and turn the result into a decision-ready a prioritized review with evidence, severity, recommendations, and unresolved risks"
+description: "Helps PMs review portfolio case study with evidence-aware recommendations and actionable outputs."
 category: career
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "career", "portfolio-case"]
 # Portfolio Case Study Reviewer
 
 ## Purpose
-This Skill helps product teams evaluate the quality and completeness of portfolio case study and turn the result into a decision-ready a prioritized review with evidence, severity, recommendations, and unresolved risks.
+This Skill helps product teams review portfolio case study, producing a prioritized review with evidence, severity, recommendations, and unresolved risks grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to evaluate the quality and completeness of portfolio case study and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to review portfolio case study and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Target role and level, current experience, examples of work, strengths, gaps, time constraints, and career goals.

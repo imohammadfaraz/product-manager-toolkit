@@ -1,7 +1,7 @@
 ---
 name: sql-for-product-analytics
 display_name: "SQL For Product Analytics"
-description: "support analysis of sql for product analytics and turn the result into a decision-ready a safe, readable query approach with definitions, assumptions, and validation checks"
+description: "Helps PMs draft and validate queries for SQL for product analytics with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "analytics", "sql-for"]
 # SQL For Product Analytics
 
 ## Purpose
-This Skill helps product teams support analysis of sql for product analytics and turn the result into a decision-ready a safe, readable query approach with definitions, assumptions, and validation checks.
+This Skill helps product teams draft and validate queries for SQL for product analytics, producing a safe, readable query approach with definitions, assumptions, and validation checks grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to support analysis of sql for product analytics and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to draft and validate queries for SQL for product analytics and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.

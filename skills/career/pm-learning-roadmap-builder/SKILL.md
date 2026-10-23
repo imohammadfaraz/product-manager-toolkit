@@ -1,7 +1,7 @@
 ---
 name: pm-learning-roadmap-builder
 display_name: "PM Learning Roadmap Builder"
-description: "create a structured artifact for pm learning roadmap and turn the result into a decision-ready a usable artifact with explicit structure, rationale, and open questions"
+description: "Helps PMs build PM learning roadmap with evidence-aware recommendations and actionable outputs."
 category: career
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "career", "pm-learning"]
 # PM Learning Roadmap Builder
 
 ## Purpose
-This Skill helps product teams create a structured artifact for pm learning roadmap and turn the result into a decision-ready a usable artifact with explicit structure, rationale, and open questions.
+This Skill helps product teams build PM learning roadmap, producing a usable artifact with explicit structure, rationale, and open questions grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to create a structured artifact for pm learning roadmap and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to build PM learning roadmap and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Target role and level, current experience, examples of work, strengths, gaps, time constraints, and career goals.

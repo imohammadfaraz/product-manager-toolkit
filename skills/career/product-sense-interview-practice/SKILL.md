@@ -1,7 +1,7 @@
 ---
 name: product-sense-interview-practice
 display_name: "Product Sense Interview Practice"
-description: "simulate and assess performance in product sense interview and turn the result into a decision-ready a realistic practice round with a rubric and actionable feedback"
+description: "Helps PMs practice product sense interview with evidence-aware recommendations and actionable outputs."
 category: career
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "career", "product-sense"]
 # Product Sense Interview Practice
 
 ## Purpose
-This Skill helps product teams simulate and assess performance in product sense interview and turn the result into a decision-ready a realistic practice round with a rubric and actionable feedback.
+This Skill helps product teams practice product sense interview, producing a realistic practice round with a rubric and actionable feedback grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to simulate and assess performance in product sense interview and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to practice product sense interview and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Target role and level, current experience, examples of work, strengths, gaps, time constraints, and career goals.

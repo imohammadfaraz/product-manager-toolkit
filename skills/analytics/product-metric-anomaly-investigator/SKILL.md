@@ -1,7 +1,7 @@
 ---
 name: product-metric-anomaly-investigator
 display_name: "Product Metric Anomaly Investigator"
-description: "diagnose product metric anomaly investigator and turn the result into a decision-ready a prioritized diagnosis with likely causes, evidence gaps, and tests"
+description: "Helps PMs analyze product metric anomaly investigator with evidence-aware recommendations and actionable outputs."
 category: analytics
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "analytics", "product-metric"]
 # Product Metric Anomaly Investigator
 
 ## Purpose
-This Skill helps product teams diagnose product metric anomaly investigator and turn the result into a decision-ready a prioritized diagnosis with likely causes, evidence gaps, and tests.
+This Skill helps product teams analyze product metric anomaly investigator, producing a structured analysis with evidence, alternatives, implications, and next steps grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to diagnose product metric anomaly investigator and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to analyze product metric anomaly investigator and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Product objective, metric definitions, event data or sample data, user segments, time windows, instrumentation, and intended decision.

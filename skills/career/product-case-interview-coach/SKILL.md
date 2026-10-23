@@ -1,7 +1,7 @@
 ---
 name: product-case-interview-coach
 display_name: "Product Case Interview Coach"
-description: "improve performance in product case interview and turn the result into a decision-ready a practice plan, targeted feedback, and specific improvement actions"
+description: "Helps PMs coach product case interview with evidence-aware recommendations and actionable outputs."
 category: career
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "career", "product-case"]
 # Product Case Interview Coach
 
 ## Purpose
-This Skill helps product teams improve performance in product case interview and turn the result into a decision-ready a practice plan, targeted feedback, and specific improvement actions.
+This Skill helps product teams coach product case interview, producing a practice plan, targeted feedback, and specific improvement actions grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to improve performance in product case interview and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to coach product case interview and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Target role and level, current experience, examples of work, strengths, gaps, time constraints, and career goals.

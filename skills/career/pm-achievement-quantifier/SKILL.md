@@ -1,7 +1,7 @@
 ---
 name: pm-achievement-quantifier
 display_name: "PM Achievement Quantifier"
-description: "analyze pm achievement quantifier and turn the result into a decision-ready a structured analysis with evidence, alternatives, implications, and next steps"
+description: "Helps PMs analyze PM achievement quantifier with evidence-aware recommendations and actionable outputs."
 category: career
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "career", "pm-achievement"]
 # PM Achievement Quantifier
 
 ## Purpose
-This Skill helps product teams analyze pm achievement quantifier and turn the result into a decision-ready a structured analysis with evidence, alternatives, implications, and next steps.
+This Skill helps product teams analyze PM achievement quantifier, producing a structured analysis with evidence, alternatives, implications, and next steps grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to analyze pm achievement quantifier and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to analyze PM achievement quantifier and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - Target role and level, current experience, examples of work, strengths, gaps, time constraints, and career goals.
