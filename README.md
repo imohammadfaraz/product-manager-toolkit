@@ -102,11 +102,15 @@ Workflow files are operating guides. They do not imply that Skills execute or ca
 | `toolkits/` | Curated collections of related Skills |
 | `workflows/` | Multi-step process guides |
 | `catalog/` | Machine-readable discovery metadata |
-| `agents/` | Future specialist agent definitions |
+| `agents/<agent-id>/AGENT.md` and `agent.json` | Specialist agent operating guides and portable contracts |
 | `commands/` and `prompts/` | Future invocation patterns and reusable prompts |
 | `templates/` | Future product artifact templates |
 | `integrations/` | Runtime- or vendor-specific adapters |
 | `evals/` and `examples/` | Evaluation fixtures and sample outputs |
+
+## Specialist agents
+
+Twelve draft specialist agents cover discovery, strategy, execution, analytics, AI product management, AI product building, growth, UX review, independent product critique, PM operations, Skill authoring, and workflow orchestration. Start with the [agent roster and security boundaries](agents/README.md) or [machine-readable agent catalog](catalog/agents.yaml). These are portable reference definitions, not deployed agents; tools are not configured and runtime safety has not been certified.
 
 ## Universal discovery and usage
 
