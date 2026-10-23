@@ -108,6 +108,12 @@ Workflow files are operating guides. They do not imply that Skills execute or ca
 | `integrations/` | Runtime- or vendor-specific adapters |
 | `evals/` and `examples/` | Evaluation fixtures and sample outputs |
 
+## Universal discovery and usage
+
+- [Universal Agent, Skill, and Workflow Discovery & Usage Guide](docs/agent-discovery-and-usage.md)
+
+Use this guide to discover the right asset, invoke it in a compatible host, combine Skills into workflows, evaluate outputs, and understand platform, permissions, and human-review boundaries.
+
 ## Foundation checks
 
 - [Skill authoring standard](docs/skill-standard.md)
@@ -133,6 +139,7 @@ Run `python scripts/validate_skills.py` before submitting changes. The GitHub Ac
 - [Asset Types](docs/asset-types.md)
 - [Skill Standard](docs/skill-standard.md)
 - [Skill Audit](docs/skill-audit.md)
+- [Universal Agent, Skill, and Workflow Discovery & Usage Guide](docs/agent-discovery-and-usage.md)
 - [Requirements & Acceptance Criteria Toolkit](toolkits/acceptance-criteria/TOOLKIT.md)
 - [PRD to Acceptance Criteria Workflow](workflows/prd-to-acceptance-criteria/WORKFLOW.md)
 - [Requirements Change Review Workflow](workflows/requirements-change-review/WORKFLOW.md)

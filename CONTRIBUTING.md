@@ -29,7 +29,7 @@ Every `skills/**/SKILL.md` file must start with YAML frontmatter containing:
 - `tags`: short list of discoverability terms.
 - `source`: required for migrated material.
 
-See [docs/skill-standard.md](docs/skill-standard.md) for the canonical section structure and review rules.
+See [docs/skill-standard.md](docs/skill-standard.md) for the canonical section structure and review rules. See [docs/agent-discovery-and-usage.md](docs/agent-discovery-and-usage.md) for cross-platform discovery, invocation, orchestration, safety, evaluation, and troubleshooting guidance.
 
 ## Required body sections
 
