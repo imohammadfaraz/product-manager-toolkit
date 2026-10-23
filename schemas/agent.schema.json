@@ -1,0 +1,410 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/imohammadfaraz/product-manager-toolkit/blob/main/schemas/agent.schema.json",
+  "title": "Product Manager Toolkit Agent definition",
+  "description": "Portable specialist-agent contract. Runtime-specific executable configuration belongs in a platform adapter.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "description",
+    "version",
+    "status",
+    "mission",
+    "responsibilities",
+    "non_goals",
+    "inputs",
+    "outputs",
+    "skills",
+    "tools",
+    "permissions",
+    "state",
+    "orchestration",
+    "failure_handling",
+    "safety",
+    "evaluation",
+    "compatibility"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "deprecated"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "mission": {
+      "type": "string",
+      "minLength": 20
+    },
+    "responsibilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "non_goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/io"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/io"
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/tool"
+      }
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "access_level",
+        "allowed_actions",
+        "prohibited_actions",
+        "approval_required"
+      ],
+      "properties": {
+        "access_level": {
+          "enum": [
+            "none",
+            "read-only",
+            "scoped-write",
+            "privileged"
+          ]
+        },
+        "allowed_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "prohibited_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "approval_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "least_privilege": {
+          "type": "boolean"
+        }
+      }
+    },
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "memory_mode",
+        "persistence",
+        "sensitive_data_policy"
+      ],
+      "properties": {
+        "memory_mode": {
+          "enum": [
+            "stateless",
+            "session",
+            "persistent",
+            "runtime-defined"
+          ]
+        },
+        "persistence": {
+          "type": "string"
+        },
+        "sensitive_data_policy": {
+          "type": "string",
+          "minLength": 10
+        }
+      }
+    },
+    "orchestration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "delegation_allowed",
+        "handoff_format",
+        "stop_conditions"
+      ],
+      "properties": {
+        "delegation_allowed": {
+          "type": "boolean"
+        },
+        "handoff_format": {
+          "type": "string"
+        },
+        "stop_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "max_handoffs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "human_checkpoints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "failure_handling": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/failure"
+      }
+    },
+    "safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "untrusted_input_policy",
+        "data_minimization",
+        "external_action_policy"
+      ],
+      "properties": {
+        "untrusted_input_policy": {
+          "type": "string",
+          "minLength": 10
+        },
+        "data_minimization": {
+          "type": "string",
+          "minLength": 10
+        },
+        "external_action_policy": {
+          "type": "string",
+          "minLength": 10
+        },
+        "security_review_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "criteria",
+        "test_cases"
+      ],
+      "properties": {
+        "criteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "test_cases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "last_evaluated": {
+          "type": "string",
+          "format": "date"
+        },
+        "results_uri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "runtime_scope": {
+          "type": "string"
+        }
+      }
+    },
+    "compatibility": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/compatibility"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "io": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "description",
+        "required"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "format": {
+          "type": "string"
+        },
+        "source_of_truth": {
+          "type": "string"
+        }
+      }
+    },
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "purpose",
+        "access",
+        "availability"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "access": {
+          "enum": [
+            "read",
+            "write",
+            "execute",
+            "admin"
+          ]
+        },
+        "availability": {
+          "enum": [
+            "required",
+            "optional",
+            "not-configured"
+          ]
+        },
+        "permission_scope": {
+          "type": "string"
+        },
+        "verification_uri": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "condition",
+        "response"
+      ],
+      "properties": {
+        "condition": {
+          "type": "string"
+        },
+        "response": {
+          "type": "string"
+        },
+        "retry_allowed": {
+          "type": "boolean"
+        },
+        "escalate_to_human": {
+          "type": "boolean"
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "platform",
+        "status",
+        "notes"
+      ],
+      "properties": {
+        "platform": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "partial",
+            "unverified",
+            "unsupported"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "verified_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "source_uri": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
+}
