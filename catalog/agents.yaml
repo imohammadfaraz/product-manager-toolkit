@@ -1,2 +1,197 @@
-# Add agent records here when role, permissions, and orchestration contracts are defined.
-agents: []
+# Specialist agent discovery catalog
+# All entries are draft reference definitions, not executable runtime deployments.
+agents:
+  - id: product-discovery-agent
+    name: "Product Discovery Agent"
+    description: "Synthesizes customer evidence, research, Jobs to Be Done, and opportunity mapping into a traceable discovery brief."
+    path: agents/product-discovery-agent/AGENT.md
+    definition: agents/product-discovery-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - customer-evidence-synthesizer
+      - problem-definition-expert
+      - jtbd-interview-analyzer
+      - opportunity-solution-tree-builder
+      - research-insight-prioritizer
+  - id: product-strategy-agent
+    name: "Product Strategy Agent"
+    description: "Connects customer and market evidence, positioning, business model, strategic choices, trade-offs, and outcome measures."
+    path: agents/product-strategy-agent/AGENT.md
+    definition: agents/product-strategy-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - product-strategy-builder
+      - competitive-analysis-expert
+      - strategic-options-analyzer
+      - business-model-canvas-builder
+      - product-vision-builder
+  - id: product-execution-agent
+    name: "Product Execution Agent"
+    description: "Coordinates requirements, PRDs, stories, acceptance criteria, dependencies, and QA readiness into a delivery-ready specification."
+    path: agents/product-execution-agent/AGENT.md
+    definition: agents/product-execution-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - prd-intake
+      - prd-analyzer
+      - prd-generator
+      - user-story-generator
+      - acceptance-criteria-generator
+      - edge-case-generator
+      - traceability-matrix
+  - id: product-analytics-agent
+    name: "Product Analytics Agent"
+    description: "Diagnoses product metrics, funnels, cohorts, and experiments using supplied data and explicit measurement assumptions."
+    path: agents/product-analytics-agent/AGENT.md
+    definition: agents/product-analytics-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - metrics-analytics-designer
+      - funnel-diagnostic
+      - cohort-retention-analyzer
+      - activation-analysis
+      - ab-test-results-interpreter
+      - experiment-design-reviewer
+  - id: ai-product-manager-agent
+    name: "AI Product Manager Agent"
+    description: "Assesses AI opportunities, model and system feasibility, evaluations, safety risks, human oversight, latency, and operating costs."
+    path: agents/ai-product-manager-agent/AGENT.md
+    definition: agents/ai-product-manager-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - ai-opportunity-assessor
+      - ai-product-feasibility-reviewer
+      - llm-use-case-risk-assessor
+      - llm-evaluation-planner
+      - golden-dataset-builder
+      - responsible-ai-reviewer
+      - ai-human-handoff-designer
+      - ai-latency-cost-optimizer
+  - id: ai-product-builder-agent
+    name: "AI Product Builder Agent"
+    description: "Turns an approved specification into a bounded prototype plan, implementation tasks, tests, and an honest implementation review."
+    path: agents/ai-product-builder-agent/AGENT.md
+    definition: agents/ai-product-builder-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - idea-to-prototype-planner
+      - prototype-requirements-writer
+      - ai-app-builder-prompt-generator
+      - api-integration-planner
+      - database-schema-reviewer
+      - frontend-ux-code-reviewer
+      - backend-architecture-reviewer
+      - automated-test-planner
+      - security-and-privacy-reviewer
+  - id: growth-agent
+    name: "Growth Agent"
+    description: "Diagnoses activation, conversion, retention, referral, and monetization opportunities using funnel evidence and experiment discipline."
+    path: agents/growth-agent/AGENT.md
+    definition: agents/growth-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - activation-analysis
+      - funnel-diagnostic
+      - cohort-retention-analyzer
+      - churn-diagnostic
+      - monetization-strategist
+      - ab-testing-expert
+      - experiment-design-reviewer
+  - id: ux-review-agent
+    name: "UX Review Agent"
+    description: "Reviews product flows for usability, accessibility, onboarding clarity, interaction states, and avoidable user friction."
+    path: agents/ux-review-agent/AGENT.md
+    definition: agents/ux-review-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - ux-reviewer
+      - heuristic-ux-auditor
+      - accessibility-reviewer
+      - onboarding-flow-reviewer
+      - empty-error-loading-state-reviewer
+      - mobile-experience-reviewer
+      - product-copy-reviewer
+  - id: product-critic-red-team-agent
+    name: "Product Critic / Red Team Agent"
+    description: "Independently challenges assumptions, evidence, logic, risks, and recommendations without defending the author's preferred conclusion."
+    path: agents/product-critic-red-team-agent/AGENT.md
+    definition: agents/product-critic-red-team-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - risk-and-edge-case-analyzer
+      - strategy-assumption-reviewer
+      - roadmap-challenge-reviewer
+      - security-and-privacy-reviewer
+      - responsible-ai-reviewer
+      - coverage-gap-analyzer
+  - id: pm-chief-of-staff-agent
+    name: "PM Chief of Staff Agent"
+    description: "Synthesizes workstream updates, decisions, dependencies, risks, owners, and follow-ups into a traceable operating brief."
+    path: agents/pm-chief-of-staff-agent/AGENT.md
+    definition: agents/pm-chief-of-staff-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - stakeholder-update-writer
+      - decision-memo-writer
+      - meeting-decision-extractor
+      - dependency-mapper
+      - delivery-risk-analyzer
+      - retrospective-facilitator
+  - id: skill-builder-agent
+    name: "Skill Builder Agent"
+    description: "Drafts, audits, and improves repository Skills against canonical standards with explicit tests and traceability."
+    path: agents/skill-builder-agent/AGENT.md
+    definition: agents/skill-builder-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - prd-analyzer
+      - risk-and-edge-case-analyzer
+      - coverage-gap-analyzer
+      - gherkin-quality-reviewer
+  - id: workflow-orchestrator-agent
+    name: "Workflow Orchestrator Agent"
+    description: "Selects and sequences appropriate Skills and agents, preserves provenance across handoffs, and stops safely on blockers."
+    path: agents/workflow-orchestrator-agent/AGENT.md
+    definition: agents/workflow-orchestrator-agent/agent.json
+    version: "1.0.0"
+    status: draft
+    mode: recommend-and-draft-only
+    review_status: draft
+    skills:
+      - prd-intake
+      - clarification-builder
+      - coverage-gap-analyzer
+      - risk-and-edge-case-analyzer
