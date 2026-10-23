@@ -22,3 +22,5 @@ jobs:
         run: python scripts/validate_skills.py
       - name: Validate editorial evaluation fixtures
         run: python scripts/validate_skill_cases.py
+      - name: Validate lifecycle and AI Skill fixtures
+        run: python scripts/validate_lifecycle_skill_cases.py

@@ -8,11 +8,11 @@ Reusable Skills, specialist agents, workflows, prompts, templates, integrations,
 
 ## Browse Skills
 
-This repository currently contains **28 standalone Skills**, each in its own `SKILL.md` file.
+This repository currently contains **150 standalone Skills**, each in its own `SKILL.md` file.
 
 ### Existing Product Management Skills
 
-These 10 Skills were migrated from [Claude Skills for Product Manager](https://github.com/imohammadfaraz/claude-skills-for-product-manager). Their metadata and top-level operating structure are standardized, while the original detailed instructions remain preserved. Each is marked `migrated-source-preserved` and `standardized-wrapper-content-review-needed`; treat platform-specific wording as unverified until its content review is completed.
+Ten migrated Skills have now been editorially reviewed for portability, conflicting instructions, evidence handling, and scope boundaries. The remaining toolkit-authored Skills use the shared canonical structure; a `standardized` status indicates structural consistency, not a claim that every Skill has passed runtime evaluation.
 
 #### Analytics & Metrics
 
@@ -106,7 +106,7 @@ Workflow files are operating guides. They do not imply that Skills execute or ca
 | `commands/` and `prompts/` | Future invocation patterns and reusable prompts |
 | `templates/` | Future product artifact templates |
 | `integrations/` | Runtime- or vendor-specific adapters |
-| `evals/` and `examples/` | Future fixtures, evaluations, and sample outputs |
+| `evals/` and `examples/` | Evaluation fixtures and sample outputs |
 
 ## Foundation checks
 
@@ -141,3 +141,157 @@ Run `python scripts/validate_skills.py` before submitting changes. The GitHub Ac
 ## License
 
 A license has not yet been selected. Add a `LICENSE` file before granting explicit reuse or redistribution rights.
+
+
+## Product Lifecycle and AI-Native Skills
+
+The following 122 Skills expand coverage across discovery, strategy, execution, analytics, design quality, AI product management, prototyping, leadership, and PM career development. Core instructions are portable. Vendor-specific setup and changing tool capabilities belong in separate integration guides.
+
+### Product Discovery & Customer Research
+
+- [Customer Interview Planner](skills/discovery/customer-interview-planner/SKILL.md)
+- [Interview Question Builder](skills/discovery/interview-question-builder/SKILL.md)
+- [Interview Synthesis](skills/discovery/interview-synthesis/SKILL.md)
+- [Customer Feedback Analyzer](skills/discovery/customer-feedback-analyzer/SKILL.md)
+- [Jobs-to-be-Done Analyzer](skills/discovery/jobs-to-be-done-analyzer/SKILL.md)
+- [Persona Builder](skills/discovery/persona-builder/SKILL.md)
+- [Customer Journey Mapper](skills/discovery/customer-journey-mapper/SKILL.md)
+- [Opportunity Solution Tree Builder](skills/discovery/opportunity-solution-tree-builder/SKILL.md)
+- [Problem Validation Planner](skills/discovery/problem-validation-planner/SKILL.md)
+- [Assumption Mapper](skills/discovery/assumption-mapper/SKILL.md)
+- [Survey Designer](skills/discovery/survey-designer/SKILL.md)
+- [Research Insight Prioritizer](skills/discovery/research-insight-prioritizer/SKILL.md)
+
+### Product Strategy & Market Intelligence
+
+- [Market Research Planner](skills/strategy/market-research-planner/SKILL.md)
+- [TAM/SAM/SOM Estimator](skills/strategy/tam-sam-som-estimator/SKILL.md)
+- [Competitor Feature Matrix](skills/strategy/competitor-feature-matrix/SKILL.md)
+- [Competitive Positioning Analyzer](skills/strategy/competitive-positioning-analyzer/SKILL.md)
+- [ICP And Segmentation Builder](skills/strategy/icp-and-segmentation-builder/SKILL.md)
+- [Value Proposition Designer](skills/strategy/value-proposition-designer/SKILL.md)
+- [Business Model Canvas Builder](skills/strategy/business-model-canvas-builder/SKILL.md)
+- [Product Vision Builder](skills/strategy/product-vision-builder/SKILL.md)
+- [Strategic Options Analyzer](skills/strategy/strategic-options-analyzer/SKILL.md)
+- [Strategy Assumption Reviewer](skills/strategy/strategy-assumption-reviewer/SKILL.md)
+- [Product Portfolio Prioritizer](skills/strategy/product-portfolio-prioritizer/SKILL.md)
+- [Build Buy Partner Analyzer](skills/strategy/build-buy-partner-analyzer/SKILL.md)
+
+### Prioritization, Roadmaps & Execution
+
+- [Feature Prioritizer](skills/execution/feature-prioritizer/SKILL.md)
+- [RICE Prioritization](skills/execution/rice-prioritization/SKILL.md)
+- [Roadmap Builder](skills/execution/roadmap-builder/SKILL.md)
+- [Roadmap Challenge Reviewer](skills/execution/roadmap-challenge-reviewer/SKILL.md)
+- [OKRs and KRs Builder](skills/execution/okrs-and-krs-builder/SKILL.md)
+- [Dependency Mapper](skills/execution/dependency-mapper/SKILL.md)
+- [Delivery Risk Analyzer](skills/execution/delivery-risk-analyzer/SKILL.md)
+- [Sprint Planning Assistant](skills/execution/sprint-planning-assistant/SKILL.md)
+- [Backlog Health Reviewer](skills/execution/backlog-health-reviewer/SKILL.md)
+- [Stakeholder Update Writer](skills/execution/stakeholder-update-writer/SKILL.md)
+- [Decision Memo Writer](skills/execution/decision-memo-writer/SKILL.md)
+- [Meeting Decision Extractor](skills/execution/meeting-decision-extractor/SKILL.md)
+- [Release Notes Writer](skills/execution/release-notes-writer/SKILL.md)
+- [Post Launch Reviewer](skills/execution/post-launch-reviewer/SKILL.md)
+
+### Product Analytics, Experimentation & Growth
+
+- [North Star Metric Builder](skills/analytics/north-star-metric-builder/SKILL.md)
+- [Metric Tree Builder](skills/analytics/metric-tree-builder/SKILL.md)
+- [Event Taxonomy Designer](skills/analytics/event-taxonomy-designer/SKILL.md)
+- [Analytics Instrumentation Planner](skills/analytics/analytics-instrumentation-planner/SKILL.md)
+- [Funnel Diagnostic](skills/analytics/funnel-diagnostic/SKILL.md)
+- [Cohort Retention Analyzer](skills/analytics/cohort-retention-analyzer/SKILL.md)
+- [Churn Diagnostic](skills/analytics/churn-diagnostic/SKILL.md)
+- [Activation Analysis](skills/analytics/activation-analysis/SKILL.md)
+- [SQL For Product Analytics](skills/analytics/sql-for-product-analytics/SKILL.md)
+- [Dashboard Requirements Writer](skills/analytics/dashboard-requirements-writer/SKILL.md)
+- [Experiment Design Reviewer](skills/analytics/experiment-design-reviewer/SKILL.md)
+- [A/B Test Results Interpreter](skills/analytics/ab-test-results-interpreter/SKILL.md)
+- [Growth Opportunity Diagnostic](skills/analytics/growth-opportunity-diagnostic/SKILL.md)
+- [Product Metric Anomaly Investigator](skills/analytics/product-metric-anomaly-investigator/SKILL.md)
+
+### UX, Design & Product Quality
+
+- [Usability Test Planner](skills/design/usability-test-planner/SKILL.md)
+- [Usability Findings Synthesizer](skills/design/usability-findings-synthesizer/SKILL.md)
+- [Heuristic UX Auditor](skills/design/heuristic-ux-auditor/SKILL.md)
+- [Accessibility Reviewer](skills/design/accessibility-reviewer/SKILL.md)
+- [Onboarding Flow Reviewer](skills/design/onboarding-flow-reviewer/SKILL.md)
+- [Information Architecture Reviewer](skills/design/information-architecture-reviewer/SKILL.md)
+- [Empty Error Loading State Reviewer](skills/design/empty-error-loading-state-reviewer/SKILL.md)
+- [Mobile Experience Reviewer](skills/design/mobile-experience-reviewer/SKILL.md)
+- [Design System Consistency Reviewer](skills/design/design-system-consistency-reviewer/SKILL.md)
+- [Product Copy Reviewer](skills/design/product-copy-reviewer/SKILL.md)
+- [Feature Acceptance Reviewer](skills/design/feature-acceptance-reviewer/SKILL.md)
+- [Pre Release Product Auditor](skills/design/pre-release-product-auditor/SKILL.md)
+
+### AI Product Management
+
+- [AI Opportunity Assessor](skills/ai-product/ai-opportunity-assessor/SKILL.md)
+- [AI Vs Rules Vs Human Decision Maker](skills/ai-product/ai-vs-rules-vs-human-decision-maker/SKILL.md)
+- [AI Product Requirements Writer](skills/ai-product/ai-product-requirements-writer/SKILL.md)
+- [LLM Use Case Risk Assessor](skills/ai-product/llm-use-case-risk-assessor/SKILL.md)
+- [AI Product Feasibility Reviewer](skills/ai-product/ai-product-feasibility-reviewer/SKILL.md)
+- [LLM Evaluation Planner](skills/ai-product/llm-evaluation-planner/SKILL.md)
+- [Golden Dataset Builder](skills/ai-product/golden-dataset-builder/SKILL.md)
+- [LLM Evaluation Rubric Builder](skills/ai-product/llm-evaluation-rubric-builder/SKILL.md)
+- [Prompt Regression Test Planner](skills/ai-product/prompt-regression-test-planner/SKILL.md)
+- [Hallucination Risk Reviewer](skills/ai-product/hallucination-risk-reviewer/SKILL.md)
+- [RAG Retrieval Quality Reviewer](skills/ai-product/rag-retrieval-quality-reviewer/SKILL.md)
+- [AI Quality Error Taxonomy Builder](skills/ai-product/ai-quality-error-taxonomy-builder/SKILL.md)
+- [Model Selection Tradeoff Analyzer](skills/ai-product/model-selection-tradeoff-analyzer/SKILL.md)
+- [RAG Product Spec Builder](skills/ai-product/rag-product-spec-builder/SKILL.md)
+- [Agent Workflow Designer](skills/ai-product/agent-workflow-designer/SKILL.md)
+- [Tool Calling Requirements Designer](skills/ai-product/tool-calling-requirements-designer/SKILL.md)
+- [AI Human Handoff Designer](skills/ai-product/ai-human-handoff-designer/SKILL.md)
+- [AI Latency Cost Optimizer](skills/ai-product/ai-latency-cost-optimizer/SKILL.md)
+- [AI Observability Planner](skills/ai-product/ai-observability-planner/SKILL.md)
+- [AI Incident Reviewer](skills/ai-product/ai-incident-reviewer/SKILL.md)
+- [Responsible AI Reviewer](skills/ai-product/responsible-ai-reviewer/SKILL.md)
+- [AI Feature Launch Reviewer](skills/ai-product/ai-feature-launch-reviewer/SKILL.md)
+
+### AI Product Builder & Technical PM
+
+- [Idea To Prototype Planner](skills/product-builder/idea-to-prototype-planner/SKILL.md)
+- [Prototype Requirements Writer](skills/product-builder/prototype-requirements-writer/SKILL.md)
+- [AI App Builder Prompt Generator](skills/product-builder/ai-app-builder-prompt-generator/SKILL.md)
+- [Technical Feasibility Reviewer](skills/product-builder/technical-feasibility-reviewer/SKILL.md)
+- [API Integration Planner](skills/product-builder/api-integration-planner/SKILL.md)
+- [Database Schema Reviewer](skills/product-builder/database-schema-reviewer/SKILL.md)
+- [Frontend UX Code Reviewer](skills/product-builder/frontend-ux-code-reviewer/SKILL.md)
+- [Backend Architecture Reviewer](skills/product-builder/backend-architecture-reviewer/SKILL.md)
+- [Security And Privacy Reviewer](skills/product-builder/security-and-privacy-reviewer/SKILL.md)
+- [Code Change Impact Analyzer](skills/product-builder/code-change-impact-analyzer/SKILL.md)
+- [Automated Test Planner](skills/product-builder/automated-test-planner/SKILL.md)
+- [Deployment Readiness Reviewer](skills/product-builder/deployment-readiness-reviewer/SKILL.md)
+- [Prototype Usability Test Planner](skills/product-builder/prototype-usability-test-planner/SKILL.md)
+- [Prototype To Production Gap Analyzer](skills/product-builder/prototype-to-production-gap-analyzer/SKILL.md)
+
+### Product Leadership & Communication
+
+- [Executive Product Brief Writer](skills/leadership/executive-product-brief-writer/SKILL.md)
+- [Stakeholder Alignment Planner](skills/leadership/stakeholder-alignment-planner/SKILL.md)
+- [Product Decision Challenger](skills/leadership/product-decision-challenger/SKILL.md)
+- [Tradeoff Analysis Builder](skills/leadership/tradeoff-analysis-builder/SKILL.md)
+- [Conflict Resolution Preparation](skills/leadership/conflict-resolution-preparation/SKILL.md)
+- [Cross Functional Dependency Reviewer](skills/leadership/cross-functional-dependency-reviewer/SKILL.md)
+- [Product Team Retrospective](skills/leadership/product-team-retrospective/SKILL.md)
+- [Product Review Facilitator](skills/leadership/product-review-facilitator/SKILL.md)
+- [Product Org Maturity Assessor](skills/leadership/product-org-maturity-assessor/SKILL.md)
+- [Product Leadership Coaching Guide](skills/leadership/product-leadership-coaching-guide/SKILL.md)
+
+### PM Career & Learning
+
+- [PM Skill Gap Assessor](skills/career/pm-skill-gap-assessor/SKILL.md)
+- [PM Learning Roadmap Builder](skills/career/pm-learning-roadmap-builder/SKILL.md)
+- [Product Case Interview Coach](skills/career/product-case-interview-coach/SKILL.md)
+- [Product Sense Interview Practice](skills/career/product-sense-interview-practice/SKILL.md)
+- [Metrics Interview Coach](skills/career/metrics-interview-coach/SKILL.md)
+- [Product Strategy Interview Coach](skills/career/product-strategy-interview-coach/SKILL.md)
+- [Resume Impact Bullet Reviewer](skills/career/resume-impact-bullet-reviewer/SKILL.md)
+- [PM Portfolio Project Planner](skills/career/pm-portfolio-project-planner/SKILL.md)
+- [Portfolio Case Study Reviewer](skills/career/portfolio-case-study-reviewer/SKILL.md)
+- [PM Achievement Quantifier](skills/career/pm-achievement-quantifier/SKILL.md)
+- [Mock Interview Evaluator](skills/career/mock-interview-evaluator/SKILL.md)
+- [PM Career Transition Planner](skills/career/pm-career-transition-planner/SKILL.md)
