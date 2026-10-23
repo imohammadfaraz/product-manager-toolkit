@@ -1,0 +1,92 @@
+{
+  "id": "example-agent-runtime",
+  "name": "Example Agent Runtime",
+  "description": "Illustrative contract for documenting a runtime integration without claiming that any platform capability has been verified.",
+  "version": "1.0.0",
+  "status": "draft",
+  "platform": "Example platform",
+  "integration_type": "agent-runtime",
+  "purpose": "Document setup, capability boundaries, permissions, data handling, and verification evidence for a target agent runtime.",
+  "capabilities": [
+    {
+      "id": "load-instructions",
+      "description": "Load reusable instruction files when supported by the target runtime.",
+      "availability": "unverified"
+    }
+  ],
+  "setup": [
+    {
+      "step": 1,
+      "instruction": "Consult the target platform's official setup documentation and configure a test workspace.",
+      "verification": "Confirm that the runtime loads the expected instruction file in a non-production test.",
+      "optional": false
+    }
+  ],
+  "authentication": {
+    "method": "Use the platform's supported authentication method after checking official documentation.",
+    "secret_handling": "Never commit secrets or paste credentials into repository examples. Use the platform's approved secret store.",
+    "scopes": [
+      "Minimum required scope"
+    ],
+    "rotation_guidance": "Follow the organization's credential rotation policy."
+  },
+  "permissions": {
+    "required_scopes": [
+      "Read only the test workspace"
+    ],
+    "least_privilege": true,
+    "approval_gates": [
+      "Require approval before external writes or production actions"
+    ],
+    "write_actions": [],
+    "admin_actions": []
+  },
+  "data_handling": {
+    "data_sent": "Only synthetic test prompts and approved test files.",
+    "data_stored": "Storage behavior must be verified in the platform's official documentation and settings.",
+    "retention": "Unverified until checked for the target account and configuration.",
+    "sensitive_data_controls": "Do not use customer personal data or secrets in the initial integration test.",
+    "training_use": "Unverified; do not assume that submitted data is excluded from training."
+  },
+  "compatibility": [
+    {
+      "platform": "Example platform",
+      "status": "unverified",
+      "notes": "Placeholder example; no compatibility claim is made."
+    }
+  ],
+  "verification": {
+    "status": "unverified",
+    "method": "Not yet tested. Verify setup, permissions, data handling, failure modes, and supported capabilities before marking verified.",
+    "verified_on": null,
+    "evidence": [],
+    "next_review_due": null,
+    "tested_version": "Not tested"
+  },
+  "failure_handling": [
+    {
+      "condition": "Runtime cannot load the instruction file",
+      "response": "Stop and document the limitation; use a supported manual method only if safe.",
+      "retry_allowed": true,
+      "escalate_to_human": false
+    }
+  ],
+  "security": {
+    "threats": [
+      "Prompt injection in untrusted source content",
+      "Excessive permissions",
+      "Sensitive data exposure"
+    ],
+    "controls": [
+      "Use synthetic test data",
+      "Apply least privilege",
+      "Require approval for consequential actions"
+    ],
+    "incident_response": "Disable the integration, preserve non-sensitive diagnostic evidence, and follow the organization's incident process.",
+    "audit_logging": "Record configuration and test outcomes without recording secrets."
+  },
+  "limitations": [
+    "This is a schema example, not a real integration guide.",
+    "No platform capability or security posture has been verified."
+  ]
+}

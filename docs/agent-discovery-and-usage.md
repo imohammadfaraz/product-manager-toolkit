@@ -451,6 +451,7 @@ For day-to-day use, follow this sequence:
 - [Skill coverage and duplication audit](skill-audit.md)
 - [Skill track map and overlap boundaries](skill-track-map.md)
 - [Asset type definitions](asset-types.md)
+- [Asset definition schemas and validation](../schemas/README.md)
 - [Contribution guide](../CONTRIBUTING.md)
 - [Evaluation fixtures and instructions](../evals/README.md)
 - [Workflow guides](../workflows/)

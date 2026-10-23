@@ -1,0 +1,343 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/imohammadfaraz/product-manager-toolkit/blob/main/schemas/workflow.schema.json",
+  "title": "Product Manager Toolkit Workflow definition",
+  "description": "Portable workflow contract. A workflow file documents sequence and handoffs; it does not by itself imply automatic execution.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "description",
+    "version",
+    "status",
+    "purpose",
+    "trigger",
+    "inputs",
+    "outputs",
+    "steps",
+    "failure_handling",
+    "approval_gates",
+    "observability",
+    "definition_of_done",
+    "compatibility"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "deprecated"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 20
+    },
+    "trigger": {
+      "type": "string",
+      "minLength": 5
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/io"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/io"
+      }
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/step"
+      }
+    },
+    "failure_handling": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/failure"
+      }
+    },
+    "approval_gates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/approval"
+      }
+    },
+    "observability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status_tracking",
+        "evidence_and_logs",
+        "completion_reporting"
+      ],
+      "properties": {
+        "status_tracking": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "not-started",
+              "in-progress",
+              "completed",
+              "blocked",
+              "skipped",
+              "failed"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "evidence_and_logs": {
+          "type": "string",
+          "minLength": 5
+        },
+        "completion_reporting": {
+          "type": "string",
+          "minLength": 5
+        },
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "definition_of_done": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "compatibility": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/compatibility"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "io": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "description",
+        "required"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "format": {
+          "type": "string"
+        },
+        "source_of_truth": {
+          "type": "string"
+        }
+      }
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "purpose",
+        "inputs",
+        "outputs",
+        "acceptance_criteria",
+        "on_failure"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 5
+        },
+        "skill_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "agent_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "acceptance_criteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "branch_condition": {
+          "type": "string"
+        },
+        "human_review": {
+          "type": "boolean"
+        },
+        "on_failure": {
+          "type": "string",
+          "minLength": 5
+        }
+      }
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "condition",
+        "response"
+      ],
+      "properties": {
+        "condition": {
+          "type": "string"
+        },
+        "response": {
+          "type": "string"
+        },
+        "retry_allowed": {
+          "type": "boolean"
+        },
+        "escalate_to_human": {
+          "type": "boolean"
+        }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stage",
+        "reason",
+        "approver"
+      ],
+      "properties": {
+        "stage": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 5
+        },
+        "approver": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "platform",
+        "status",
+        "notes"
+      ],
+      "properties": {
+        "platform": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "partial",
+            "unverified",
+            "unsupported"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "verified_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "source_uri": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
+}

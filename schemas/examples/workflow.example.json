@@ -1,0 +1,108 @@
+{
+  "id": "customer-evidence-to-roadmap",
+  "name": "Customer Evidence to Roadmap",
+  "description": "Moves from customer research evidence to a reviewed roadmap recommendation with traceable assumptions and explicit decision ownership.",
+  "version": "1.0.0",
+  "status": "draft",
+  "purpose": "Create a roadmap recommendation grounded in customer evidence and make uncertainty and trade-offs explicit.",
+  "trigger": "A product team has customer research and needs to evaluate roadmap options.",
+  "inputs": [
+    {
+      "name": "interview-notes",
+      "description": "Approved customer interview notes and references",
+      "required": true,
+      "source_of_truth": "Research repository"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "roadmap-recommendation",
+      "description": "Sequenced options, rationale, dependencies, risks, and open decisions",
+      "required": true
+    }
+  ],
+  "steps": [
+    {
+      "id": "synthesize-evidence",
+      "name": "Synthesize evidence",
+      "purpose": "Identify themes, contradictions, and confidence levels in research.",
+      "skill_ids": [
+        "interview-synthesis"
+      ],
+      "inputs": [
+        "interview-notes"
+      ],
+      "outputs": [
+        "evidence-summary"
+      ],
+      "acceptance_criteria": [
+        "Material themes link to source evidence",
+        "Unknowns and contradictions are visible"
+      ],
+      "on_failure": "Block downstream prioritization if core evidence is missing."
+    },
+    {
+      "id": "prioritize-opportunities",
+      "name": "Prioritize opportunities",
+      "purpose": "Compare opportunities using explicit criteria and evidence strength.",
+      "skill_ids": [
+        "research-insight-prioritizer",
+        "feature-prioritizer"
+      ],
+      "inputs": [
+        "evidence-summary"
+      ],
+      "outputs": [
+        "prioritized-opportunities"
+      ],
+      "depends_on": [
+        "synthesize-evidence"
+      ],
+      "acceptance_criteria": [
+        "Criteria and assumptions are stated",
+        "Scores are not presented as objective truth"
+      ],
+      "human_review": true,
+      "on_failure": "Return for clarification when evidence is insufficient."
+    }
+  ],
+  "failure_handling": [
+    {
+      "condition": "Research evidence is contradictory",
+      "response": "Preserve the conflict and request a decision on the source of truth.",
+      "retry_allowed": false,
+      "escalate_to_human": true
+    }
+  ],
+  "approval_gates": [
+    {
+      "stage": "roadmap-approval",
+      "reason": "Roadmap sequencing creates cross-team commitments.",
+      "approver": "Accountable product leader",
+      "required": true
+    }
+  ],
+  "observability": {
+    "status_tracking": [
+      "not-started",
+      "in-progress",
+      "completed",
+      "blocked",
+      "failed"
+    ],
+    "evidence_and_logs": "Retain source references, assumptions, and output versions at each handoff.",
+    "completion_reporting": "Report completed and blocked steps, unresolved decisions, and approver."
+  },
+  "definition_of_done": [
+    "Recommendation links material claims to evidence",
+    "Dependencies and uncertainty are visible",
+    "Accountable decision owner approves or records a rejection"
+  ],
+  "compatibility": [
+    {
+      "platform": "Manual workflow",
+      "status": "unverified",
+      "notes": "This example is a playbook contract, not an automated runtime configuration."
+    }
+  ]
+}

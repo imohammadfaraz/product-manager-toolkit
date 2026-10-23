@@ -1,0 +1,17 @@
+{
+  "name": "customer-interview-synthesis",
+  "display_name": "Customer Interview Synthesis",
+  "description": "Synthesize interview notes into evidence-backed themes, contradictions, and follow-up questions.",
+  "category": "discovery",
+  "asset_type": "skill",
+  "version": "1.0.0",
+  "status": "active",
+  "portability": "portable",
+  "review_status": "standardized",
+  "tags": [
+    "research",
+    "interviews",
+    "synthesis"
+  ],
+  "source": "https://github.com/imohammadfaraz/product-manager-toolkit"
+}
