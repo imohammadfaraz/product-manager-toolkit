@@ -12,7 +12,7 @@ This repository currently contains **28 standalone Skills**, each in its own `SK
 
 ### Existing Product Management Skills
 
-These were migrated from [Claude Skills for Product Manager](https://github.com/imohammadfaraz/claude-skills-for-product-manager). Source instructions are preserved, including platform-specific phrasing where present. Review the portability note in each file before using it with a different agent runtime.
+These 10 Skills were migrated from [Claude Skills for Product Manager](https://github.com/imohammadfaraz/claude-skills-for-product-manager). Their metadata and top-level operating structure are standardized, while the original detailed instructions remain preserved. Each is marked `migrated-source-preserved` and `standardized-wrapper-content-review-needed`; treat platform-specific wording as unverified until its content review is completed.
 
 #### Analytics & Metrics
 
@@ -108,6 +108,15 @@ Workflow files are operating guides. They do not imply that Skills execute or ca
 | `integrations/` | Runtime- or vendor-specific adapters |
 | `evals/` and `examples/` | Future fixtures, evaluations, and sample outputs |
 
+## Foundation checks
+
+- [Skill authoring standard](docs/skill-standard.md)
+- [Current duplication and coverage audit](docs/skill-audit.md)
+- [Skill metadata schema](schemas/skill.schema.json)
+- [Validation script](scripts/validate_skills.py)
+
+Run `python scripts/validate_skills.py` before submitting changes. The GitHub Actions workflow runs the same checks on pushes and pull requests.
+
 ## Adding a Skill
 
 1. Create a unique kebab-case folder under the appropriate category.
@@ -122,6 +131,8 @@ Workflow files are operating guides. They do not imply that Skills execute or ca
 - [Roadmap](ROADMAP.md)
 - [Changelog](CHANGELOG.md)
 - [Asset Types](docs/asset-types.md)
+- [Skill Standard](docs/skill-standard.md)
+- [Skill Audit](docs/skill-audit.md)
 - [Requirements & Acceptance Criteria Toolkit](toolkits/acceptance-criteria/TOOLKIT.md)
 - [PRD to Acceptance Criteria Workflow](workflows/prd-to-acceptance-criteria/WORKFLOW.md)
 - [Requirements Change Review Workflow](workflows/requirements-change-review/WORKFLOW.md)
