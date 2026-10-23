@@ -51,12 +51,28 @@ def main() -> int:
                 ERRORS.append(f"{fixture_path.relative_to(ROOT)}:{location}: {issue.message}")
             if not issues:
                 print(f"PASS {fixture_path.relative_to(ROOT)} against {schema_name}")
+    # Validate every published specialist-agent definition, not only the canonical fixture.
+    agent_schema = load_json(SCHEMA_DIR / "agent.schema.json")
+    agents_dir = ROOT / "agents"
+    agent_files = sorted(agents_dir.glob("*/agent.json")) if agents_dir.exists() else []
+    if agent_schema is not None:
+        agent_validator = Draft202012Validator(agent_schema, format_checker=FormatChecker())
+        for agent_path in agent_files:
+            instance = load_json(agent_path)
+            if instance is None:
+                continue
+            issues = sorted(agent_validator.iter_errors(instance), key=lambda error: list(map(str, error.absolute_path)))
+            for issue in issues:
+                location = ".".join(str(part) for part in issue.absolute_path) or "$"
+                ERRORS.append(f"{agent_path.relative_to(ROOT)}:{location}: {issue.message}")
+            if not issues:
+                print(f"PASS {agent_path.relative_to(ROOT)} against agent.schema.json")
     if ERRORS:
         print("\nAsset schema validation failed:")
         for error in ERRORS:
             print(f"- {error}")
         return 1
-    print(f"Validated {len(FIXTURES)} schemas and {sum(map(len, FIXTURES.values()))} example fixtures.")
+    print(f"Validated {len(FIXTURES)} schemas, {sum(map(len, FIXTURES.values()))} example fixtures, and {len(agent_files)} agent definitions.")
     print("Structural validation is not runtime compatibility or security certification.")
     return 0
 
