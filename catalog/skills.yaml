@@ -184,10 +184,10 @@ skills:
     path: skills/requirements/prd-generator/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
     portability: portable
-    review_status: standardized
+    review_status: content-reviewed
   - id: prd-intake
     title: "PRD Intake & Normalizer"
     category: requirements
