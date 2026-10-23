@@ -15,7 +15,7 @@ Use this guide when you need to answer any of these questions:
 - When do I need a specialist agent, a critic, a workflow guide, or a human decision?
 - How do I check quality, handle failures, and keep assets current?
 
-The repository currently publishes portable Skills and several documented workflows. Agent definitions and runtime-specific integration guides may be added later. This guide describes how to use existing assets and how to handle future assets without assuming that they already exist.
+The repository publishes portable Skills, documented workflows, and twelve draft specialist-agent contracts. These are reference definitions, not deployed runtimes; tools are not configured and behavioral security has not been certified.
 
 ## 2. Understand the asset types
 
@@ -64,7 +64,7 @@ Clarify the output you need, the source material available, the audience, and th
 4. **Check the overlap map** in [docs/skill-track-map.md](skill-track-map.md) when two Skills look similar.
 5. **Check workflow guides** in [workflows/](../workflows/) when the task spans multiple deliverables.
 6. **Check toolkits** in [toolkits/](../toolkits/) for curated sequences.
-7. **Check the agent catalog** at [catalog/agents.yaml](../catalog/agents.yaml) if you are looking for an agent. An empty catalog means no agent record is currently published. Do not invent an agent configuration just because an agent would be useful.
+7. **Check the agent catalog** at [catalog/agents.yaml](../catalog/agents.yaml) if you are looking for an agent. Read the full operating guide and machine-readable contract. Draft definitions do not imply runtime deployment or configured tools.
 8. **Check integrations** in [integrations/](../integrations/) only when platform-specific instructions actually exist. Verify current tool support in the target product before relying on it.
 
 For local repository search, common options include searching file names or text in your editor, using GitHub's repository search, or running commands such as:
@@ -472,3 +472,10 @@ A discovery and usage process is complete only when:
 - Follow-up fixes, evaluation results, or content gaps are recorded when needed.
 
 **Completion does not mean that every task is fully automated.** It means the user can discover the right asset, understand how to apply it in the actual environment, evaluate the result, and see the boundaries of what has and has not been done.
+
+
+## Specialist agents and security boundary
+
+The [agent catalog](../catalog/agents.yaml) lists twelve draft specialist-agent definitions. Each has a machine-readable contract and operating guide under [agents/](../agents/). See the [agent overview](../agents/README.md) for the roster and shared guardrails.
+
+All definitions default to read-only, session-only, no configured tools, and recommend-and-draft-only behavior. Never infer that an agent can execute a Skill or action because it references that Skill. Before runtime deployment, verify allowlisted tools, permission scopes, secrets handling, logging, data retention, and approval enforcement. Run normal, missing-evidence, conflicting-evidence, boundary, and prompt-injection evaluations. Schema validation is not a security certification.
