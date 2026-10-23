@@ -1,7 +1,7 @@
 ---
 name: model-selection-tradeoff-analyzer
 display_name: "Model Selection Tradeoff Analyzer"
-description: "analyze model selection tradeoff and turn the result into a decision-ready a structured analysis with evidence, alternatives, implications, and next steps"
+description: "Helps PMs analyze model selection tradeoff with evidence-aware recommendations and actionable outputs."
 category: ai-product
 asset_type: skill
 version: "1.0.0"
@@ -13,7 +13,7 @@ tags: ["product-management", "ai-product", "model-selection"]
 # Model Selection Tradeoff Analyzer
 
 ## Purpose
-This Skill helps product teams analyze model selection tradeoff and turn the result into a decision-ready a structured analysis with evidence, alternatives, implications, and next steps.
+This Skill helps product teams analyze model selection tradeoff, producing a structured analysis with evidence, alternatives, implications, and next steps grounded in supplied evidence and explicit assumptions.
 
 ## When to use
 Use when a product team needs to analyze model selection tradeoff and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.

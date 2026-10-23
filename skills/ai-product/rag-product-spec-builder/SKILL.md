@@ -1,7 +1,7 @@
 ---
 name: rag-product-spec-builder
 display_name: "RAG Product Spec Builder"
-description: "create a structured artifact for rag product spec and turn the result into a decision-ready a usable artifact with explicit structure, rationale, and open questions"
+description: "Helps PMs build RAG product spec with evidence-aware recommendations and actionable outputs."
 category: ai-product
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "ai-product", "rag-product"]
 # RAG Product Spec Builder
 
 ## Purpose
-This Skill helps product teams create a structured artifact for rag product spec and turn the result into a decision-ready a usable artifact with explicit structure, rationale, and open questions.
+This Skill helps product teams build RAG product spec, producing a usable artifact with explicit structure, rationale, and open questions grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to create a structured artifact for rag product spec and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to build RAG product spec and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - AI use case, target users, expected task, source data, model/runtime constraints, quality needs, volume, latency and cost limits, and risk context.

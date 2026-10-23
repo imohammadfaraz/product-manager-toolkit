@@ -1,7 +1,7 @@
 ---
 name: ai-vs-rules-vs-human-decision-maker
 display_name: "AI Vs Rules Vs Human Decision Maker"
-description: "choose between ai vs rules vs human decision maker and turn the result into a decision-ready a decision framework comparing rules, human judgment, and model-based approaches"
+description: "Helps PMs compare AI, rules, and human judgment for AI vs. rules vs. human decision-making with evidence-aware recommendations and actionable outputs."
 category: ai-product
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "ai-product", "ai-vs"]
 # AI Vs Rules Vs Human Decision Maker
 
 ## Purpose
-This Skill helps product teams choose between ai vs rules vs human decision maker and turn the result into a decision-ready a decision framework comparing rules, human judgment, and model-based approaches.
+This Skill helps product teams compare AI, rules, and human judgment for AI vs. rules vs. human decision-making, producing an implementation approach grounded in trade-offs, risks, and validation needs grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to choose between ai vs rules vs human decision maker and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to compare AI, rules, and human judgment for AI vs. rules vs. human decision-making and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - AI use case, target users, expected task, source data, model/runtime constraints, quality needs, volume, latency and cost limits, and risk context.

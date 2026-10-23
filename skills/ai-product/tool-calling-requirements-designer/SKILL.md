@@ -1,7 +1,7 @@
 ---
 name: tool-calling-requirements-designer
 display_name: "Tool Calling Requirements Designer"
-description: "design a practical approach for tool calling requirements and turn the result into a decision-ready a design brief with user needs, states, constraints, and trade-offs"
+description: "Helps PMs design tool calling requirements with evidence-aware recommendations and actionable outputs."
 category: ai-product
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "ai-product", "tool-calling"]
 # Tool Calling Requirements Designer
 
 ## Purpose
-This Skill helps product teams design a practical approach for tool calling requirements and turn the result into a decision-ready a design brief with user needs, states, constraints, and trade-offs.
+This Skill helps product teams design tool calling requirements, producing a design brief with user needs, states, constraints, and trade-offs grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to design a practical approach for tool calling requirements and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to design tool calling requirements and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - AI use case, target users, expected task, source data, model/runtime constraints, quality needs, volume, latency and cost limits, and risk context.

@@ -1,7 +1,7 @@
 ---
 name: hallucination-risk-reviewer
 display_name: "Hallucination Risk Reviewer"
-description: "evaluate the quality and completeness of hallucination risk and turn the result into a decision-ready a prioritized review with evidence, severity, recommendations, and unresolved risks"
+description: "Helps PMs review hallucination risk with evidence-aware recommendations and actionable outputs."
 category: ai-product
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "ai-product", "hallucination-risk"]
 # Hallucination Risk Reviewer
 
 ## Purpose
-This Skill helps product teams evaluate the quality and completeness of hallucination risk and turn the result into a decision-ready a prioritized review with evidence, severity, recommendations, and unresolved risks.
+This Skill helps product teams review hallucination risk, producing a prioritized review with evidence, severity, recommendations, and unresolved risks grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to evaluate the quality and completeness of hallucination risk and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to review hallucination risk and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - AI use case, target users, expected task, source data, model/runtime constraints, quality needs, volume, latency and cost limits, and risk context.
