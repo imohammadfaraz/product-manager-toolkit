@@ -15,7 +15,7 @@ This directory contains JSON Schema Draft 2020-12 contracts for the toolkit's po
 
 A **definition** is the full contract used to describe and operate an asset. A **catalog record** is a smaller discovery entry that points to an asset. They serve different purposes and must not be treated as interchangeable. Catalogs under **catalog/** remain the discovery index; these schemas validate full definition objects or Skill metadata fixtures.
 
-The existing workflow catalog records currently describe workflow guides with status **guide**. They are catalog entries, not full workflow definition objects. Likewise, the agent catalog is currently empty. A schema does not mean an asset or integration has been implemented.
+The existing workflow catalog records currently describe workflow guides with status **guide**. They are catalog entries, not full workflow definition objects. The agent catalog contains draft reference definitions. The integration registry contains documented-only, unverified patterns, not live connectors. A schema does not mean an asset or integration has been implemented.
 
 ## Required quality expectations
 
@@ -45,3 +45,8 @@ python scripts/validate_lifecycle_skill_cases.py
 The schema validator checks that each schema is valid Draft 2020-12 JSON Schema and that each canonical example satisfies its schema, including declared formats. It does not run an agent, execute a workflow, test a vendor integration, or certify security.
 
 When changing a schema, update its example fixture, run the validator, and document breaking changes. Prefer backward-compatible optional fields when possible. If a required field or enum changes, assess all existing definitions and adapters before merging.
+
+
+## Integration definitions
+
+Every `integrations/**/integration.json` is checked against `integration.schema.json` by `scripts/validate_asset_schemas.py`. The check is structural. Integration status must remain unverified until a named owner records an actual test, runtime/version, scope, date, and evidence. Do not mark a provider executable until a maintained adapter is implemented and its security and failure modes are tested.
