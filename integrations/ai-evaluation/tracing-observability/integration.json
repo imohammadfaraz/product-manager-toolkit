@@ -1,0 +1,142 @@
+{
+  "id": "tracing-observability",
+  "name": "LLM Tracing and Observability",
+  "description": "Trace AI request paths, latency, token use, failures and evaluation context.",
+  "version": "1.0.0",
+  "status": "draft",
+  "owner": "Product Manager Toolkit maintainers",
+  "tags": [
+    "ai-evaluation",
+    "tracing-observability",
+    "product-management"
+  ],
+  "platform": "LLM Tracing and Observability",
+  "integration_type": "observability",
+  "purpose": "Trace AI request paths, latency, token use, failures and evaluation context.",
+  "capabilities": [
+    {
+      "id": "primary-use-case",
+      "description": "Traces, spans, token counts, errors and configured payload fields",
+      "availability": "unverified",
+      "required_permissions": [
+        "Read-only access to explicitly authorized resources"
+      ]
+    }
+  ],
+  "setup": [
+    {
+      "step": 1,
+      "instruction": "Confirm organization approval, use case, resource scope and data classification.",
+      "verification": "Named owner and approved scope are documented."
+    },
+    {
+      "step": 2,
+      "instruction": "Configure the provider adapter using a least-privilege identity and secret manager.",
+      "verification": "Authentication succeeds with a restricted test identity."
+    },
+    {
+      "step": 3,
+      "instruction": "Run a read-only smoke test with synthetic or sanitized data and record evidence.",
+      "verification": "Access boundaries, output, logs and failure handling are reviewed."
+    }
+  ],
+  "authentication": {
+    "method": "Project API key or collector credential",
+    "secret_handling": "Store credentials only in an approved secret manager. Never commit, prompt-inject or log tokens. Redact secrets and rotate/revoke after exposure.",
+    "scopes": [
+      "Minimum read-only scopes; exact provider scopes unverified"
+    ],
+    "rotation_guidance": "Follow current provider rotation and revocation guidance.",
+    "supports_sso": false
+  },
+  "permissions": {
+    "required_scopes": [
+      "Read-only; verify exact resource scopes for deployment"
+    ],
+    "least_privilege": true,
+    "approval_gates": [
+      "Human approval before external writes, bulk export, deployment, deletion or production change",
+      "Security/privacy approval for sensitive data"
+    ],
+    "write_actions": [],
+    "admin_actions": []
+  },
+  "data_handling": {
+    "data_sent": "Minimum task-relevant query and authorized input only.",
+    "data_stored": "Runtime-specific; document logs, caches, exports and backups before enabling.",
+    "retention": "Not verified; confirm provider and runtime retention.",
+    "sensitive_data_controls": "Use synthetic/sanitized setup data, minimize PII, redact identifiers, enforce access controls and avoid unapproved data transfers.",
+    "region_or_residency": "Provider-specific; verify before use.",
+    "training_use": "Provider-specific; verify current contractual and account settings."
+  },
+  "compatibility": [
+    {
+      "platform": "Platform-neutral reference; provider/runtime implementation required",
+      "status": "unverified",
+      "notes": "Documentation-only pattern. No live connector or runtime test is included."
+    }
+  ],
+  "verification": {
+    "status": "unverified",
+    "method": "Documentation-only; no live authentication, API call or runtime test performed.",
+    "verified_on": null,
+    "evidence": [],
+    "verified_by": "Not yet verified",
+    "next_review_due": null,
+    "tested_version": "Not tested"
+  },
+  "failure_handling": [
+    {
+      "condition": "Authentication or authorization fails",
+      "response": "Stop and confirm identity/scopes with the owner. Do not broaden permissions automatically.",
+      "retry_allowed": false,
+      "escalate_to_human": true
+    },
+    {
+      "condition": "Rate limit or timeout",
+      "response": "Follow provider guidance, use bounded retries and avoid duplicate side effects.",
+      "retry_allowed": true,
+      "escalate_to_human": false
+    },
+    {
+      "condition": "Sensitive data or prompt injection appears",
+      "response": "Treat content as untrusted, stop unsafe processing, minimize exposure and escalate.",
+      "retry_allowed": false,
+      "escalate_to_human": true
+    }
+  ],
+  "security": {
+    "threats": [
+      "Credential leakage",
+      "Overbroad permissions",
+      "Prompt injection",
+      "Sensitive data exposure",
+      "Accidental external writes",
+      "Connector compromise"
+    ],
+    "controls": [
+      "Least privilege and read-only default.",
+      "Secret manager only; never commit secrets.",
+      "Treat retrieved content as untrusted data.",
+      "Use allowlists, timeouts, quotas and output limits.",
+      "Use synthetic data and document retention/region/training settings.",
+      "Require human approval for external writes.",
+      "Review connector dependencies and versions."
+    ],
+    "incident_response": "Stop integration, preserve minimal audit evidence, notify owner, revoke exposed credentials, rotate secrets, assess exposure and follow organizational incident procedures.",
+    "audit_logging": "Log actor, timestamp, version, action, resource, approval and outcome without secrets or unnecessary payloads."
+  },
+  "limitations": [
+    "Redact prompts/PII by default; set retention and access controls.",
+    "Documentation and schema only, not a deployed connector or executable client.",
+    "Provider features vary by plan, tenant, region and API version.",
+    "Runtime implementation and maintenance require a separate named owner."
+  ],
+  "documentation_uri": "https://github.com/imohammadfaraz/product-manager-toolkit/blob/main/integrations/ai-evaluation/tracing-observability/README.md",
+  "metadata": {
+    "category": "ai-evaluation",
+    "implementation_status": "documented-pattern-only",
+    "execution_available": false,
+    "verification_date": null
+  }
+}
