@@ -1,0 +1,142 @@
+{
+  "id": "coding-agents",
+  "name": "Coding Agents",
+  "description": "Define safe boundaries for coding agents that inspect repositories and propose patches.",
+  "version": "1.0.0",
+  "status": "draft",
+  "owner": "Product Manager Toolkit maintainers",
+  "tags": [
+    "coding-agents",
+    "coding-agents",
+    "product-management"
+  ],
+  "platform": "Coding Agents",
+  "integration_type": "developer-tool",
+  "purpose": "Define safe boundaries for coding agents that inspect repositories and propose patches.",
+  "capabilities": [
+    {
+      "id": "primary-use-case",
+      "description": "Repository files and test output within granted scope",
+      "availability": "unverified",
+      "required_permissions": [
+        "Read-only access to explicitly authorized repositories"
+      ]
+    }
+  ],
+  "setup": [
+    {
+      "step": 1,
+      "instruction": "Confirm repository scope, owner approval and data classification.",
+      "verification": "Named owner and approved repositories are documented."
+    },
+    {
+      "step": 2,
+      "instruction": "Configure an isolated adapter with a least-privilege identity and secret manager.",
+      "verification": "Authentication succeeds with a restricted test identity."
+    },
+    {
+      "step": 3,
+      "instruction": "Run bounded tests in a sandbox and record evidence.",
+      "verification": "Repository boundaries, logs and no-secret/no-deploy guarantees are reviewed."
+    }
+  ],
+  "authentication": {
+    "method": "Platform auth or GitHub App token scoped to selected repositories",
+    "secret_handling": "Store credentials only in an approved secret manager. Never commit, prompt-inject or log tokens. Redact secrets and rotate/revoke after exposure.",
+    "scopes": [
+      "Minimum read-only repository scopes; exact provider scopes unverified"
+    ],
+    "rotation_guidance": "Follow current provider rotation and revocation guidance.",
+    "supports_sso": false
+  },
+  "permissions": {
+    "required_scopes": [
+      "Read-only; verify exact repository scopes"
+    ],
+    "least_privilege": true,
+    "approval_gates": [
+      "Human approval before writes, merge, deployment, deletion or production change",
+      "Security approval before enabling code execution or network access"
+    ],
+    "write_actions": [],
+    "admin_actions": []
+  },
+  "data_handling": {
+    "data_sent": "Minimum task-relevant code and repository metadata.",
+    "data_stored": "Runtime-specific; document workspaces, logs, caches and artifacts.",
+    "retention": "Not verified; confirm provider and runtime retention.",
+    "sensitive_data_controls": "Never expose production secrets; use sandboxed synthetic data, minimize private source sharing and redact logs.",
+    "region_or_residency": "Provider-specific; verify before use.",
+    "training_use": "Provider-specific; verify current contractual and account settings."
+  },
+  "compatibility": [
+    {
+      "platform": "Platform-neutral reference; provider/runtime implementation required",
+      "status": "unverified",
+      "notes": "Documentation-only pattern. No live coding-agent integration or runtime test is included."
+    }
+  ],
+  "verification": {
+    "status": "unverified",
+    "method": "Documentation-only; no live authentication, API call or runtime test performed.",
+    "verified_on": null,
+    "evidence": [],
+    "verified_by": "Not yet verified",
+    "next_review_due": null,
+    "tested_version": "Not tested"
+  },
+  "failure_handling": [
+    {
+      "condition": "Authentication or authorization fails",
+      "response": "Stop and confirm identity/scopes with the owner. Do not broaden permissions automatically.",
+      "retry_allowed": false,
+      "escalate_to_human": true
+    },
+    {
+      "condition": "Tests fail or output is ambiguous",
+      "response": "Report the failure and do not claim success; require a human to review.",
+      "retry_allowed": true,
+      "escalate_to_human": false
+    },
+    {
+      "condition": "Sensitive data or malicious embedded instructions appear",
+      "response": "Treat content as untrusted, stop unsafe processing, minimize exposure and escalate.",
+      "retry_allowed": false,
+      "escalate_to_human": true
+    }
+  ],
+  "security": {
+    "threats": [
+      "Credential leakage",
+      "Overbroad repository permissions",
+      "Prompt injection in repository files",
+      "Unsafe code execution",
+      "Supply-chain compromise",
+      "Accidental merge or deployment"
+    ],
+    "controls": [
+      "Least privilege and read-only default.",
+      "Secret manager only; never commit secrets.",
+      "Sandbox code execution and restrict network access.",
+      "Treat repository content and generated code as untrusted.",
+      "Use allowlisted repositories and bounded runtime limits.",
+      "Require human review before merge/deploy.",
+      "Review dependencies and scan for secrets."
+    ],
+    "incident_response": "Stop execution, preserve minimal audit evidence, notify repository/security owner, revoke exposed credentials, rotate secrets, assess exposure and follow organizational incident procedures.",
+    "audit_logging": "Log actor, timestamp, runtime version, repository, action, approval and outcome without secrets or unnecessary code payloads."
+  },
+  "limitations": [
+    "Sandbox execution; no production secrets; review diffs before merge/deploy.",
+    "Documentation and schema only, not a deployed connector or executable client.",
+    "Hosted capabilities vary by provider, plan and runtime.",
+    "Runtime implementation and maintenance require a separate named owner."
+  ],
+  "documentation_uri": "https://github.com/imohammadfaraz/product-manager-toolkit/blob/main/integrations/coding-agents/coding-agents/README.md",
+  "metadata": {
+    "category": "coding-agents",
+    "implementation_status": "documented-pattern-only",
+    "execution_available": false,
+    "verification_date": null
+  }
+}
