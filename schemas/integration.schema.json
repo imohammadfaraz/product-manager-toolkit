@@ -1,0 +1,434 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/imohammadfaraz/product-manager-toolkit/blob/main/schemas/integration.schema.json",
+  "title": "Product Manager Toolkit Integration definition",
+  "description": "Contract for a platform adapter or tool connection. Capability, security, and compatibility claims must be evidence-based and time-bounded.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "description",
+    "version",
+    "status",
+    "platform",
+    "integration_type",
+    "purpose",
+    "capabilities",
+    "setup",
+    "authentication",
+    "permissions",
+    "data_handling",
+    "compatibility",
+    "verification",
+    "failure_handling",
+    "security",
+    "limitations"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "deprecated"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "platform": {
+      "type": "string",
+      "minLength": 2
+    },
+    "integration_type": {
+      "enum": [
+        "model-provider",
+        "agent-runtime",
+        "tool-connector",
+        "data-source",
+        "developer-tool",
+        "deployment",
+        "observability",
+        "other"
+      ]
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 20
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/capability"
+      }
+    },
+    "setup": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/setupStep"
+      }
+    },
+    "authentication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "secret_handling"
+      ],
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "secret_handling": {
+          "type": "string",
+          "minLength": 10
+        },
+        "scopes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rotation_guidance": {
+          "type": "string"
+        },
+        "supports_sso": {
+          "type": "boolean"
+        }
+      }
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required_scopes",
+        "least_privilege",
+        "approval_gates"
+      ],
+      "properties": {
+        "required_scopes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "least_privilege": {
+          "type": "boolean"
+        },
+        "approval_gates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "write_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "admin_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "data_handling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "data_sent",
+        "data_stored",
+        "retention",
+        "sensitive_data_controls"
+      ],
+      "properties": {
+        "data_sent": {
+          "type": "string",
+          "minLength": 5
+        },
+        "data_stored": {
+          "type": "string",
+          "minLength": 5
+        },
+        "retention": {
+          "type": "string",
+          "minLength": 3
+        },
+        "sensitive_data_controls": {
+          "type": "string",
+          "minLength": 10
+        },
+        "region_or_residency": {
+          "type": "string"
+        },
+        "training_use": {
+          "type": "string"
+        }
+      }
+    },
+    "compatibility": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/compatibility"
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "method",
+        "verified_on",
+        "evidence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "verified",
+            "partial",
+            "unverified",
+            "failed",
+            "stale"
+          ]
+        },
+        "method": {
+          "type": "string",
+          "minLength": 5
+        },
+        "verified_on": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "verified_by": {
+          "type": "string"
+        },
+        "next_review_due": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "tested_version": {
+          "type": "string"
+        }
+      }
+    },
+    "failure_handling": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/failure"
+      }
+    },
+    "security": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "threats",
+        "controls",
+        "incident_response"
+      ],
+      "properties": {
+        "threats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "controls": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "incident_response": {
+          "type": "string",
+          "minLength": 5
+        },
+        "audit_logging": {
+          "type": "string"
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "documentation_uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "description",
+        "availability"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 3
+        },
+        "availability": {
+          "enum": [
+            "supported",
+            "partial",
+            "unsupported",
+            "unverified"
+          ]
+        },
+        "required_permissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_uri": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "setupStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "step",
+        "instruction",
+        "verification"
+      ],
+      "properties": {
+        "step": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "instruction": {
+          "type": "string",
+          "minLength": 5
+        },
+        "verification": {
+          "type": "string",
+          "minLength": 5
+        },
+        "optional": {
+          "type": "boolean"
+        },
+        "reference_uri": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "condition",
+        "response"
+      ],
+      "properties": {
+        "condition": {
+          "type": "string"
+        },
+        "response": {
+          "type": "string"
+        },
+        "retry_allowed": {
+          "type": "boolean"
+        },
+        "escalate_to_human": {
+          "type": "boolean"
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "platform",
+        "status",
+        "notes"
+      ],
+      "properties": {
+        "platform": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "partial",
+            "unverified",
+            "unsupported"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "verified_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "source_uri": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
+}
