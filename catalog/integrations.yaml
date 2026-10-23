@@ -1,3 +1,273 @@
-# Platform-specific integration discovery records.
-# Add records only after a concrete integration guide exists.
-integrations: []
+# Integration discovery registry
+# 'documented' means guide and contract exist. It does not mean tested or executable.
+integrations:
+  - id: web-search
+    name: "Web Search"
+    category: research
+    path: integrations/research/web-search/README.md
+    definition: integrations/research/web-search/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Public web evidence collection and citation traceability."
+  - id: documentation-search
+    name: "Documentation Search"
+    category: research
+    path: integrations/research/documentation-search/README.md
+    definition: integrations/research/documentation-search/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Search official documentation with version context."
+  - id: customer-feedback-exports
+    name: "Customer Feedback Exports"
+    category: research
+    path: integrations/research/customer-feedback-exports/README.md
+    definition: integrations/research/customer-feedback-exports/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Synthesize authorized feedback exports with provenance."
+  - id: interview-transcripts
+    name: "Interview Transcripts"
+    category: research
+    path: integrations/research/interview-transcripts/README.md
+    definition: integrations/research/interview-transcripts/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Analyze authorized interviews while protecting participant privacy."
+  - id: survey-platforms
+    name: "Survey Platforms"
+    category: research
+    path: integrations/research/survey-platforms/README.md
+    definition: integrations/research/survey-platforms/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Analyze survey definitions, aggregates and authorized responses."
+  - id: competitor-research
+    name: "Competitor Research"
+    category: research
+    path: integrations/research/competitor-research/README.md
+    definition: integrations/research/competitor-research/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Organize public competitor evidence."
+  - id: sql-databases
+    name: "SQL Databases"
+    category: analytics
+    path: integrations/analytics/sql-databases/README.md
+    definition: integrations/analytics/sql-databases/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Read-only queries against approved product analytics databases."
+  - id: amplitude
+    name: "Amplitude"
+    category: analytics
+    path: integrations/analytics/amplitude/README.md
+    definition: integrations/analytics/amplitude/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Authorized product event and cohort analytics."
+  - id: mixpanel
+    name: "Mixpanel"
+    category: analytics
+    path: integrations/analytics/mixpanel/README.md
+    definition: integrations/analytics/mixpanel/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Authorized behavioral analytics and funnel analysis."
+  - id: google-analytics
+    name: "Google Analytics"
+    category: analytics
+    path: integrations/analytics/google-analytics/README.md
+    definition: integrations/analytics/google-analytics/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Authorized acquisition, conversion and event reporting."
+  - id: adobe-analytics
+    name: "Adobe Analytics"
+    category: analytics
+    path: integrations/analytics/adobe-analytics/README.md
+    definition: integrations/analytics/adobe-analytics/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Authorized digital experience reporting."
+  - id: data-warehouse
+    name: "Data Warehouse Queries"
+    category: analytics
+    path: integrations/analytics/data-warehouse/README.md
+    definition: integrations/analytics/data-warehouse/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Read-only analysis against curated warehouse views."
+  - id: jira
+    name: "Jira"
+    category: delivery
+    path: integrations/delivery/jira/README.md
+    definition: integrations/delivery/jira/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Issue, sprint, project and release metadata."
+  - id: linear
+    name: "Linear"
+    category: delivery
+    path: integrations/delivery/linear/README.md
+    definition: integrations/delivery/linear/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Issue, project, cycle and team metadata."
+  - id: github-issues-projects
+    name: "GitHub Issues and Projects"
+    category: delivery
+    path: integrations/delivery/github-issues-projects/README.md
+    definition: integrations/delivery/github-issues-projects/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Repository issue and project tracking metadata."
+  - id: azure-devops
+    name: "Azure DevOps"
+    category: delivery
+    path: integrations/delivery/azure-devops/README.md
+    definition: integrations/delivery/azure-devops/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Authorized work item and project metadata."
+  - id: notion
+    name: "Notion"
+    category: delivery
+    path: integrations/delivery/notion/README.md
+    definition: integrations/delivery/notion/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Explicitly shared product pages and databases."
+  - id: confluence
+    name: "Confluence"
+    category: delivery
+    path: integrations/delivery/confluence/README.md
+    definition: integrations/delivery/confluence/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Authorized product documentation and spaces."
+  - id: figma
+    name: "Figma"
+    category: design
+    path: integrations/design/figma/README.md
+    definition: integrations/design/figma/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Approved design files and design handoff metadata."
+  - id: whiteboarding-prototyping
+    name: "Whiteboarding and Prototyping"
+    category: design
+    path: integrations/design/whiteboarding-prototyping/README.md
+    definition: integrations/design/whiteboarding-prototyping/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Vendor-neutral board and prototype handoff."
+  - id: ai-app-builders
+    name: "AI App Builders"
+    category: design
+    path: integrations/design/ai-app-builders/README.md
+    definition: integrations/design/ai-app-builders/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Bounded spec handoff to AI app builders."
+  - id: llm-apis
+    name: "LLM APIs"
+    category: ai-evaluation
+    path: integrations/ai-evaluation/llm-apis/README.md
+    definition: integrations/ai-evaluation/llm-apis/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Model-provider API use with data and cost controls."
+  - id: model-evaluation-platforms
+    name: "Model Evaluation Platforms"
+    category: ai-evaluation
+    path: integrations/ai-evaluation/model-evaluation-platforms/README.md
+    definition: integrations/ai-evaluation/model-evaluation-platforms/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Evaluation datasets, runs, scores and failure tracking."
+  - id: tracing-observability
+    name: "LLM Tracing and Observability"
+    category: ai-evaluation
+    path: integrations/ai-evaluation/tracing-observability/README.md
+    definition: integrations/ai-evaluation/tracing-observability/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Latency, token, trace and failure monitoring."
+  - id: vector-search
+    name: "Vector Search"
+    category: ai-evaluation
+    path: integrations/ai-evaluation/vector-search/README.md
+    definition: integrations/ai-evaluation/vector-search/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Retrieval quality and grounding evaluation."
+  - id: prompt-management
+    name: "Prompt Management"
+    category: ai-evaluation
+    path: integrations/ai-evaluation/prompt-management/README.md
+    definition: integrations/ai-evaluation/prompt-management/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Versioned prompts, approvals and evaluation linkage."
+  - id: coding-agents
+    name: "Coding Agents"
+    category: coding-agents
+    path: integrations/coding-agents/coding-agents/README.md
+    definition: integrations/coding-agents/coding-agents/integration.json
+    status: documented
+    verification_status: unverified
+    last_verification_date: null
+    execution_available: false
+    description: "Safe repository access and bounded coding-agent workflows."
