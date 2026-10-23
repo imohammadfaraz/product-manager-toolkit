@@ -105,7 +105,7 @@ Workflow files are operating guides. They do not imply that Skills execute or ca
 | `agents/<agent-id>/AGENT.md` and `agent.json` | Specialist agent operating guides and portable contracts |
 | `commands/` and `prompts/` | Future invocation patterns and reusable prompts |
 | `templates/` | Future product artifact templates |
-| `integrations/` | Runtime- or vendor-specific adapters |
+| `integrations/` | Vendor-specific integration guides and machine-readable contracts; currently documented only |
 | `evals/` and `examples/` | Evaluation fixtures and sample outputs |
 
 ## Specialist agents
@@ -128,6 +128,12 @@ Use this guide to discover the right asset, invoke it in a compatible host, comb
 - [Integration discovery catalog](catalog/integrations.yaml)
 
 CI validates all four schemas and their canonical example fixtures. Schema validation is structural and does not establish runtime quality or platform compatibility.
+
+## Tool integration layer
+
+The [integration registry](catalog/integrations.yaml) indexes 27 documented integration patterns across research, analytics, delivery, design, AI evaluation, and coding agents. Each has a README setup guide and machine-readable integration contract. See the [integration layer overview](integrations/README.md) and [reusable integration template](integrations/INTEGRATION_TEMPLATE.md).
+
+**Important:** all entries are documented-only and unverified. This repository does not yet include live MCP servers, API clients, configured credentials, or executable integrations. The registry explicitly distinguishes documentation from tested and executable status. CI validates the shape of each integration contract, not live connectivity or security.
 
 ## Foundation checks
 

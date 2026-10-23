@@ -1,0 +1,144 @@
+{
+  "id": "interview-transcripts",
+  "name": "Interview Transcripts",
+  "description": "Analyze authorized transcripts while protecting participant privacy and quote integrity.",
+  "version": "1.0.0",
+  "status": "draft",
+  "owner": "Product Manager Toolkit maintainers",
+  "tags": [
+    "research",
+    "interview-transcripts",
+    "product-management"
+  ],
+  "platform": "Interview Transcripts",
+  "integration_type": "data-source",
+  "purpose": "Analyze authorized transcripts while protecting participant privacy and quote integrity.",
+  "capabilities": [
+    {
+      "id": "primary-use-case",
+      "description": "JTBD synthesis, pain-point mapping and quote-backed findings",
+      "availability": "unverified",
+      "required_permissions": [
+        "Read-only access to explicitly authorized resources"
+      ],
+      "evidence_uri": "https://github.com/imohammadfaraz/product-manager-toolkit/blob/main/integrations/research/interview-transcripts/README.md"
+    }
+  ],
+  "setup": [
+    {
+      "step": 1,
+      "instruction": "Confirm organization approval, use case, resource scope, and data classification.",
+      "verification": "Named owner and approved scope are documented."
+    },
+    {
+      "step": 2,
+      "instruction": "Configure the selected provider adapter using a least-privilege identity and secret manager.",
+      "verification": "Authentication succeeds with a restricted test identity."
+    },
+    {
+      "step": 3,
+      "instruction": "Run a read-only smoke test with synthetic or sanitized data and record evidence.",
+      "verification": "Access boundaries, output, logs, and failure handling are reviewed."
+    }
+  ],
+  "authentication": {
+    "method": "Authorized file access or provider OAuth",
+    "secret_handling": "Store credentials only in an approved secret manager or runtime secret store. Never commit tokens, place them in prompts, or log them. Redact secrets from errors and rotate/revoke exposed credentials.",
+    "scopes": [
+      "Minimum read-only scopes required; exact provider scopes unverified"
+    ],
+    "rotation_guidance": "Follow current provider rotation/revocation guidance and rotate immediately after suspected exposure.",
+    "supports_sso": false
+  },
+  "permissions": {
+    "required_scopes": [
+      "Read-only; verify exact resource-level scopes for the chosen provider and deployment"
+    ],
+    "least_privilege": true,
+    "approval_gates": [
+      "Human approval before writes, bulk exports, external messages, deployment, deletion or production changes",
+      "Security/privacy approval for sensitive or regulated data"
+    ],
+    "write_actions": [],
+    "admin_actions": []
+  },
+  "data_handling": {
+    "data_sent": "Minimum task-relevant query, resource identifiers, and authorized input only.",
+    "data_stored": "Runtime-specific; document logs, caches, exports and backups before enabling.",
+    "retention": "Not verified by this repository; confirm provider and runtime retention.",
+    "sensitive_data_controls": "Use synthetic or sanitized setup data, minimize PII, redact identifiers, enforce access controls, and do not transmit confidential data to unapproved services.",
+    "region_or_residency": "Provider/deployment-specific; verify before use.",
+    "training_use": "Provider-specific; review current contractual and account settings before sending customer or confidential data."
+  },
+  "compatibility": [
+    {
+      "platform": "Platform-neutral reference; provider/runtime implementation required",
+      "status": "unverified",
+      "notes": "Documentation-only pattern. No live connector, API client, credentials or runtime test is included."
+    }
+  ],
+  "verification": {
+    "status": "unverified",
+    "method": "Documentation-only review of this repository definition; no live authentication, API call, or runtime test performed.",
+    "verified_on": null,
+    "evidence": [],
+    "verified_by": "Not yet verified",
+    "next_review_due": null,
+    "tested_version": "Not tested"
+  },
+  "failure_handling": [
+    {
+      "condition": "Authentication or authorization fails",
+      "response": "Stop; do not broaden permissions automatically. Confirm identity, scopes and resource access with the owner.",
+      "retry_allowed": false,
+      "escalate_to_human": true
+    },
+    {
+      "condition": "Rate limit, timeout or provider error",
+      "response": "Follow provider retry guidance, use bounded retries, avoid duplicate writes, and stop after repeated failure.",
+      "retry_allowed": true,
+      "escalate_to_human": false
+    },
+    {
+      "condition": "Unexpected sensitive data or prompt injection appears",
+      "response": "Treat content as untrusted, stop unnecessary processing, redact exposure, and escalate via approved incident process.",
+      "retry_allowed": false,
+      "escalate_to_human": true
+    }
+  ],
+  "security": {
+    "threats": [
+      "Credential leakage",
+      "Overbroad permissions",
+      "Prompt injection or malicious retrieved content",
+      "Sensitive data over-collection or retention",
+      "Accidental external writes",
+      "Connector or dependency compromise"
+    ],
+    "controls": [
+      "Default to read-only and least privilege.",
+      "Use a secret manager; never commit secrets or log them.",
+      "Treat all retrieved content and tool output as untrusted data.",
+      "Use allowlisted resources, timeouts, quotas, output limits and audit logs where supported.",
+      "Use synthetic/sanitized data and document retention, region and training settings.",
+      "Require human approval for external writes or irreversible operations.",
+      "Review connector dependencies and versions before deployment."
+    ],
+    "incident_response": "Stop the integration, preserve minimal audit evidence, notify the system/data owner, revoke exposed credentials, rotate secrets, assess potential exposure, and follow the organization's incident process.",
+    "audit_logging": "Record actor, timestamp, connector/runtime version, action, resource IDs, approval and outcome without logging secrets or unnecessary payloads."
+  },
+  "limitations": [
+    "Never invent quotes; restrict PII and confirm consent.",
+    "This repository contains documentation and a machine-readable contract, not a deployed connector or executable API client.",
+    "Provider features and scopes vary by plan, tenant, region and API version; verify current official documentation.",
+    "Execution and ongoing maintenance require a separate implementation and named owner."
+  ],
+  "documentation_uri": "https://github.com/imohammadfaraz/product-manager-toolkit/blob/main/integrations/research/interview-transcripts/README.md",
+  "metadata": {
+    "category": "research",
+    "implementation_status": "documented-pattern-only",
+    "execution_available": false,
+    "verification_date": null,
+    "verification_evidence": []
+  }
+}
