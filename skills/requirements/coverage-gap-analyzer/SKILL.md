@@ -1,12 +1,23 @@
 ---
 name: coverage-gap-analyzer
+display_name: "Acceptance Criteria Coverage Gap Analyzer"
 description: "Acceptance Criteria Coverage Gap Analyzer. Find missing, partial, blocked, duplicated, ambiguous, or orphaned coverage."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "coverage", "gap", "analyzer"]
 ---
-
 # Acceptance Criteria Coverage Gap Analyzer
 
 ## Purpose
 Find missing, partial, blocked, duplicated, ambiguous, or orphaned coverage.
+
+
+## When to use
+Use this Skill when you need to find missing, partial, blocked, duplicated, ambiguous, or orphaned coverage. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

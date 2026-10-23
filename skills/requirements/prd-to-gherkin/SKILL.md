@@ -1,12 +1,23 @@
 ---
 name: prd-to-gherkin
+display_name: "PRD-to-Gherkin Converter"
 description: "PRD-to-Gherkin Converter. Convert source-backed requirements into readable, testable Gherkin while preserving traceability and surfacing unknowns."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "prd", "gherkin"]
 ---
-
 # PRD-to-Gherkin Converter
 
 ## Purpose
 Convert source-backed requirements into readable, testable Gherkin while preserving traceability and surfacing unknowns.
+
+
+## When to use
+Use this Skill when you need to convert source-backed requirements into readable, testable Gherkin while preserving traceability and surfacing unknowns. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

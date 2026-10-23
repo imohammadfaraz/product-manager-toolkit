@@ -1,12 +1,23 @@
 ---
 name: qa-handoff
+display_name: "QA Handoff & Automation Readiness Reviewer"
 description: "QA Handoff & Automation Readiness Reviewer. Prepare QA handoff and assess readiness for manual testing and automation planning."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "handoff"]
 ---
-
 # QA Handoff & Automation Readiness Reviewer
 
 ## Purpose
 Prepare QA handoff and assess readiness for manual testing and automation planning.
+
+
+## When to use
+Use this Skill when you need to prepare QA handoff and assess readiness for manual testing and automation planning. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

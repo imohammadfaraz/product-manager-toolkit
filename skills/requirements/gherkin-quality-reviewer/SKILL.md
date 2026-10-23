@@ -1,12 +1,23 @@
 ---
 name: gherkin-quality-reviewer
+display_name: "Gherkin Quality Reviewer"
 description: "Gherkin Quality Reviewer. Review Gherkin for structure, clarity, traceability, testability, independence, duplication, and unsupported behavior."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "gherkin", "quality", "reviewer"]
 ---
-
 # Gherkin Quality Reviewer
 
 ## Purpose
 Review Gherkin for structure, clarity, traceability, testability, independence, duplication, and unsupported behavior.
+
+
+## When to use
+Use this Skill when you need to review Gherkin for structure, clarity, traceability, testability, independence, duplication, and unsupported behavior. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

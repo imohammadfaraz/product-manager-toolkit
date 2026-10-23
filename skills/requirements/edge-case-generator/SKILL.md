@@ -1,12 +1,23 @@
 ---
 name: edge-case-generator
+display_name: "Edge Case & Negative Path Generator"
 description: "Edge Case & Negative Path Generator. Identify meaningful boundary, negative, interruption, permission, and recovery scenarios."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "edge", "case", "generator"]
 ---
-
 # Edge Case & Negative Path Generator
 
 ## Purpose
 Identify meaningful boundary, negative, interruption, permission, and recovery scenarios.
+
+
+## When to use
+Use this Skill when you need to identify meaningful boundary, negative, interruption, permission, and recovery scenarios. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

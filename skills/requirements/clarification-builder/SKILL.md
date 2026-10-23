@@ -1,12 +1,23 @@
 ---
 name: clarification-builder
+display_name: "Clarification & Decision Builder"
 description: "Clarification & Decision Builder. Turn requirement gaps and conflicts into actionable questions and decision records."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "clarification", "builder"]
 ---
-
 # Clarification & Decision Builder
 
 ## Purpose
 Turn requirement gaps and conflicts into actionable questions and decision records.
+
+
+## When to use
+Use this Skill when you need to turn requirement gaps and conflicts into actionable questions and decision records. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.
