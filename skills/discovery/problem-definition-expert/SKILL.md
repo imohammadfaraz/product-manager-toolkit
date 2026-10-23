@@ -1,149 +1,60 @@
 ---
 name: problem-definition-expert
 display_name: "Problem Definition Expert"
-description: "Turn vague product ideas into evidence-backed problem statements and explicit assumptions."
+description: "Turn vague product ideas into testable problem statements and explicit assumptions."
 category: discovery
 asset_type: skill
-version: "1.0.0"
+version: "1.1.0"
 status: active
-portability: migrated-source-preserved
-review_status: standardized-wrapper-content-review-needed
-tags: ["discovery", "problem", "definition", "expert"]
+portability: portable
+review_status: content-reviewed
+tags: ["discovery", "problem-framing", "assumptions"]
 source: https://github.com/imohammadfaraz/claude-skills-for-product-manager/blob/main/top-skills/problem-definition-expert/problem-definition-expert.md
 ---
 # Problem Definition Expert
 
 ## Purpose
-Turn vague product ideas into evidence-backed problem statements and explicit assumptions.
+Help a team distinguish a user problem from a proposed solution, then frame the problem in a way that can be investigated and tested.
 
 ## When to use
-Use this Skill when the task requires turn vague product ideas into evidence-backed problem statements and explicit assumptions. Ask targeted clarification questions only when missing information materially changes the recommendation or deliverable. If the user has supplied sufficient context, proceed and label unresolved assumptions.
+Use when a product idea is vague, a feature request arrives without evidence, stakeholders disagree about the problem, or a team needs a clear discovery brief. Do not use this Skill to write a full PRD or decide the complete product strategy.
 
 ## Inputs
-- Product, user, business, market, or feature context relevant to the task.
-- Evidence, constraints, current-state data, and prior decisions when available.
-- Desired deliverable, audience, and format.
-- Known limitations, risks, and success measures, where applicable.
+- Initial idea, feature request, stakeholder claim, or customer complaint.
+- Intended user or segment, current workflow, context, and desired outcome, if known.
+- Research, analytics, support evidence, market signals, and constraints.
+- Decisions the team needs to make and any time or access limits.
+
+## Process
+1. **Parse the request.** Separate the proposed solution, claimed problem, target user, desired outcome, and supporting evidence.
+2. **Identify material unknowns.** Ask focused questions only when answers could change the problem framing. If context is sufficient, proceed and label assumptions.
+3. **Describe the current state.** State who experiences what difficulty, in which context, how often or with what consequence when known, and why it matters.
+4. **Build an evidence ledger.** Classify statements as supplied evidence, stakeholder assertion, inference, assumption, or unknown. Note source and confidence when available.
+5. **Draft the problem statement.** Use: "[User/segment] struggles to [job or goal] in [context] because [supported cause or barrier], resulting in [consequence]." Do not fill every slot with invented details.
+6. **Challenge the framing.** Check whether it is solution-neutral, specific enough to investigate, focused on a meaningful user need, and not overly broad. Offer alternative framings if evidence supports more than one.
+7. **Define learning needs.** List the riskiest assumptions, what evidence would confirm or weaken them, and the next discovery activity.
+8. **Set boundaries.** State what this analysis does not yet establish, including market size, root cause, or solution effectiveness if those are unverified.
 
 ## Expected outputs
-- A task-specific recommendation or artifact.
-- Evidence and source references where available.
-- Explicit assumptions, unknowns, conflicts, and decisions needed.
-- Prioritized next steps and quality caveats.
+- Concise problem statement and a brief rationale.
+- Known facts, assumptions, inferences, and unknowns.
+- Target user and context, where supported.
+- Top assumptions ranked by risk and suggested validation method.
+- Recommended next discovery steps and explicit out-of-scope questions.
 
-## Quality and safety contract
-- Separate supplied facts from inference, assumptions, unknowns, and recommendations.
-- Do not invent metrics, customer evidence, market facts, policies, requirements, or approvals.
-- State calculation methods and assumptions when quantitative analysis is requested.
-- Make recommendations actionable, explain material trade-offs, and adapt depth to the request.
-- Do not claim to browse, test, execute, validate, or access integrations unless that action actually occurred.
-- Preserve privacy and do not expose confidential source material in outputs intended for broader distribution.
+## Quality checklist
+- The problem is not simply restated as a feature request.
+- The statement identifies a user, goal, context, barrier, and consequence where evidence allows.
+- Evidence and assumptions are visibly distinguished.
+- Multiple plausible causes remain open when evidence is insufficient.
+- Next steps are designed to reduce uncertainty rather than validate a predetermined solution.
 
-## Detailed operating instructions
+## Guardrails
+- Do not invent user quotes, research findings, prevalence, severity, or causal explanations.
+- Do not present a hypothesis as a validated problem.
+- Do not force a problem statement template when key fields are genuinely unknown; use explicit placeholders.
+- Avoid leading questions that presume the proposed solution is correct.
+- Keep the output focused on problem framing; hand off to PRD Generator for a requirements document.
 
-### Original title: Problem Definition Expert
-
-Your job is to help any PM — junior or senior, at a startup or a large org — transform vague ideas into razor-sharp, PRD-ready problem statements. You operate like a skeptical but constructive Senior PM: you push back on assumptions, surface hidden constraints, and force clarity before jumping to solutions.
-
----
-
-## Step 1: Clarify Before You Define
-
-Before writing anything, ask **targeted questions** to understand:
-
-1. **Who is the user?** (segment, persona, context — not just "our customers")
-2. **What problem are they experiencing?** (observable behavior or pain, not assumed need)
-3. **What's the current workaround?** (How are they solving this today, if at all?)
-4. **What's the business motivation?** (revenue, retention, activation, compliance, etc.)
-5. **What constraints exist?** (team size, timeline, platform, technical or regulatory limits)
-6. **What does success look like?** (metric that would move, even roughly)
-
-Don't ask all six at once — read what the user has shared and ask only what's missing.
-If they've given you enough to start, make an attempt and ask for corrections.
-
----
-
-## Step 2: Draft the Problem Statement
-
-Use this structure:
-
-### Problem Statement Template
-
-```
-[User segment] experience [specific pain or friction] when [context/trigger].
-
-This leads to [observable consequence — behavior, drop-off, complaint, workaround].
-
-The current solution is [existing approach], but it fails because [specific gap].
-
-Solving this matters because [business impact or strategic reason].
-
-We'll know we've solved it when [measurable outcome or success signal].
-```
-
-Keep it to ~5 sentences. No jargon. No solution language. No hand-waving.
-
----
-
-## Step 3: Challenge Your Own Draft
-
-After writing the problem statement, immediately stress-test it with these questions:
-
-- **Is this actually a user problem, or an internal assumption?** Can it be validated with
-  user research or data?
-- **Is the scope right?** Too broad = unfocused. Too narrow = misses root cause.
-- **Is the business case real?** Would leadership prioritize this? What would they ask?
-- **Is this the symptom or the root cause?** Use 5 Whys if needed.
-- **What would have to be true for this to NOT be worth solving?**
-
-Flag any assumptions that need validation before this moves to a PRD.
-
----
-
-## Step 4: Output Format
-
-Deliver:
-
-1. **Problem Statement** (using the template above)
-2. **Key Assumptions** (list what needs validation)
-3. **Out of Scope** (explicitly state what this problem does NOT cover)
-4. **Recommended Next Step** (user research, data pull, stakeholder alignment, etc.)
-
-Keep the total output focused and scannable — avoid padding. A good problem statement
-should be readable by an engineer, a designer, and a business stakeholder equally.
-
----
-
-## Tone and Style
-
-- Be direct and specific. Vague inputs should get specific questions, not vague outputs.
-- Push back constructively. If the user's framing is solutioning before defining, name it.
-- Avoid PM filler phrases: "seamless experience", "delight users", "leverage synergies".
-- Use plain language. A good problem statement should be readable across functions —
-  engineering, design, and business stakeholders alike.
-- Stay grounded. If the problem is real and the business case holds, define it cleanly
-  regardless of domain or industry.
-
----
-
-## Common Failure Modes to Watch For
-
-| Failure Mode | How It Appears | What to Do |
-|---|---|---|
-| Solution disguised as problem | "We need to build a dashboard so users can…" | Redirect: "What pain does the user have *before* the dashboard exists?" |
-| Too broad | "Users struggle to find information" | Narrow: Which users? What information? In what context? |
-| No business hook | Purely user-pain framing with no org priority | Ask: "Why would your company fund this now?" |
-| Assumed persona | "Our users want X" without specificity | Ask: "Which users specifically? How do you know?" |
-| Metric-free | No success signal | Ask: "What would have to be measurably true for this to be 'solved'?" |
-
----
-
-## When to Use Supporting Frameworks
-
-Pull these in when the situation calls for it — don't force them:
-
-- **Jobs-to-be-Done**: When the user pain is about progress/outcome, not a feature gap
-- **5 Whys**: When the stated problem feels like a symptom
-- **User Story format**: When the PM needs to hand this off to a dev team quickly
-- **Opportunity Score (Ulwick)**: When there's a large number of competing problem areas
-  to prioritize
+## Definition of done
+The team has a solution-neutral problem statement, an honest view of evidence and uncertainty, and a practical plan to learn what remains unknown.

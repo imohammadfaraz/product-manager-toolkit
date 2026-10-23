@@ -1,210 +1,65 @@
 ---
 name: product-strategy-builder
 display_name: "Product Strategy Builder"
-description: "Help Product Managers complete the product strategy builder task using a structured, evidence-aware process."
+description: "Develop a coherent product strategy linking target users, choices, differentiated bets, trade-offs, and outcomes."
 category: strategy
 asset_type: skill
-version: "1.0.0"
+version: "1.1.0"
 status: active
-portability: migrated-source-preserved
-review_status: standardized-wrapper-content-review-needed
-tags: ["strategy", "product", "builder"]
+portability: portable
+review_status: content-reviewed
+tags: ["product-strategy", "roadmap", "trade-offs"]
 source: https://github.com/imohammadfaraz/claude-skills-for-product-manager/blob/main/top-skills/product-strategy-builder/product-strategy-builder.md
 ---
 # Product Strategy Builder
 
 ## Purpose
-Help Product Managers complete the product strategy builder task using a structured, evidence-aware process.
+Create a coherent set of product choices that connects a long-term direction to a focused set of bets, trade-offs, and measurable outcomes.
 
 ## When to use
-Use this Skill when the task requires help Product Managers complete the product strategy builder task using a structured, evidence-aware process. Ask targeted clarification questions only when missing information materially changes the deliverable. If enough context is available, proceed and label unresolved assumptions.
+Use when a team needs to define or refresh product direction, align on strategic priorities, evaluate major bets, or turn market and customer insight into a roadmap theme. Use Competitive Analysis Expert for a dedicated evidence-led competitor comparison.
 
 ## Inputs
-- Relevant product, user, business, market, or feature context.
-- Evidence, constraints, current-state data, and prior decisions where available.
-- Desired deliverable, audience, and format.
-- Known limitations, risks, and success measures where applicable.
+- Product vision or business context, target users, and user problems.
+- Customer research, usage data, market/competitive evidence, and business model where available.
+- Company goals, constraints, capabilities, risks, and planning horizon.
+- Existing strategy, roadmap, decisions, and stakeholder tensions.
+
+## Process
+1. **Clarify the strategic decision.** Identify the horizon, audience, and decisions this strategy must support. Ask only questions that materially change the recommendation.
+2. **Summarize the current context.** Separate facts, evidence, assumptions, constraints, and unresolved questions.
+3. **Define direction.** State the intended user and business outcome over the planning horizon. Keep vision aspirational but specific enough to guide choices.
+4. **Choose target users and problem spaces.** Explain who to prioritize, what important needs to solve, and who is intentionally not prioritized.
+5. **Set strategic pillars.** Propose a small number, usually three to five, of mutually reinforcing choices. Each pillar should state why it matters and what it rules in or out.
+6. **Define differentiated bets.** Describe the bet, supporting rationale, expected outcome, leading evidence, investment or capability required, and key uncertainty.
+7. **Make trade-offs explicit.** State what the team will prioritize and what it will defer, with reasons. Avoid lists of options without a decision.
+8. **Sequence roadmap themes.** Use outcomes and learning milestones rather than pretending to know exact feature delivery dates when evidence is insufficient.
+9. **Set measures and review points.** Connect outcomes to metrics, guardrails, leading indicators, and evidence that would cause the strategy to change.
+10. **Stress-test the strategy.** Examine dependencies, failure modes, opportunity cost, organizational fit, and alternative explanations.
+11. **State confidence and next steps.** Identify what is decided, proposed, or still needs validation.
 
 ## Expected outputs
-- A task-specific recommendation or artifact.
-- Source references and evidence notes where available.
-- Explicit assumptions, unknowns, conflicts, and decisions needed.
-- Prioritized next steps and quality caveats.
+- Strategic context and guiding direction.
+- Target segments and priority problem spaces.
+- Three to five strategic pillars with rationale and explicit boundaries.
+- A short list of bets with expected outcomes, evidence, risks, and learning milestones.
+- Trade-offs, non-goals, roadmap themes, metrics, and review cadence.
+- Key assumptions and decisions required.
 
-## Quality and safety contract
-- Separate supplied facts from inference, assumptions, unknowns, conflicts, and recommendations.
-- Do not invent metrics, customer evidence, market facts, policies, requirements, or approvals.
-- State calculation methods and assumptions for quantitative work.
-- Explain material trade-offs and make recommendations actionable.
-- Do not claim to browse, test, execute, validate, or access integrations unless that action occurred.
-- Protect private or confidential information.
+## Quality checklist
+- The strategy makes choices, not just aspirations or a list of initiatives.
+- Pillars reinforce one another and each excludes some plausible work.
+- Bets are linked to user value and business outcomes.
+- Roadmap themes reflect sequencing and learning, not false precision.
+- Metrics include guardrails and evidence that could invalidate the strategy.
+- Confidence is calibrated to the quality of the inputs.
 
-## Detailed operating instructions
+## Guardrails
+- Do not invent market size, customer evidence, company priorities, resources, or executive alignment.
+- Do not treat a competitor feature or industry trend as strategy by itself.
+- Do not present a roadmap as a delivery commitment unless dates and owners are confirmed.
+- Do not hide meaningful trade-offs or uncertainty behind confident language.
+- Keep the strategy distinct from a detailed PRD or a standalone competitor report.
 
-### Original title: Product Strategy Builder
-
-You are a seasoned Product Manager with experience building and scaling products across different company sizes, industries, and markets. Your job is to craft a deep, opinionated product strategy tailored to the user's specific context — not a generic framework document.
-
----
-
-## THINKING APPROACH (MANDATORY)
-
-Before writing anything, think through:
-
-1. **Understand the user deeply** — motivations, behavior, unmet needs
-2. **Define the real problem space** — not surface-level symptoms
-3. **Identify market dynamics** — competition, trends, structural gaps
-4. **Clarify business leverage** — how this drives growth/revenue/retention
-5. **Make explicit trade-offs** — what NOT to do is as important as what to do
-
-Think in first principles, not templates. Adapt the depth and scope to the company's stage and resources.
-
----
-
-## CLARIFICATION RULE
-
-If the input is vague or missing critical context, ask **3–5 sharp questions BEFORE generating strategy**:
-
-- What stage is the product? (0→1, growth, mature, declining)
-- What is the primary business goal? (growth, revenue, retention, defensibility)
-- Who is the core user? (be specific — not "everyone")
-- What market/geography/industry are we operating in?
-- What company type? (startup, scale-up, enterprise, B2B, B2C, etc.)
-- What has already been tried? What worked, what didn't?
-
-**Do NOT proceed with weak assumptions.** A strategy built on wrong assumptions is worse than no strategy.
-
----
-
-## OUTPUT FORMAT (MANDATORY)
-
-Produce the following sections in order. Every section must reflect strategic thinking — not documentation. Scale depth and horizon to fit the product's stage (e.g., a 0→1 product needs different bets than a mature platform).
-
----
-
-### 1. Vision
-- A clear, ambitious, long-term direction (2–3 year horizon, or shorter for early-stage)
-- Inspiring but grounded in market and user reality
-- Avoid generic statements like "be the best platform" or "delight users"
-
-### 2. Target Users
-- Define **primary** and **secondary** segments explicitly
-- For each segment, include:
-  - Behavioral traits
-  - Core needs
-  - Current frustrations / unmet jobs-to-be-done
-- Be ruthlessly specific. "Professionals aged 25–40" is not a segment.
-
-### 3. Core Problem Space
-- Define the real problems being solved (not feature requests)
-- Separate:
-  - **Surface problems** (what users complain about)
-  - **Root problems** (why those complaints exist)
-- Explain why this problem space matters *now* — timing is strategy
-
-### 4. Strategic Pillars (3–5 MAX)
-Each pillar must include:
-- **Name** (sharp, memorable)
-- **Description** (what it means in practice)
-- **Why it matters** (the strategic rationale)
-- **Example initiatives** (2–3 concrete examples, not exhaustive)
-
-Pillars represent where the product will *win* — not a feature list.
-
-### 5. Differentiation Strategy
-- Compare against 2–3 key competitors (name them, or use category archetypes if unknown)
-- For each competitor:
-  - What they do well
-  - Where they are weak or blind
-  - Where **you** will win
-- Focus on unfair advantages, not feature parity
-
-### 6. Key Product Bets (3–5)
-Bold, explicit bets that will drive outcomes. For each:
-- **Hypothesis** — what you believe to be true
-- **Expected impact** — what winning looks like
-- **Risk** — what could make this bet fail
-
-These should feel like real strategic decisions with stakes — not obvious next steps.
-
-### 7. Trade-offs (CRITICAL — Do not skip)
-Explicitly define:
-- What you will **NOT** build (and why)
-- What you are **deprioritizing** (and for how long)
-- What you are **betting against** (trends, competitor moves, user demands)
-
-Weak strategies avoid trade-offs. This section separates real strategy from roadmap theater.
-
-### 8. Risks & Failure Modes
-
-| Risk | Why it matters | Mitigation |
-|------|---------------|------------|
-
-Include at minimum:
-- 2 product risks
-- 1 market risk
-- 1 execution risk
-
-### 9. 12-Month Roadmap Themes (NOT features)
-
-Break into phases:
-- **0–3 months**: Strategic focus + expected outcomes
-- **3–6 months**: Strategic focus + expected outcomes
-- **6–12 months**: Strategic focus + expected outcomes
-
-Focus on *direction and outcomes*, not feature lists. For early-stage products, compress the horizon if needed.
-
-### 10. Success Definition
-- **North Star Metric** (1 only — the number that captures real value delivery)
-- **2–3 Supporting Metrics** (leading indicators, guardrail metrics)
-
-Tie directly to the strategy. Avoid vanity metrics.
-
----
-
-## OPTIONAL (IF RELEVANT)
-Include when they meaningfully affect strategy:
-- Market trends influencing timing or positioning
-- Platform/ecosystem advantages (e.g., data network effects, distribution moats)
-- Monetization implications
-- Regulatory or compliance constraints (fintech, healthtech, enterprise)
-
----
-
-## QUALITY BAR
-
-Every output must:
-- Be **opinionated**, not descriptive
-- Avoid generic phrases ("improve UX", "focus on growth", "build for scale")
-- Avoid feature dumping
-- Show **clear reasoning** behind every strategic call
-- Reflect genuine trade-offs and stakes
-- Be calibrated to the company's actual stage and resources (a 5-person startup gets different advice than a 500-person scale-up)
-
-## WHAT TO AVOID
-- "Improve user experience" (too vague to be a strategy)
-- Copying competitor strategies without a differentiated angle
-- Sections with no trade-offs
-- Overly broad target users
-- Shallow insights dressed up as strategy
-- Advice that ignores company size, resources, or market context
-
----
-
-## EXAMPLE INPUTS & EXPECTED OUTPUTS
-
-**Example 1 — B2B SaaS, early stage:**
-> Product: A project management tool for remote-first engineering teams
-> Context: Competing with Jira and Linear, 0→1 stage, small team, early revenue
-
-Expected output: A focused strategy that picks a narrow wedge (e.g., async-first engineering rituals), avoids feature-matching Jira, and bets on developer-led adoption over top-down sales.
-
-**Example 2 — Consumer app, growth stage:**
-> Product: A personal finance app
-> Context: Growing user base but high churn, competing with incumbents going digital
-
-Expected output: A differentiation strategy that exploits the gap between incumbent UX and real user behavior, with explicit bets on trust and habitual engagement over feature completeness.
-
----
-
-*The best product strategy is one your team can actually execute — ambitious enough to matter, specific enough to act on.*
+## Definition of done
+The strategy makes clear who the product serves, which problems matter, which bets to pursue, what to deprioritize, and how the team will know whether the direction is working.

@@ -1,276 +1,63 @@
 ---
 name: metrics-analytics-designer
 display_name: "Metrics & Analytics Designer"
-description: "Design product metrics and analytics frameworks that support measurable product decisions."
+description: "Design decision-oriented product metrics, event tracking, and analytics plans."
 category: analytics
 asset_type: skill
-version: "1.0.0"
+version: "1.1.0"
 status: active
-portability: migrated-source-preserved
-review_status: standardized-wrapper-content-review-needed
-tags: ["analytics", "metrics", "designer"]
+portability: portable
+review_status: content-reviewed
+tags: ["analytics", "metrics", "event-tracking"]
 source: https://github.com/imohammadfaraz/claude-skills-for-product-manager/blob/main/top-skills/metrics-analytics-designer/metrics-analytics-designer.md
 ---
 # Metrics & Analytics Designer
 
 ## Purpose
-Design product metrics and analytics frameworks that support measurable product decisions.
+Translate product goals and user value into a measurable framework that supports decisions, not just reporting.
 
 ## When to use
-Use this Skill when the task requires design product metrics and analytics frameworks that support measurable product decisions. Ask targeted clarification questions only when missing information materially changes the recommendation or deliverable. If the user has supplied sufficient context, proceed and label unresolved assumptions.
+Use for a new product or feature measurement plan, a metrics audit, an event instrumentation plan, or diagnosis of metric movement. This Skill designs the plan; it does not claim to inspect live analytics unless data or tool access is actually provided.
 
 ## Inputs
-- Product, user, business, market, or feature context relevant to the task.
-- Evidence, constraints, current-state data, and prior decisions when available.
-- Desired deliverable, audience, and format.
-- Known limitations, risks, and success measures, where applicable.
+- Product or feature, target users, user problem, lifecycle stage, and intended decision.
+- Business objective, known baseline data, constraints, and available analytics capabilities.
+- Requested depth: focused brief, full framework, or executive summary.
+- Existing metric definitions, events, dashboards, or data-quality concerns, if available.
+
+## Process
+1. **Establish the decision.** Identify what decision the metrics should inform and the user value the product is expected to deliver.
+2. **Clarify only material gaps.** Ask concise questions if missing information changes the metric design. Otherwise proceed with clearly labeled assumptions.
+3. **Map the value journey.** Describe the key user journey and the observable behavior that signals value realization.
+4. **Choose outcome and driver metrics.** Recommend one North Star metric only when a credible candidate exists, plus input metrics across relevant stages such as acquisition, activation, engagement, retention, and monetization.
+5. **Define guardrails.** Include quality, trust, reliability, user harm, or cost measures that prevent local optimization from damaging the overall experience.
+6. **Specify instrumentation.** Provide event names, triggers, required properties, identity rules, and failure/edge events. Avoid collecting unnecessary personal data.
+7. **Design reporting and diagnosis.** Recommend dashboards, segments, review cadence, and plausible responses to metric changes.
+8. **State limits.** Separate observed facts from hypotheses, proposed targets, and unverified assumptions. Do not invent benchmarks or claim a metric is validated without evidence.
 
 ## Expected outputs
-- A task-specific recommendation or artifact.
-- Evidence and source references where available.
-- Explicit assumptions, unknowns, conflicts, and decisions needed.
-- Prioritized next steps and quality caveats.
-
-## Quality and safety contract
-- Separate supplied facts from inference, assumptions, unknowns, and recommendations.
-- Do not invent metrics, customer evidence, market facts, policies, requirements, or approvals.
-- State calculation methods and assumptions when quantitative analysis is requested.
-- Make recommendations actionable, explain material trade-offs, and adapt depth to the request.
-- Do not claim to browse, test, execute, validate, or access integrations unless that action actually occurred.
-- Preserve privacy and do not expose confidential source material in outputs intended for broader distribution.
-
-## Detailed operating instructions
-
-### Original title: Metrics & Analytics Designer
-
-You are an expert product analytics advisor helping PMs at any level — from aspiring PMs to seasoned product leaders — design a **comprehensive, decision-ready metrics and analytics framework** for a product or feature.
-
-Your goal is to produce something practical: a framework the user can actually act on, whether they have a full data team or are working solo.
-
----
-
-## STEP 1: ALWAYS CLARIFY FIRST
-
-Before producing any output, ask the following clarifying questions. Do NOT skip this step, even if the input seems detailed.
-
-Ask these questions in a single message:
-
-1. **What is the product/feature?** Briefly describe what it does and who it's for.
-2. **What is the primary goal right now?** (e.g., drive engagement, improve retention, grow revenue, validate that this is something people want)
-3. **What stage is the product at?** (just starting out / early growth / scaling / mature)
-4. **What platforms/surfaces are involved?** (e.g., iOS, Android, web, API, internal tool)
-5. **What output format do you prefer?**
-   - **Full Framework** — All 12 sections, deeply detailed (best for greenfield or audit situations)
-   - **Focused Brief** — North Star + Input Metrics + Event Tracking only (best for a specific feature)
-   - **Executive Summary** — High-level metrics + dashboards + risks only (best for stakeholder alignment)
-
-Wait for the user's answers before proceeding.
-
----
-
-## STEP 2: THINK BEFORE YOU WRITE
-
-Once you have answers, reason through these before drafting any section:
-
-1. What is the **core user value** this product/feature delivers?
-2. What is the **critical user journey** end-to-end?
-3. What are the **key actions that signal value realization**?
-4. How do **user actions → product success → business outcomes** connect?
-5. What are **leading indicators** (early signals) vs **lagging indicators** (outcomes)?
-6. Are there **known competitors or analogous products** worth benchmarking against?
-
-Think in systems, not isolated metrics. Every metric must tie to user value OR business outcome. No vanity metrics.
-
-Also consider the user's **context and constraints** — if they're a solo PM without a data team, flag which parts of the framework they can implement manually vs. what needs engineering support.
-
----
-
-## STEP 3: PRODUCE THE FRAMEWORK
-
-Produce the sections appropriate for the chosen output format. Where relevant, note what's essential vs. what's optional for smaller teams.
-
----
-
-# 📊 METRICS & ANALYTICS FRAMEWORK
-
----
-
-## 1. Core Value Definition
-
-- What value does this product/feature deliver to users?
-- What single action best represents this value being realized?
-
-*(Grounds all downstream metrics in reality)*
-
----
-
-## 2. North Star Metric
-
-Define ONE metric that directly reflects user value delivered and scales with product success.
-
-Include:
-- **Definition** — What exactly is being measured
-- **Formula** — How it's calculated
-- **Why this metric** — Why it captures true value
-- **Trade-offs** — What it might miss or distort
-
----
-
-## 3. Input Metrics (Growth Drivers)
-
-Break down across the funnel. For EACH metric include: definition, why it matters, whether it's a leading or lagging indicator, and what levers influence it.
-
-### Acquisition
-Metrics that capture how users discover and enter the product.
-
-### Activation
-First meaningful experience — the moment users realize value.
-
-### Engagement
-Depth and frequency of usage.
-
-### Retention
-Repeat usage behavior over time.
-
-### Monetization *(if applicable)*
-Revenue signals tied to product value.
-
----
-
-## 4. Guardrail Metrics
-
-Metrics that protect user experience, system health, and business sustainability.
-
-For each: what risk it prevents, and what threshold would trigger concern.
-
-Examples to consider: churn rate, crash rate, latency, error rate, spam/abuse rate, support ticket volume.
-
----
-
-## 5. User Journey Funnel
-
-Map the full journey:
-**Discovery → Onboarding → Activation → Engagement → Retention → Expansion/Sharing**
-
-For each stage:
-- Key metric
-- Drop-off points to watch
-- Diagnostic signals
-
----
-
-## 6. Event Tracking Plan
-
-Define events in this table format:
-
-| Event Name | Trigger | Properties | Type (core/edge) | Why It Matters |
-|---|---|---|---|---|
-
-Include:
-- Core actions (value-driving)
-- Secondary actions
-- Failure/error events
-- Edge cases (timeouts, retries, empty states)
-
-Also define:
-- **Naming convention** (e.g., `object_action` → `video_played`, `checkout_completed`)
-- **Recommended properties on every event**: `user_id`, `timestamp`, `platform`, `session_id`, `app_version`
-
-> **Note for smaller teams:** If you don't have a formal analytics pipeline yet, start with just the "core" events. You can add edge cases later.
-
----
-
-## 7. Segmentation Strategy
-
-Define key segments and what insights each unlocks:
-
-- New vs returning users
-- Power users vs casual users
-- Geography / device
-- Behavioral cohorts (e.g., users who completed activation vs those who didn't)
-
----
-
-## 8. Dashboard Design
-
-Recommend dashboards appropriate to the team's size and tooling. For smaller teams, a single unified dashboard may be more practical than four separate ones.
-
-### Executive Dashboard
-- Metrics: North Star + key business metrics
-- Frequency: Weekly
-- Decisions supported: Resource allocation, roadmap direction
-
-### Product Dashboard
-- Metrics: Feature usage + funnel metrics
-- Frequency: Daily
-- Decisions supported: Feature iteration, friction removal
-
-### Growth Dashboard
-- Metrics: Conversion + retention curves
-- Frequency: Daily/Weekly
-- Decisions supported: Activation and retention optimization
-
-### Operational Dashboard
-- Metrics: Errors, latency, system health
-- Frequency: Real-time
-- Decisions supported: Incident response, SLA management
-
----
-
-## 9. Competitive Benchmarking *(if relevant)*
-
-For key competitors or analogous products:
-- What their likely North Star metric is
-- What behaviors they optimize for
-- Where they outperform / where gaps exist
-- How this metrics strategy differs
-
----
-
-## 10. Experimentation Layer
-
-*(Include only if the user has the tooling and traffic to run experiments)*
-
-Define:
-- Key metrics to use as A/B test success criteria
-- Leading vs lagging indicators for experiment readouts
-- Minimum detectable effect / success thresholds
-- Guardrails to watch during experiments
-
-If the team is too early for A/B testing, suggest lightweight alternatives: structured user interviews, cohort analysis, or beta vs. general availability comparisons.
-
----
-
-## 11. Insights & Decision Framework
-
-Map metric movements to decisions:
-
-| If this happens... | Investigate... | Action to take |
-|---|---|---|
-| Activation drops | Onboarding friction | Run UX audit, check drop-off events |
-| Retention falls | Habit loop breaking | Analyze D7/D30 cohorts, check notification CTR |
-| North Star stalls | Depth vs breadth of usage | Segment by power vs casual users |
-
-Add rows relevant to this specific product.
-
----
-
-## 12. Risks & Blind Spots
-
-Identify:
-- Misleading metrics (metrics that look good but mask problems)
-- Missing signals (what you can't yet measure)
-- Data quality risks
-- Over-optimization risks (e.g., optimizing clicks at the cost of satisfaction)
-
----
-
-## QUALITY BAR
-
-Before finalizing output, verify:
-- [ ] Every metric ties to user value OR business outcome
-- [ ] No vanity metrics included
-- [ ] Every metric is actionable — it should be clear what to do when it moves
-- [ ] The event tracking plan is specific enough to hand to an engineering or data team
-- [ ] The framework enables decisions, not just observation
-- [ ] Recommendations are calibrated to the user's team size and stage
+Choose the smallest useful set of deliverables:
+- Metric tree or value-to-outcome map.
+- Definitions and formulas for primary, input, and guardrail metrics.
+- Event tracking table with event, trigger, properties, purpose, and priority.
+- Segmentation and dashboard recommendations.
+- Diagnostic decision table and data-quality risks.
+- Assumptions, open questions, and next steps.
+
+## Quality checklist
+- Every metric connects to user value, a business outcome, or a named risk.
+- Each metric has a precise definition, numerator/denominator where applicable, and time window.
+- Leading indicators are distinguished from lagging outcomes.
+- Event definitions are implementable and do not collect sensitive data without a clear need.
+- Recommendations are calibrated to product stage, traffic, and team capacity.
+- Proposed thresholds are labeled as hypotheses unless supplied or evidence-backed.
+
+## Guardrails
+- Do not treat a metric as a North Star merely because it is easy to measure.
+- Do not recommend every possible funnel metric by default; include only relevant stages.
+- Do not invent baselines, benchmarks, targets, or event coverage.
+- Do not imply analytics tools, datasets, or dashboards were accessed unless they were.
+- Flag denominator changes, instrumentation gaps, seasonality, cohort effects, and metric gaming risks where relevant.
+
+## Definition of done
+A team can tell what to measure, why it matters, how to calculate it, what data to collect, and which decisions the measurement should inform.

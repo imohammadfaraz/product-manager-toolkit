@@ -8,10 +8,10 @@ skills:
     path: skills/analytics/metrics-analytics-designer/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
-    portability: migrated-source-preserved
-    review_status: standardized-wrapper-content-review-needed
+    portability: portable
+    review_status: content-reviewed
   - id: ux-reviewer
     title: "UX Reviewer"
     category: design
@@ -19,10 +19,10 @@ skills:
     path: skills/design/ux-reviewer/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
-    portability: migrated-source-preserved
-    review_status: standardized-wrapper-content-review-needed
+    portability: portable
+    review_status: content-reviewed
   - id: problem-definition-expert
     title: "Problem Definition Expert"
     category: discovery
@@ -30,10 +30,10 @@ skills:
     path: skills/discovery/problem-definition-expert/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
-    portability: migrated-source-preserved
-    review_status: standardized-wrapper-content-review-needed
+    portability: portable
+    review_status: content-reviewed
   - id: ab-testing-expert
     title: "A/B Testing Expert"
     category: experimentation
@@ -41,10 +41,10 @@ skills:
     path: skills/experimentation/ab-testing-expert/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
-    portability: migrated-source-preserved
-    review_status: standardized-wrapper-content-review-needed
+    portability: portable
+    review_status: content-reviewed
   - id: monetization-strategist
     title: "Monetization Strategist"
     category: growth
@@ -52,10 +52,10 @@ skills:
     path: skills/growth/monetization-strategist/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
-    portability: migrated-source-preserved
-    review_status: standardized-wrapper-content-review-needed
+    portability: portable
+    review_status: content-reviewed
   - id: gtm-planner
     title: "GTM Planner"
     category: launch
@@ -63,10 +63,10 @@ skills:
     path: skills/launch/gtm-planner/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
-    portability: migrated-source-preserved
-    review_status: standardized-wrapper-content-review-needed
+    portability: portable
+    review_status: content-reviewed
   - id: risk-and-edge-case-analyzer
     title: "Risk & Edge Case Analyzer"
     category: quality
@@ -74,10 +74,10 @@ skills:
     path: skills/quality/risk-and-edge-case-analyzer/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
-    portability: migrated-source-preserved
-    review_status: standardized-wrapper-content-review-needed
+    portability: portable
+    review_status: content-reviewed
   - id: acceptance-criteria-generator
     title: "Acceptance Criteria Generator"
     category: requirements
@@ -294,10 +294,10 @@ skills:
     path: skills/strategy/competitive-analysis-expert/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
-    portability: migrated-source-preserved
-    review_status: standardized-wrapper-content-review-needed
+    portability: portable
+    review_status: content-reviewed
   - id: product-strategy-builder
     title: "Product Strategy Builder"
     category: strategy
@@ -305,7 +305,7 @@ skills:
     path: skills/strategy/product-strategy-builder/SKILL.md
     format: SKILL.md
     asset_type: skill
-    version: "1.0.0"
+    version: "1.1.0"
     status: active
-    portability: migrated-source-preserved
-    review_status: standardized-wrapper-content-review-needed
+    portability: portable
+    review_status: content-reviewed
