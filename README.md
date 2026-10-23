@@ -114,6 +114,17 @@ Workflow files are operating guides. They do not imply that Skills execute or ca
 
 Use this guide to discover the right asset, invoke it in a compatible host, combine Skills into workflows, evaluate outputs, and understand platform, permissions, and human-review boundaries.
 
+## Asset definition schemas
+
+- [Schema overview and validation instructions](schemas/README.md)
+- [Skill metadata schema](schemas/skill.schema.json)
+- [Agent definition schema](schemas/agent.schema.json)
+- [Workflow definition schema](schemas/workflow.schema.json)
+- [Integration definition schema](schemas/integration.schema.json)
+- [Integration discovery catalog](catalog/integrations.yaml)
+
+CI validates all four schemas and their canonical example fixtures. Schema validation is structural and does not establish runtime quality or platform compatibility.
+
 ## Foundation checks
 
 - [Skill authoring standard](docs/skill-standard.md)
