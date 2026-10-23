@@ -8,7 +8,7 @@ This layer separates reusable product methods from vendor-specific integration i
 - tested: a named owner ran a bounded test in a named runtime and recorded dated evidence.
 - available for execution: a maintained adapter/MCP server/API client is implemented, configured outside source control, and tested in the target runtime.
 
-All 27 registry entries are documented only. None has a live connector or executable API client in this repository, and all remain unverified. A product name in the catalog does not mean it can be connected.
+All 27 registry entries have documentation. The GitHub Issues and Projects entry now also contains an initial read-only adapter and mocked tests, but it remains unverified and is not yet promoted as available for execution. The other entries remain documented only. A product name in the catalog does not mean it can be connected.
 
 ## Categories
 
