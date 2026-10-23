@@ -59,7 +59,7 @@ Tests use mocked API responses. They do not authenticate with GitHub and do not 
 ## Verification evidence
 
 - **Status:** Implemented, not live-verified
-- **Mocked tests:** Added; execution result not yet recorded from a repository runtime
+- **Mocked tests:** Passed in GitHub Actions on Python 3.12 on 2026-10-23 UTC
 - **Live smoke test date:** None
 - **Runtime and Python version:** Not recorded
 - **Target repository / board:** Not recorded
