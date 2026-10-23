@@ -1,12 +1,23 @@
 ---
 name: test-data-builder
+display_name: "Test Data & Boundary Value Builder"
 description: "Test Data & Boundary Value Builder. Build test-data matrices and boundary-value candidates from defined validation rules."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "test", "data", "builder"]
 ---
-
 # Test Data & Boundary Value Builder
 
 ## Purpose
 Build test-data matrices and boundary-value candidates from defined validation rules.
+
+
+## When to use
+Use this Skill when you need to build test-data matrices and boundary-value candidates from defined validation rules. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.

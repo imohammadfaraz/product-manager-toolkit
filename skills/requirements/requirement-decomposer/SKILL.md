@@ -1,12 +1,23 @@
 ---
 name: requirement-decomposer
+display_name: "Requirement Decomposer"
 description: "Requirement Decomposer. Split broad requirements into atomic, independently reviewable units while preserving traceability."
+category: requirements
+asset_type: skill
+version: "1.0.0"
+status: active
+portability: portable
+review_status: standardized
+tags: ["requirements", "requirement", "decomposer"]
 ---
-
 # Requirement Decomposer
 
 ## Purpose
 Split broad requirements into atomic, independently reviewable units while preserving traceability.
+
+
+## When to use
+Use this Skill when you need to split broad requirements into atomic, independently reviewable units while preserving traceability. If required source information is missing, ask focused questions or mark the gap explicitly rather than inventing product behavior.
 
 ## Inputs
 - Relevant PRD, feature brief, requirement register, story, business rules, test artifacts, or change record.
