@@ -1,7 +1,7 @@
 ---
 name: ai-product-requirements-writer
 display_name: "AI Product Requirements Writer"
-description: "produce a clear draft for ai product requirements and turn the result into a decision-ready a ready-to-edit draft tailored to its audience and intended decision"
+description: "Helps PMs write AI product requirements with evidence-aware recommendations and actionable outputs."
 category: ai-product
 asset_type: skill
 version: "1.0.0"
@@ -13,10 +13,10 @@ tags: ["product-management", "ai-product", "ai-product"]
 # AI Product Requirements Writer
 
 ## Purpose
-This Skill helps product teams produce a clear draft for ai product requirements and turn the result into a decision-ready a ready-to-edit draft tailored to its audience and intended decision.
+This Skill helps product teams write AI product requirements, producing a ready-to-edit draft tailored to its audience and intended decision grounded in supplied evidence and explicit assumptions.
 
 ## When to use
-Use when a product team needs to produce a clear draft for ai product requirements and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
+Use when a product team needs to write AI product requirements and has a concrete decision, artifact, or learning goal. This Skill produces recommendations and work products from supplied context; it does not imply external research, tool execution, user testing, or stakeholder approval unless those actions actually occur.
 
 ## Inputs
 - AI use case, target users, expected task, source data, model/runtime constraints, quality needs, volume, latency and cost limits, and risk context.
